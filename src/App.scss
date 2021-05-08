@@ -1,0 +1,17 @@
+$primaryColor: #8C4219;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.master-container {
+  width: 1000px;
+  margin: 0 auto;
+  border: 1px dashed lightgray;
+}
+
+p {
+  text-align: center;
+  color: $primaryColor;
+}
