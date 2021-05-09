@@ -1,9 +1,13 @@
 import './App.scss';
+import Nav from './components/layout/Nav'
 
 function App() {
   return (
-    <div className="master-container">
-      <p>This is a test</p>
+    <div className="masterContainer">
+      <div className="bgLine leftLine"></div>
+      <div className="bgLine middleLine"></div>
+      <div className="bgLine rightLine"></div>
+      <Nav />
     </div>
   );
 }
