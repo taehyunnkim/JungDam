@@ -1,5 +1,6 @@
 $primaryColor: #8C4219;
 $dashColor: #D8D7D7;
+$font: "Fredericka the Great", "Arial";
 
 body {
   margin: 0;
@@ -13,6 +14,71 @@ body {
   margin: 0 auto;
   border-left: 1px dashed $dashColor;
   border-right: 1px dashed $dashColor;
+}
+
+//************************** LANDING **************************
+#landing {
+  width: 940px;
+  height: 570px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  & > div {
+    width: 33%;
+  }
+}
+
+#introduction {
+  white-space: nowrap;
+  z-index: 200;
+
+  & > h1 {
+    font-family: $font;
+    margin: 0;
+    line-height: 120%;
+    font-size: 60px;
+    font-weight: normal;
+  }
+
+  & > p {
+    margin: 5px 0;
+    color: black;
+  }
+}
+
+#landing-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  align-self: center;
+  margin-top: 200px;
+
+  img {
+    width: 600px;
+  }
+}
+
+//************************** BUTTON **************************
+.button {
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+  margin: 25px 20px 0 0;
+}
+
+.primary {
+  background: #8C4219;
+
+}
+
+.secondary {
+  background: #2E2E2E;
 }
 
 //************************** NAVIGATION **************************
@@ -82,9 +148,9 @@ li {
 
 .middleLine {
   left: 50%;
+  z-index: 50;
 }
 
 p {
-  text-align: center;
   color: $primaryColor;
 }
