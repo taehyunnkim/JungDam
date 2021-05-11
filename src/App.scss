@@ -1,8 +1,9 @@
 $primaryColor: #8C4219;
 $secondaryColor: #F1ECE7;
+$tertiaryColor: #7C9D68;
 $black: #2E2E2E;
 $dashColor: #D8D7D7;
-$headerFont: "Fredericka the Great", "Serif";
+$headerFont: "Orelega One", "Serif";
 $paragraphFontKR: "Nanum Gothic Coding", "Arial";
 $paragraphFont: "Raleway", "Arial";
 $boxshadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
@@ -13,11 +14,15 @@ body {
   padding: 0;
 }
 
+span {
+  color: $tertiaryColor;
+}
+
 .introHeader {
     font-family: $headerFont;
     margin: 0;
-    line-height: 120%;
-    font-size: 60px;
+    line-height: 105%;
+    font-size: 64px;
     font-weight: normal;
     background: -webkit-linear-gradient(#8C4219, #BA9782);
     -webkit-background-clip: text;
@@ -52,6 +57,9 @@ p {
 #introduction {
   white-space: nowrap;
   z-index: 200;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 1000ms;
+  transition-delay: 500ms;
 
   .button {
     margin-right: 20px;
@@ -154,8 +162,12 @@ p {
         display: flex;
         justify-content: space-around;
 
-        & > h3:nth-child(2) {
+        & > h3 {
           margin-left: 20px;
+        }
+
+        & > h3:nth-child(2) {
+          margin-left: 30px;
         }
       }
 
@@ -206,6 +218,7 @@ p {
 
   & > div {
     height: 100%;
+    z-index: 100;
   }
 
   & > div:first-child {
@@ -217,7 +230,7 @@ p {
       box-shadow: $boxshadow;
       background-size: cover;
       background-position: center;
-      border-radius: 20px;
+      border-radius: 15px;
     }
   }
 
@@ -269,8 +282,7 @@ p {
   cursor: pointer;
   margin: 25px 0 0 0;
   font-family: $paragraphFontKR;
-  transition-timing-function: cubic-bezier(.17,.67,.83,.67);
-  transition-duration: 100ms;
+  transition: box-shadow 200ms cubic-bezier(.17,.67,.83,.67), transform 1000ms 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     box-shadow: $boxshadowHover;
@@ -346,7 +358,7 @@ nav {
 footer {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 250px;
   z-index: 300;
   background-color: $secondaryColor;
   text-align: center;
@@ -374,9 +386,11 @@ footer {
   }
 
   ul {
+    text-align: left;
     list-style-type: none; 
-    margin: 0 30px 0 auto; 
     padding: 0; 
+    width: 50%;
+    margin: 50px auto 0 50px;
   }
   
   li { 
@@ -414,6 +428,18 @@ footer {
   z-index: 50;
 }
 
-span {
-  color: $primaryColor;
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.up {
+  transform: translateY(-20px);
+}
+
+.ogPos {
+  transform: translateY(0px);
 }

@@ -18,7 +18,7 @@ function Footer() {
                 <img src={canada} alt="Food Safety Certificate" />
                 <p>식품위생 안전취급 <br/> 캐나다인증</p>
             </div>
-            <p>Copyright © 정담도시락.com        2021 All Rights Reserved.</p>
+            <p>Copyright © 정담도시락.com &nbsp;&nbsp;&nbsp;&nbsp; 2021 All Rights Reserved.</p>
         </footer>
     );
 }

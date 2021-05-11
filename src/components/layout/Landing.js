@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 import mainImage from '../../images/mid.png';
 import flower1 from '../../images/flowers/flower1.png'
 import flower2 from '../../images/flowers/flower2.png'
@@ -9,15 +11,21 @@ import special from '../../images/special.png';
 import Button from '../Button';
 
 function Landing() {
+    const [fade, setFade] = useState('hidden');
+    const [slide, setSlide] = useState('up');
+    useEffect(() => {
+        setFade('visible');
+        setSlide('ogPos');
+    },[]);
     return(
         <div>
             <div id="landing">
-                <div id="introduction">
+                <div id="introduction" className={fade}>
                     <h1 className="introHeader">NATURAL <br /> AND SINCERE</h1>
-                    <p>행복을 담은 도시락, 정성을 담은 도시락으로</p>
-                    <p>고객의 건강과 만족을 높이겠습니다.</p>
-                    <Button text="메뉴보기" type="primary" />
-                    <Button text="전화주문" type="secondary" />
+                    <p><span>행복</span>을 담은 도시락, <span>정성</span>을 담은 도시락으로</p>
+                    <p>건강과 행복을 드리겠습니다</p>
+                    <Button text="메뉴보기" type="primary" slide={slide} />
+                    <Button text="전화주문" type="secondary" slide={slide} />
                 </div>
                 <div id="landing-image">
                     <img src={mainImage} draggable={false} alt="JungDam" />
@@ -37,7 +45,7 @@ function Landing() {
                 <article>
                     <div>
                         <h1>
-                        늘 신선하고 깨끗한 맛으로
+                        늘 신선하고 정성이 담긴 맛으로
                         <br /> 건강까지 채워드리겠습니다
                         </h1>
                         <div>
@@ -88,8 +96,8 @@ function Landing() {
                 </div>
                 <div>
                     <h1 className="introHeader">GALLERY</h1>
-                    <p>행복을 담은 도시락, 정성을 담은 도시락으로</p>
-                    <p>고객의 건강과 만족을 높이겠습니다.</p>
+                    <p><span>행복</span>을 담은 도시락, <span>정성</span>을 담은 도시락으로</p>
+                    <p>건강과 행복을 드리겠습니다</p>
                     <Button text="자세히 보기" type="secondary" />
                 </div>
             </div>
