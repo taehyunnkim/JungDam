@@ -49,42 +49,44 @@ function Landing() {
                         <br /> 건강까지 채워드리겠습니다
                         </h1>
                         <div>
-                            <p>
-                                체육대회, 야유회, 학교MT, 직장인 점식 도시락등 <br />
-                                각종 행사엔 누구나 좋아하는 한식 도시락
-                            </p>
-                            <p>
-                                바쁜 하루에 밥이라도 제대로 먹었으면 하는 <span>엄마의 마음</span> <br />
-                                뜨끈한 국물로 마음속의 추위까지 녹였으면 하는 <span>정담도시락의 마음</span>                            </p>
-                            <p>
-                                항상 정성을 담은 정담 도시락은 엄선된 식태료만을 사용하여 <br />
-                                맛과 건강면에서 차병화된 한식 도시락입니다.
-                            </p>
-                            <p>
-                                그마음을 한 그릇에 담아 <span>따듯한 도시락</span>으로 <br />
-                                고객님을 찾아갑니다.
-                            </p>
+                            <div>
+                                <p>
+                                    체육대회, 야유회, 학교MT, 직장인 점식 도시락등 <br />
+                                    각종 행사엔 누구나 좋아하는 한식 도시락
+                                </p>
+                                <p>
+                                    항상 정성을 담은 정담 도시락은 엄선된 식태료만을 사용하여 <br />
+                                    맛과 건강면에서 차병화된 한식 도시락입니다.
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    바쁜 하루에 밥이라도 제대로 먹었으면 하는 <span>엄마의 마음</span> <br />
+                                    뜨끈한 국물로 마음속의 추위까지 녹였으면 하는 <span>정담도시락의 마음</span>                            
+                                </p>
+                                <p>
+                                    그마음을 한 그릇에 담아 <span>따듯한 도시락</span>으로 <br />
+                                    고객님을 찾아갑니다.
+                                </p>
+                            </div>
                         </div>
                         <Button text="자세히 보기" type="secondary" />
                     </div>
                     <div>
                         <div>
                             <img src={premium} draggable={false} alt="premium" />
-                            <img src={event} draggable={false} alt="event" />
-                            <img src={special} draggable={false} alt="special" />
+                            <h3>명품메뉴</h3>
                         </div>
                         <div>
-                            <h3>명품메뉴</h3>
+                            <img src={event} draggable={false} alt="event" />
                             <h3>행사메뉴</h3>
+                        </div>
+                        <div>
+                            <img src={special} draggable={false} alt="special" />
                             <h3>스페셜메뉴</h3>
                         </div>
                     </div>
                 </article>
-                <svg width="1000" height="550" viewBox="0 0 1000 550" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <clipPath id="bgSvg">
-                    <path d="M999.5 50V500C999.5 527.338 977.338 549.5 950 549.5H50C22.6619 549.5 0.5 527.338 0.5 500V50C0.5 22.6619 22.6619 0.5 50 0.5H697.222H950C977.338 0.5 999.5 22.6619 999.5 50Z" fill="#C4C4C4" stroke="#F1F1F1"/>
-                </clipPath>
-                </svg>
             </div>
 
             <div id="gallery-introduction">
