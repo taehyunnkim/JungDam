@@ -9,6 +9,7 @@ import premium from '../../images/premium.png';
 import event from '../../images/event.png';
 import special from '../../images/special.png';
 import Button from '../Button';
+import TeleButton from '../TeleButton';
 
 function Landing({ setPage }) {
     const [fade, setFade] = useState('hidden');
@@ -26,7 +27,7 @@ function Landing({ setPage }) {
                     <p><span>행복</span>을 담은 도시락, <span>정성</span>을 담은 도시락으로</p>
                     <p>건강과 행복을 드리겠습니다</p>
                     <Button text="메뉴보기" type="primary" slide={slide} setPage={setPage} path='menu' />
-                    <Button text="전화주문" type="secondary" slide={slide} />
+                    <TeleButton text="전화주문" type="secondary" slide={slide} />
                 </div>
                 <div id="landing-image">
                     <img src={mainImage} draggable={false} alt="JungDam" />
