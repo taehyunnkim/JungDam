@@ -1,6 +1,6 @@
-function Button({text, type, slide}) {
+function Button({text, type, slide, setPage, path}) {
     return(
-        <button className={'button ' + type + ' ' + slide}> {text} </button>
+        <button className={'button ' + type + ' ' + slide} onClick={()=>{setPage(path)}}> {text} </button>
 
     );
 }

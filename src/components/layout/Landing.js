@@ -10,13 +10,14 @@ import event from '../../images/event.png';
 import special from '../../images/special.png';
 import Button from '../Button';
 
-function Landing() {
+function Landing({ setPage }) {
     const [fade, setFade] = useState('hidden');
     const [slide, setSlide] = useState('up');
     useEffect(() => {
         setFade('visible');
         setSlide('ogPos');
     },[]);
+
     return(
         <div>
             <div id="landing">
@@ -24,7 +25,7 @@ function Landing() {
                     <h1 className="introHeader">NATURAL <br /> AND SINCERE</h1>
                     <p><span>행복</span>을 담은 도시락, <span>정성</span>을 담은 도시락으로</p>
                     <p>건강과 행복을 드리겠습니다</p>
-                    <Button text="메뉴보기" type="primary" slide={slide} />
+                    <Button text="메뉴보기" type="primary" slide={slide} setPage={setPage} path='menu' />
                     <Button text="전화주문" type="secondary" slide={slide} />
                 </div>
                 <div id="landing-image">
@@ -70,7 +71,7 @@ function Landing() {
                                 </p>
                             </div>
                         </div>
-                        <Button text="자세히 보기" type="secondary" />
+                        <Button text="자세히 보기" type="secondary" setPage={setPage} path='menu' />
                     </div>
                     <div>
                         <div>
@@ -100,7 +101,7 @@ function Landing() {
                     <h1 className="introHeader">GALLERY</h1>
                     <p><span>행복</span>을 담은 도시락, <span>정성</span>을 담은 도시락으로</p>
                     <p>건강과 행복을 드리겠습니다</p>
-                    <Button text="자세히 보기" type="secondary" />
+                    <Button text="자세히 보기" type="secondary" setPage={setPage} path='gallery' />
                 </div>
             </div>
         </div>
