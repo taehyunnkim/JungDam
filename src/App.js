@@ -17,9 +17,11 @@ function App() {
 
   return (
     <div className="masterContainer">
-      <div className="bgLine leftLine"></div>
-      <div className="bgLine middleLine"></div>
-      <div className="bgLine rightLine"></div>
+      <div id="lines">
+        <div className="bgLine leftLine"></div>
+        <div className="bgLine middleLine"></div>
+        <div className="bgLine rightLine"></div>
+      </div>
       <Nav setPage={setPage} currentPage={page} />
       { pageComp }
       <Footer />

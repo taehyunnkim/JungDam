@@ -21,35 +21,38 @@ function Landing({ setPage }) {
 
     return(
         <div>
-            <div id="landing">
-                <div id="introduction" className={fade}>
-                    <h1 className="introHeader">NATURAL <br /> AND SINCERE</h1>
-                    <p><span>행복</span>을 담은 도시락, <span>정성</span>을 담은 도시락으로</p>
-                    <p>건강과 행복을 드리겠습니다</p>
-                    <Button text="메뉴보기" type="primary" slide={slide} setPage={setPage} path='menu' />
-                    <TeleButton text="전화주문" type="secondary" slide={slide} />
+            <div className="container">
+                <div id="landing">
+                    <div id="introduction" className={fade}>
+                        <h1 className="introHeader">NATURAL <br /> AND SINCERE</h1>
+                        <p>행복을 담은 도시락, 정성을 담은 도시락으로</p>
+                        <p>건강과 행복을 드리겠습니다</p>
+                        <Button text="메뉴보기" type="primary" slide={slide} setPage={setPage} path='menu' />
+                        <TeleButton text="전화주문" type="secondary" slide={slide} />
+                        <h2>ORDER 051-782-3630</h2>
+                    </div>
+                    <div id="landing-image">
+                        <img src={mainImage} draggable={false} alt="JungDam" />
+                    </div>
+                    <div id="filler"></div>
                 </div>
-                <div id="landing-image">
-                    <img src={mainImage} draggable={false} alt="JungDam" />
+                <div id="flowers">
+                    <img src={flower1} draggable={false} alt="flower1" />
+                    <img src={flower2} draggable={false} alt="flower2" />
+                    <img src={flower3} draggable={false} alt="flower3" />
+                    <img src={flower4} draggable={false} alt="flower4" />
                 </div>
-                <div id="filler"></div>
             </div>
-            <div id="flowers">
-                <img src={flower1} draggable={false} alt="flower1" />
-                <img src={flower2} draggable={false} alt="flower2" />
-                <img src={flower3} draggable={false} alt="flower3" />
-                <img src={flower4} draggable={false} alt="flower4" />
-            </div>
-
             <div id="menu-introduction">
                 <div id="top-circle" className="circle"></div>
                 <div id="bottom-circle" className="circle"></div>
                 <article>
                     <div>
-                        <h1>
+                        <h1>MENU INTRODUCTION</h1>
+                        <h2>
                         늘 신선하고 정성이 담긴 맛으로
                         <br /> 건강까지 채워드리겠습니다
-                        </h1>
+                        </h2>
                         <div>
                             <div>
                                 <p>
@@ -72,7 +75,7 @@ function Landing({ setPage }) {
                                 </p>
                             </div>
                         </div>
-                        <Button text="자세히 보기" type="secondary" setPage={setPage} path='menu' />
+                        <Button text="자세히 보기" type="primary" setPage={setPage} path='menu' />
                     </div>
                     <div>
                         <div>
@@ -90,19 +93,25 @@ function Landing({ setPage }) {
                     </div>
                 </article>
             </div>
+            <div className="container">
+                <div id="gallery-introduction">
+                    <div>
+                        <div id="gallery1"></div>
+                        <div id="gallery2"></div>
+                        <div id="gallery3"></div>
+                        <div id="gallery4"></div>
+                    </div>
+                    <div>
+                        <h1>GALLERY INTRODUCTION</h1>
+                        <h2>
+                        청결한 위생으로 안전한 
+                        <br /> 먹거리를 제공하겠습니다.
+                        </h2>
 
-            <div id="gallery-introduction">
-                <div>
-                    <div id="gallery1"></div>
-                    <div id="gallery2"></div>
-                    <div id="gallery3"></div>
-                    <div id="gallery4"></div>
-                </div>
-                <div>
-                    <h1 className="introHeader">GALLERY</h1>
-                    <p><span>행복</span>을 담은 도시락, <span>정성</span>을 담은 도시락으로</p>
-                    <p>건강과 행복을 드리겠습니다</p>
-                    <Button text="자세히 보기" type="secondary" setPage={setPage} path='gallery' />
+                        <p>정담도시락은 <span>좋은 재료</span>만 담아 자연의 에너지를 전합니다.</p>
+                        <p>정담도시락에는 <span>건강한 삷</span>과 <span>행복한 미래</span>가 있습니다.</p>
+                        <Button text="자세히 보기" type="primary" setPage={setPage} path='gallery' />
+                    </div>
                 </div>
             </div>
         </div>
