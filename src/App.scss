@@ -81,7 +81,7 @@ p {
 
   h2 {
     font-family: "Arial";
-    margin: 20px 5px;
+    margin: 20px 5px 0px 5px;
     color: #8e8e8e;
     font-weight: bold;
     font-size: 12px;
@@ -148,7 +148,6 @@ p {
       h1 {
         font-family: $paragraphFont;
         font-size: 12px;
-        text-shadow: $textshadow;
         margin-left: 4px;
         color: $primaryColor;
         margin: 0;
@@ -273,7 +272,6 @@ p {
       font-size: 12px;
       margin-left: 4px;
       color: $primaryColor;
-      text-shadow: $textshadow;
       margin: 0;
     }
 
@@ -500,13 +498,19 @@ $paddedWidth: 450px;
 @media (min-width: 481px) and (max-width: 1000px) {
   $divisor: 1.4;
 
-  .masterContainer {
+  .container {
     width: $width;
   }
   
   .introHeader {
     line-height: 105%;
-    font-size: 35px;
+    font-size: 45px;
+  }
+
+  #lines {
+    width: $width;
+    height: 100%;
+    z-index: 0;
   }
 
   //************************** LANDING **************************
@@ -514,6 +518,7 @@ $paddedWidth: 450px;
     width: 100%;
     height: 500px;
     margin: 0 auto;
+    justify-content: flex-start;
   }
   
   p {
@@ -525,10 +530,13 @@ $paddedWidth: 450px;
     .button {
       margin-right: 10px;
     }
+    h2{
+      font-size: 10px;
+    }
   }
 
   #landing-image {
-    height: 500px;
+    height: 200px;
   
     img {
       width: 300px;
@@ -548,27 +556,27 @@ $paddedWidth: 450px;
   }
 
   #menu-introduction {
-    height: 570px;
+    height: 600px;
     width: 100%;
     margin-top: -10px;
-    border-radius: 30px;
     z-index: 100;
   
     article {
-      width: 90%;
+      width: $paddedWidth;
       height: 100%;
-      margin: 30px auto;
+      margin: 45px auto;
   
       & > div {
         width: 100%;
       }
   
       & > div:first-child {
-        height: 45%;
-  
         h1 {
-          font-size: 18px;
-          line-height: 150%;
+          font-size: 10px;
+        }
+
+        h2 {
+          font-size: 22px;
         }
   
         & > div {
@@ -579,7 +587,7 @@ $paddedWidth: 450px;
           }
 
           p {
-            font-size: 10px;
+            font-size: 8px;
             width: 100%;
             margin: 5px 0px;
             line-height: 18px;
@@ -588,10 +596,9 @@ $paddedWidth: 450px;
       }
   
       & > div:last-child {
-        height: 45%;
         width: 100%;
         justify-content: space-evenly;
-        margin-top: 30px;
+        margin-top: 40px;
 
         h3 {
           font-size: 12px;
@@ -635,11 +642,12 @@ $paddedWidth: 450px;
   }
 
   #gallery-introduction {
-    height: 260px;
-    width: $paddedWidth;
-    margin: 40px auto 0 auto;
+    height: 340px;
+    width: 100%;
+    margin: 60px auto;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
   
     & > div {
       height: 100%;
@@ -647,52 +655,60 @@ $paddedWidth: 450px;
     }
   
     & > div:first-child {
-      width: 53%;
       position: relative;
-  
+      width: 100%;
+      margin-top: 50px; 
+      display: flex;
+      justify-content: space-between;
+
       & > div {
-        position: absolute;
+        position: unset;
         box-shadow: $boxshadow;
         background-size: cover;
         background-position: center;
         border-radius: 15px;
+        height: 100px;
       }
     }
   
     & > div:last-child {
-      text-align: right;
-      width: 47%;
+      width: 100%;
+      h1 {
+        font-size: 10px;
+      }
+
+      h2 {
+        font-size: 22px;
+        line-height: 150%;
+      }
+
+      p {
+        font-size: 12px;
+      }
     }
   }
   
   #gallery1 {
-    top: 0;
-    left: 0;
     width: 100px;
     height: 100px;
     background-image: url("./images/jungdam0.jpg");
   }
   
   #gallery2 {
-    top: 0;
-    left: 50%;
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     background-image: url("./images/jungdam1.jpg");
   }
   
   #gallery3 {
-    top: 120px;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-image: url("./images/jungdam2.jpg");
   }
   
   #gallery4 {
-    top: 90px;
-    left: 50%;
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     background-image: url("./images/jungdam3.jpg");
   }
 
@@ -724,10 +740,10 @@ $paddedWidth: 450px;
 
   //************************** BUTTON **************************
   .button {
-    width: 80px;
-    height: 30px;
+    width: 100px;
+    height: 35px;
+    font-size: 12px;
     margin: 15px 0 0 0;
-    font-size: 10px;
   }
 
 
@@ -742,32 +758,31 @@ $paddedWidth: 450px;
   //************************** FOOTER **************************
   footer {
     height: 250px;
-    border-radius: 30px 30px 0px 0px;
+    .footer {
+      & > div {
+        img {
+          height: 25px;
+        }
 
-    & > div {
-      img {
-        height: 25px;
+        p {
+          padding: 8px;
+        }
       }
 
       p {
-        padding: 8px;
+        font-size: 8px;
+      }
+
+      ul {
+        width: 100%;
+        margin: 30px 0;
+      }
+      
+      li { 
+        font-size: 8px;
       }
     }
-
-    p {
-      font-size: 8px;
-    }
-
-    ul {
-      width: 100%;
-      margin: 10px 0;
-    }
-    
-    li { 
-      font-size: 8px;
-    }
   }
-  
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
