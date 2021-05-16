@@ -2,30 +2,34 @@ import './App.scss';
 import Nav from './components/layout/Nav';
 import Landing from './components/layout/Landing';
 import Footer from './components/layout/Footer';
-import { useState } from 'react';
+import {
+  BrowserRouter,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
-  const [page, setPage] = useState('home');
-  let pageComp = <Landing setPage={setPage} />
-  if(page === 'home') {
-    pageComp = <Landing setPage={setPage} />;
-  } else if(page === 'menu') {
-    pageComp = <div>Menu</div>;
-  } else {
-    pageComp = <div>Gallery</div>;
-  }
-
   return (
-    <div className="masterContainer">
-      <div id="lines">
-        <div className="bgLine leftLine"></div>
-        <div className="bgLine middleLine"></div>
-        <div className="bgLine rightLine"></div>
+    <BrowserRouter>
+      <div className="masterContainer">
+        <div id="lines">
+          <div className="bgLine leftLine"></div>
+          <div className="bgLine middleLine"></div>
+          <div className="bgLine rightLine"></div>
+        </div>
+        <Nav />
+        <Switch>
+          <Route exact strict path="/menu">
+          </Route>
+          <Route exact strict path="/gallery">
+          </Route>
+          <Route exact strict path="/">
+            <Landing />
+          </Route>
+        </Switch>
+        <Footer />
       </div>
-      <Nav setPage={setPage} currentPage={page} />
-      { pageComp }
-      <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

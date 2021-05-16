@@ -27,7 +27,7 @@ function Landing({ setPage }) {
                         <h1 className="introHeader">NATURAL <br /> AND SINCERE</h1>
                         <p>행복을 담은 도시락, 정성을 담은 도시락으로</p>
                         <p>건강과 행복을 드리겠습니다</p>
-                        <Button text="메뉴보기" type="primary" slide={slide} setPage={setPage} path='menu' />
+                        <Button text="메뉴보기" type="primary" slide={slide} path='menu' />
                         <TeleButton text="전화주문" type="secondary" slide={slide} />
                         <h2>ORDER 051-782-3630</h2>
                     </div>
@@ -75,7 +75,7 @@ function Landing({ setPage }) {
                                 </p>
                             </div>
                         </div>
-                        <Button text="자세히 보기" type="primary" setPage={setPage} path='menu' />
+                        <Button text="자세히 보기" type="primary" path='menu' />
                     </div>
                     <div>
                         <div>
@@ -110,7 +110,7 @@ function Landing({ setPage }) {
 
                         <p>정담도시락은 <span>좋은 재료</span>만 담아 자연의 에너지를 전합니다.</p>
                         <p>정담도시락에는 <span>건강한 삷</span>과 <span>행복한 미래</span>가 있습니다.</p>
-                        <Button text="자세히 보기" type="primary" setPage={setPage} path='gallery' />
+                        <Button text="자세히 보기" type="primary" path='gallery' />
                     </div>
                 </div>
             </div>
