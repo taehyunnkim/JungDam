@@ -48,7 +48,7 @@ function Landing({ setPage }) {
                 <div id="bottom-circle" className="circle"></div>
                 <article>
                     <div>
-                        <h1>MENU INTRODUCTION</h1>
+                        <h1 className="smHeader">MENU INTRODUCTION</h1>
                         <h2>
                         늘 신선하고 정성이 담긴 맛으로
                         <br /> 건강까지 채워드리겠습니다
@@ -102,7 +102,7 @@ function Landing({ setPage }) {
                         <div id="gallery4"></div>
                     </div>
                     <div>
-                        <h1>GALLERY INTRODUCTION</h1>
+                        <h1 className="smHeader">GALLERY INTRODUCTION</h1>
                         <h2>
                         청결한 위생으로 안전한 
                         <br /> 먹거리를 제공하겠습니다.
