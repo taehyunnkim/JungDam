@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import mainImage from '../../images/mid.png';
+import mainImage from '../../images/main_alt.png';
 import flower1 from '../../images/flowers/flower1.png'
 import flower2 from '../../images/flowers/flower2.png'
 import flower3 from '../../images/flowers/flower3.png'
