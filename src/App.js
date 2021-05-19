@@ -1,6 +1,7 @@
-import './App.scss';
+import './scss/App.scss';
 import Nav from './components/layout/Nav';
 import Landing from './components/layout/Landing';
+import Menu from './components/layout/Menu';
 import Footer from './components/layout/Footer';
 import {
   BrowserRouter,
@@ -20,6 +21,7 @@ function App() {
         <Nav />
         <Switch>
           <Route exact strict path="/menu">
+            <Menu />
           </Route>
           <Route exact strict path="/gallery">
           </Route>

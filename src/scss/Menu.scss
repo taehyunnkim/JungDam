@@ -1,0 +1,230 @@
+$borderRadius: 8px;
+$cardHeight: 230px;
+$cardWidth: 150px;
+$paragraphFontKR: "Nanum Gothic Coding", "Arial";
+$primaryColor: #8C4219;
+$secondaryColor: #F1ECE7;
+$tertiaryColor: #7C9D68;
+$black: #2E2E2E;
+
+.menuContainer > div:first-child {
+    width: 300px;
+
+    h1 {
+        font-family: $paragraphFontKR;
+        font-size: 24px;
+        background: -webkit-linear-gradient(#8C4219, #BA9782);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $primaryColor;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-family: $paragraphFontKR;
+        font-size: 12px;
+        line-height: 18px;
+        color: $black;
+        margin-left: 2px;
+        font-weight: bold;
+    }
+
+    div {
+        width: 50px;
+        margin-top: 10px;
+        margin-left: 2px;
+        border-bottom: 3px solid $black;
+        border-radius: 15px;
+    }
+}
+
+.menuContainer {
+    padding: 30px;
+}
+
+.cardList {
+    position: relative;
+    z-index: 500;
+    margin: 0 auto;
+    width: 95%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: $cardWidth;
+    height: $cardHeight;
+    padding: 2px;
+    border: 1px solid #b7b7b7;
+    margin: 10px 20px;
+    background-color: white;
+    border-radius: $borderRadius;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 4px;
+    font-family: $paragraphFontKR;
+
+    div:first-child {
+        height: $cardWidth;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 130px;
+        }
+    }
+
+    div:last-child {
+        background-color: #F1ECE7;
+        flex-grow: 1;
+        border-top: 1px solid #b7b7b7;
+        border-radius: 0 0 $borderRadius $borderRadius;
+    }
+
+    h1 {
+        font-size: 11px;
+        line-height: 16px;
+        margin: 15px 0 10px 0;
+        width: 98%;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 12px;
+        color: gray;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+@media (min-width: 481px) and (max-width: 1000px) {
+    $factor: 0.85;
+
+    .menuContainer > div:first-child {
+        h1 {
+            font-size: 20px;
+        }
+    
+        p {
+            font-size: 10px;
+            line-height: 18px;
+        }
+    
+        div {
+            width: 30px;
+            margin-left: 2px;
+            border-bottom: 2px solid $black;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .menuContainer {
+        padding: 20px;
+    }
+
+    .cardList {
+        padding: 20px 0;
+        justify-content: space-around;
+    }
+
+    .card {
+        width: $cardWidth * $factor;
+        height: $cardHeight * $factor;
+        margin: 10px 0;
+
+        div:first-child {
+            height: $cardWidth * $factor;
+
+            img {
+                width: $cardWidth * $factor - 20px;
+                border-radius: $borderRadius;
+            }
+        }
+
+        h1 {
+            font-size: 9px;
+            line-height: 14px;
+            margin: 15px 0 10px 0;
+            width: 98%;
+        }
+    
+        h2 {
+            margin: 0;
+            font-size: 10px;
+            color: gray;
+        }
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    $factor: 0.85;
+
+    .menuContainer > div:first-child {
+        h1 {
+            font-size: 20px;
+        }
+    
+        p {
+            font-size: 10px;
+            line-height: 18px;
+        }
+    
+        div {
+            width: 30px;
+            margin-left: 2px;
+            border-bottom: 2px solid $black;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .menuContainer {
+        padding: 10px;
+    }
+
+    .cardList {
+        padding: 20px 0;
+    }
+
+    .card {
+        width: $cardWidth * $factor;
+        height: $cardHeight * $factor;
+        margin: 10px 0;
+
+        div:first-child {
+            height: $cardWidth * $factor;
+
+            img {
+                width: $cardWidth * $factor - 20px;
+                border-radius: $borderRadius;
+            }
+        }
+
+        h1 {
+            font-size: 9px;
+            line-height: 14px;
+            margin: 15px 0 10px 0;
+            width: 98%;
+        }
+    
+        h2 {
+            margin: 0;
+            font-size: 10px;
+            color: gray;
+        }
+    }
+}
