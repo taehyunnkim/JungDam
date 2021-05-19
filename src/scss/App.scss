@@ -109,6 +109,9 @@ p {
   align-items: center;
   align-self: center;
   height: 200px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.3, 1);
+  transition-duration: 1000ms;
+  transition-delay: 800ms;
 
   img {
     width: 500px;

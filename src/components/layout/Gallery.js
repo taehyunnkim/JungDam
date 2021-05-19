@@ -13,7 +13,6 @@ import pic11 from "../../images/gallery/11.jpg";
 import pic12 from "../../images/gallery/12.jpg";
 import pic13 from "../../images/gallery/13.jpg";
 import pic14 from "../../images/gallery/14.jpg";
-import pic15 from "../../images/gallery/15.jpg";
 import '../../scss/Gallery.scss';
 
 function Gallery() {

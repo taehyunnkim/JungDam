@@ -31,7 +31,7 @@ function Landing({ setPage }) {
                         <TeleButton text="전화주문" type="secondary" slide={slide} />
                         <h2>ORDER 051-782-3630</h2>
                     </div>
-                    <div id="landing-image">
+                    <div id="landing-image" className={fade}>
                         <img src={mainImage} draggable={false} alt="JungDam" />
                     </div>
                     <div id="filler"></div>

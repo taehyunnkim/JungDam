@@ -16,13 +16,10 @@ $borderRadius: 8px;
             position: absolute;
             box-shadow: $boxshadow;
             border-radius: $borderRadius;
-            width: 250px;
-            bottom: 0;
         }
         
         $oneHeight: 440px;
         img:nth-child(1) {
-            width: unset;
             height: $oneHeight;
             top: 0;
             left: 0;
@@ -30,7 +27,6 @@ $borderRadius: 8px;
 
         $twoHeight: 250px;
         img:nth-child(2) {
-            width: unset;
             height: $twoHeight;
             top: 0;
             right: 0;
@@ -38,7 +34,6 @@ $borderRadius: 8px;
 
         $threeHeight: 250px;
         img:nth-child(3) {
-            width: unset;
             height: $threeHeight;
             top: 270px;
             right: 0;
@@ -46,7 +41,6 @@ $borderRadius: 8px;
 
         $fourHeight: 250px;
         img:nth-child(4) {
-            width: unset;
             height: $fourHeight;
             top: 460px;
             left: 0;
@@ -54,7 +48,6 @@ $borderRadius: 8px;
 
         $fiveHeight: 250px;
         img:nth-child(5) {
-            width: unset;
             height: $fiveHeight;
             top: 460px;
             left: 0;
@@ -62,7 +55,6 @@ $borderRadius: 8px;
 
         $sixHeight: 460px;
         img:nth-child(11) {
-            width: unset;
             height: 300px;
             top: $sixHeight;
             left: 360px;
@@ -70,7 +62,6 @@ $borderRadius: 8px;
 
         $sixHeight: 460px;
         img:nth-child(6) {
-            width: unset;
             height: 220px;
             top: $fourHeight + $threeHeight + 40px;
             right: 40px;
@@ -78,56 +69,48 @@ $borderRadius: 8px;
 
         $sevenHeight: 250px;
         img:nth-child(7) {
-            width: unset;
             height: 250px;
             top: $sixHeight + 280px;
             left: 0;
         }
 
         img:nth-child(8) {
-            width: unset;
             height: 210px;
             top: 780px;
             right: 300px;
         }
 
         img:nth-child(10) {
-            width: unset;
             height: 210px;
             top: 780px;
             right: 0;
         }
 
         img:nth-child(9) {
-            width: unset;
             height: 400px;
             top: 1010px;
             right: 0;
         }
 
         img:nth-child(12) {
-            width: unset;
             height: 260px;
             top: 1010px;
             left: 35px;
         }
 
         img:nth-child(13) {
-            width: unset;
             height: 285px;
             top: 1295px;
             left: 0;
         }
 
         img:nth-child(14) {
-            width: unset;
             height: 190px;
             top: 1435px;
             right: 280px;
         }
 
         img:nth-child(15) {
-            width: unset;
             height: 190px;
             top: 1435px;
             right: 0;
@@ -135,3 +118,217 @@ $borderRadius: 8px;
     }
 }
 
+@media (min-width: 481px) and (max-width: 1000px) {
+    .galleryContainer {
+        padding: 10px;
+        height: 1050px;
+    
+        & > div {
+            img:nth-child(1) {
+                height: 240px;
+                top: 0;
+                left: 0;
+            }
+    
+            img:nth-child(2) {
+                height: 95px;
+                top: 0;
+                right: 0;
+            }
+    
+            img:nth-child(3) {
+                height: 95px;
+                top: 105px;
+                right: 0;
+            }
+    
+            img:nth-child(4) {
+                height: 115px;
+                top: 250px;
+                left: 0;
+            }
+    
+            img:nth-child(5) {
+                height: 115px;
+                top: 250px;
+                left: 165px;
+            }
+    
+            img:nth-child(11) {
+                height: 150px;
+                height: 170px;
+                top: 215px;
+                right: 0;
+                left: unset;
+            }
+    
+            img:nth-child(6) {
+                height: 115px;
+                top: 380px;
+                left: 0;
+                right: unset;
+            }
+    
+            img:nth-child(7) {
+                height: 95px;
+                top: 400px;
+                right: 0;
+                left: unset;
+            }
+    
+            img:nth-child(8) {
+                height: 95px;
+                top: 510px;
+                right: 0;
+            }
+    
+            img:nth-child(10) {
+                height: 115px;
+                top: 380px;
+                left: 165px;
+                right: unset;
+            }
+    
+            img:nth-child(9) {
+                height: 240px;
+                top: 510px;
+                left: 0;
+            }
+    
+            img:nth-child(12) {
+                height: 95px;
+                top: 620px;
+                right: 0;
+                lefT: unset;
+            }
+    
+            img:nth-child(13) {
+                height: 95px;
+                top: 730px;
+                right: 0;
+                left: unset;
+            }
+    
+            img:nth-child(14) {
+                height: 240px;
+                top: 765px;
+                left: 0;
+                right: unset;
+            }
+    
+            img:nth-child(15) {
+                height: 95px;
+                top: 840px;
+                right: 0;
+                lefT: unset;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .galleryContainer {
+        padding: 10px;
+        height: 1200px;
+    
+        & > div {
+            img:nth-child(1) {
+                height: 120px;
+                top: 0;
+                left: 0;
+            }
+    
+            img:nth-child(2) {
+                height: 95px;
+                top: 0;
+                right: 0;
+            }
+    
+            img:nth-child(3) {
+                height: 95px;
+                top: 105px;
+                right: 0;
+            }
+    
+            img:nth-child(4) {
+                height: 120px;
+                top: 130px;
+                left: 0;
+            }
+    
+            img:nth-child(5) {
+                height: 120px;
+                top: 265px;
+                left: 0;
+            }
+    
+            img:nth-child(11) {
+                height: 150px;
+                height: 170px;
+                top: 215px;
+                right: 0;
+                left: unset;
+            }
+    
+            img:nth-child(6) {
+                height: 120px;
+                top: 400px;
+                left: 0;
+                right: unset;
+            }
+    
+            img:nth-child(7) {
+                height: 95px;
+                top: 400px;
+                right: 0;
+                left: unset;
+            }
+    
+            img:nth-child(8) {
+                height: 95px;
+                top: 510px;
+                right: 0;
+            }
+    
+            img:nth-child(10) {
+                height: 120px;
+                top: 535px;
+                left: 0;
+                right: unset;
+            }
+    
+            img:nth-child(9) {
+                height: 225px;
+                top: 670px;
+                right: 0;
+            }
+    
+            img:nth-child(12) {
+                height: 105px;
+                top: 910px;
+                left: 0;
+            }
+    
+            img:nth-child(13) {
+                height: 105px;
+                top: 910px;
+                right: 0;
+                left: unset;
+            }
+    
+            img:nth-child(14) {
+                height: 105px;
+                top: 1030px;
+                left: 0;
+                right: unset;
+            }
+    
+            img:nth-child(15) {
+                height: 105px;
+                top: 1030px;
+                right: 0;
+                left: unset;
+            }
+        }
+    }
+}
