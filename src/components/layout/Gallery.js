@@ -18,23 +18,24 @@ import '../../scss/Gallery.scss';
 
 function Gallery() {
     return(
-        <div className="container">
-            <img src={main} alt="gallery" />
-            <img src={pic1} alt="gallery" />
-            <img src={pic2} alt="gallery" />
-            <img src={pic3} alt="gallery" />
-            <img src={pic4} alt="gallery" />
-            <img src={pic5} alt="gallery" />
-            <img src={pic6} alt="gallery" />
-            <img src={pic7} alt="gallery" />
-            <img src={pic8} alt="gallery" />
-            <img src={pic9} alt="gallery" />
-            <img src={pic10} alt="gallery" />
-            <img src={pic11} alt="gallery"/>
-            <img src={pic12} alt="gallery"/>
-            <img src={pic13} alt="gallery" />
-            <img src={pic14} alt="gallery"/>
-            <img src={pic15} alt="gallery" />
+        <div className="container galleryContainer">
+            <div>
+                <img src={main} alt="gallery" />
+                <img src={pic1} alt="gallery" />
+                <img src={pic2} alt="gallery" />
+                <img src={pic3} alt="gallery" />
+                <img src={pic4} alt="gallery" />
+                <img src={pic5} alt="gallery" />
+                <img src={pic6} alt="gallery" />
+                <img src={pic7} alt="gallery" />
+                <img src={pic8} alt="gallery" />
+                <img src={pic9} alt="gallery" />
+                <img src={pic10} alt="gallery" />
+                <img src={pic11} alt="gallery"/>
+                <img src={pic12} alt="gallery"/>
+                <img src={pic13} alt="gallery" />
+                <img src={pic14} alt="gallery"/>
+            </div>
         </div>
     );
 }

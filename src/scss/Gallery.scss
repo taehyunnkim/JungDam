@@ -1,0 +1,137 @@
+$boxshadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
+$borderRadius: 8px;
+
+.galleryContainer {
+    padding: 30px;
+    box-sizing: border-box;
+    height: 1700px;
+
+    & > div {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 500;
+
+        img {
+            position: absolute;
+            box-shadow: $boxshadow;
+            border-radius: $borderRadius;
+            width: 250px;
+            bottom: 0;
+        }
+        
+        $oneHeight: 440px;
+        img:nth-child(1) {
+            width: unset;
+            height: $oneHeight;
+            top: 0;
+            left: 0;
+        }
+
+        $twoHeight: 250px;
+        img:nth-child(2) {
+            width: unset;
+            height: $twoHeight;
+            top: 0;
+            right: 0;
+        }
+
+        $threeHeight: 250px;
+        img:nth-child(3) {
+            width: unset;
+            height: $threeHeight;
+            top: 270px;
+            right: 0;
+        }
+
+        $fourHeight: 250px;
+        img:nth-child(4) {
+            width: unset;
+            height: $fourHeight;
+            top: 460px;
+            left: 0;
+        }
+
+        $fiveHeight: 250px;
+        img:nth-child(5) {
+            width: unset;
+            height: $fiveHeight;
+            top: 460px;
+            left: 0;
+        }
+
+        $sixHeight: 460px;
+        img:nth-child(11) {
+            width: unset;
+            height: 300px;
+            top: $sixHeight;
+            left: 360px;
+        }
+
+        $sixHeight: 460px;
+        img:nth-child(6) {
+            width: unset;
+            height: 220px;
+            top: $fourHeight + $threeHeight + 40px;
+            right: 40px;
+        }
+
+        $sevenHeight: 250px;
+        img:nth-child(7) {
+            width: unset;
+            height: 250px;
+            top: $sixHeight + 280px;
+            left: 0;
+        }
+
+        img:nth-child(8) {
+            width: unset;
+            height: 210px;
+            top: 780px;
+            right: 300px;
+        }
+
+        img:nth-child(10) {
+            width: unset;
+            height: 210px;
+            top: 780px;
+            right: 0;
+        }
+
+        img:nth-child(9) {
+            width: unset;
+            height: 400px;
+            top: 1010px;
+            right: 0;
+        }
+
+        img:nth-child(12) {
+            width: unset;
+            height: 260px;
+            top: 1010px;
+            left: 35px;
+        }
+
+        img:nth-child(13) {
+            width: unset;
+            height: 285px;
+            top: 1295px;
+            left: 0;
+        }
+
+        img:nth-child(14) {
+            width: unset;
+            height: 190px;
+            top: 1435px;
+            right: 280px;
+        }
+
+        img:nth-child(15) {
+            width: unset;
+            height: 190px;
+            top: 1435px;
+            right: 0;
+        }
+    }
+}
+
