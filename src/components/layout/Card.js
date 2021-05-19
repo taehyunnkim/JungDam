@@ -1,6 +1,6 @@
 function Card({ item }) {
     return(
-        <div className="card" key={Math.random(100000)}>
+        <div className="card">
             <div>
                 <img src={require(`../../images/items/${item.img}`).default} alt="item" />
             </div>

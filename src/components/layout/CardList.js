@@ -3,19 +3,19 @@ import Card from './Card';
 function CardList({items, title, description}) {
     let cards = [];
     items.forEach(item => {
-        cards.push(<Card item={item} />)
+        cards.push(<Card item={item} key={Math.random(100000)} />)
     });
 
     let numHidden = items.length % 4 !== 0 ? 4 - (items.length % 4) : items.length % 4;
     let ele = [];
     for(let i = 0; i < numHidden; i++) {
-        ele.push(<div className="card hidden"></div>);
+        ele.push(<div className="card hidden" key={Math.random(100000)}></div>);
     }
 
     let descriptions = [];
     if(description) {
         for(let i = 0; i < description.length; i++) {
-            descriptions.push(<p>{description[i]}</p>);
+            descriptions.push(<p key={Math.random(100000)}>{description[i]}</p>);
         }
     }
 
@@ -28,10 +28,7 @@ function CardList({items, title, description}) {
                 <div></div>
             </div>
             <div className="cardList">
-                {cards.map(card => {
-                    return card;
-                })
-                }
+                {cards}
                 {ele}
             </div>
         </div>
