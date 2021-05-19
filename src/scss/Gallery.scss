@@ -4,7 +4,7 @@ $borderRadius: 8px;
 .galleryContainer {
     padding: 30px;
     box-sizing: border-box;
-    height: 1700px;
+    height: 1980px;
 
     & > div {
         position: relative;
@@ -41,8 +41,8 @@ $borderRadius: 8px;
 
         $fourHeight: 250px;
         img:nth-child(4) {
-            height: $fourHeight;
-            top: 460px;
+            height: 285px;
+            top: 1605px;
             left: 0;
         }
 
