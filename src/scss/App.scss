@@ -11,6 +11,8 @@ $boxshadowHover: rgba(0, 0, 0, 0.35) 0px 0px 0px;
 $textshadow: rgba(0, 0, 0, 0.35) 0px 1px 2px;
 $borderRadius: 8px;
 
+html{scroll-behavior:smooth}
+
 body {
   margin: 0;
   padding: 0;
@@ -21,9 +23,19 @@ span {
   color: $tertiaryColor;
 }
 
+.masterContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
 hr {
   border-top: 1px solid #888888;
   width: 100%;
+}
+
+.first {
+  margin-top: 170px!important;
 }
 
 .introHeader {
@@ -125,7 +137,7 @@ p {
 
 #flowers {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-top: 100px;
   
   img {
@@ -352,15 +364,37 @@ p {
 }
 
 //************************** NAVIGATION **************************
+.revealNav {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;;
+  background-color: rgba( 255, 255, 255, 1);
+
+  & > div:first-child {
+    height: 100px;
+  }
+}
+
 nav {
-  position: relative;
-  z-index: 200;
-  width: 1000px;
-  margin: 0 auto;
-  height: 140px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgba( 255, 255, 255, 0);
+  z-index: 1000;
+  transition: all 200ms cubic-bezier(0.56, 0.01, 0.5, 0.99);
+
+  & > div {
+    background-color: rgba( 255, 255, 255, 0);
+    z-index: 1000;
+    transition: all 200ms cubic-bezier(0.56, 0.01, 0.5, 0.99);
+    position: relative;
+    z-index: 200;
+    width: 1000px;
+    margin: 0 auto;
+    height: 140px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
 
   ul {
     list-style-type: none; 
@@ -405,7 +439,7 @@ nav {
 
 #logo {
   margin-left: 30px;
-  width: 120px;
+  width: 122px;
 }
 
 //************************** FOOTER **************************
@@ -608,7 +642,7 @@ $paddedWidth: 450px;
   
       & > div:last-child {
         width: 100%;
-        justify-content: space-evenly;
+        justify-content: space-around;
         margin-top: 40px;
 
         h3 {
@@ -720,7 +754,7 @@ $paddedWidth: 450px;
   }
 
   //************************** NAVIGATION **************************
-  nav {
+  nav > div {
     width: $paddedWidth;
     margin: 0 auto;
     height: 100px;
@@ -742,7 +776,7 @@ $paddedWidth: 450px;
 
   #logo {
     margin-left: 0px;
-    width: 120px;
+    width: 122px;
   }
 
   #bgSvg {
@@ -791,6 +825,10 @@ $paddedWidth: 450px;
 
 @media (min-width: 320px) and (max-width: 480px) {
   $divisor: 1.4;
+
+  .first {
+    margin-top: 100px!important;
+  }
 
   .leftLine {
     visibility: hidden;
@@ -911,7 +949,7 @@ $paddedWidth: 450px;
       & > div:last-child {
         height: unset;
         width: 100%;
-        justify-content: space-evenly;
+        justify-content: space-around;
         margin-top: 30px;
 
         h3 {
@@ -1023,10 +1061,14 @@ $paddedWidth: 450px;
   }  
 
   //************************** NAVIGATION **************************
-  nav {
+  .revealNav > div:first-child {
+    height: 80px;
+  }
+
+  nav > div {
     width: 300px;
     margin: 0 auto;
-    height: 80px;
+    height: 110px;
 
     ul {
       margin: 0 0 0 auto;
@@ -1058,7 +1100,7 @@ $paddedWidth: 450px;
 
   #logo {
     margin-left: 0px;
-    width: 100px;
+    width: 85px;
   }
 
   #bgSvg {

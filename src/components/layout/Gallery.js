@@ -14,10 +14,15 @@ import pic12 from "../../images/gallery/12.jpg";
 import pic13 from "../../images/gallery/13.jpg";
 import pic14 from "../../images/gallery/14.jpg";
 import '../../scss/Gallery.scss';
+import { useEffect } from 'react';
 
-function Gallery() {
+function Gallery({setPage}) {
+    useEffect(() => {
+        setPage("gallery");
+    }, [setPage]);
+
     return(
-        <div className="container galleryContainer">
+        <div className="container galleryContainer first">
             <div>
                 <img src={main} alt="gallery" />
                 <img src={pic1} alt="gallery" />

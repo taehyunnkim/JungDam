@@ -17,11 +17,12 @@ function Landing({ setPage }) {
     useEffect(() => {
         setFade('visible');
         setSlide('ogPos');
-    },[]);
+        setPage("home");
+    },[setFade, setPage]);
 
     return(
         <div>
-            <div className="container">
+            <div className="container first">
                 <div id="landing">
                     <div id="introduction" className={fade}>
                         <h1 className="introHeader">NATURAL <br /> AND SINCERE</h1>

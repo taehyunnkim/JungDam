@@ -1,23 +1,61 @@
-$borderRadius: 8px;
+$borderRadius: 5px;
 $cardHeight: 230px;
-$cardWidth: 150px;
+$cardWidth: 180px;
 $paragraphFontKR: "Nanum Gothic Coding", "Arial";
 $primaryColor: #8C4219;
 $secondaryColor: #F1ECE7;
 $tertiaryColor: #7C9D68;
 $black: #2E2E2E;
+$boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
+
+.container {
+    height: unset;
+}
+
+.spacing {
+    height: 200px;
+}
+
+.shortcut {
+    background-color: white;
+    height: 40px;
+    padding: 5px 5px;
+    left: 0;
+    border-top: 1px dotted #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    a {
+        font-family: $paragraphFontKR;
+        text-decoration: none;
+        color: $black;
+        font-size: 16px;
+        padding: 10px 12px;
+        border-radius: 5px;
+
+        &:active {
+            color: gray;
+        }
+
+        &:hover {
+            background:rgb(245, 245, 245);
+        }
+    }
+}
 
 .menuContainer > div:first-child {
     width: 300px;
+    padding: 0 30px 30px 30px;
 
     h1 {
         font-family: $paragraphFontKR;
         font-size: 24px;
-        background: -webkit-linear-gradient(#8C4219, #BA9782);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         color: $primaryColor;
         margin-bottom: 0;
+        padding-top: 180px;
+        margin-top: -180px;
     }
 
     p {
@@ -39,19 +77,31 @@ $black: #2E2E2E;
 }
 
 .menuContainer {
-    padding: 30px;
+}
+
+.invisiCard {
+    height: 250px!important;
+    width: 245px!important;
+    margin: 0!important;
+    padding: 0!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cardList {
     position: relative;
     z-index: 500;
     margin: 0 auto;
-    width: 95%;
-    padding: 20px;
     box-sizing: border-box;
+    margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.menuContainer:last-child {
+    margin-bottom: 50px;
 }
 
 .card {
@@ -62,18 +112,19 @@ $black: #2E2E2E;
     margin: 10px 20px;
     background-color: white;
     border-radius: $borderRadius;
+    // box-shadow: rgba(0, 0, 0, 0.10) 0px 2px 4px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 4px;
     font-family: $paragraphFontKR;
 
     div:first-child {
-        height: $cardWidth;
+        height: 150px;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        border-bottom: 1px dotted #b7b7b7;
 
         img {
             width: 130px;
@@ -81,9 +132,9 @@ $black: #2E2E2E;
     }
 
     div:last-child {
+        margin-top: 2px;
         background-color: #F1ECE7;
         flex-grow: 1;
-        border-top: 1px solid #b7b7b7;
         border-radius: 0 0 $borderRadius $borderRadius;
     }
 
@@ -108,7 +159,17 @@ $black: #2E2E2E;
 @media (min-width: 481px) and (max-width: 1000px) {
     $factor: 0.85;
 
+    .invisiCard {
+        height: unset!important;
+        width: unset!important;
+        margin: unset!important;
+        padding: unset!important;
+        display: block!important;
+    }
+
     .menuContainer > div:first-child {
+        padding: 10px;
+
         h1 {
             font-size: 20px;
         }
@@ -126,7 +187,7 @@ $black: #2E2E2E;
     }
 
     .hidden {
-        display: none;
+        display: none!important;
     }
 
     .menuContainer {
@@ -169,11 +230,45 @@ $black: #2E2E2E;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    $factor: 0.85;
+    $factor: 0.9;
+    $cardHeight: 230px;
+    $cardWidth: 150px;
+
+    .spacing {
+        height: unset;
+    }
+
+    .invisiCard {
+        height: unset!important;
+        width: unset!important;
+        margin: unset!important;
+        padding: unset!important;
+        display: block!important;
+    }
+
+    .shortcut {
+        height: 70px;
+        padding: 5px 0px;
+    
+        a {
+            font-size: 11px;
+            padding: 5px 8px;
+        }
+    }
 
     .menuContainer > div:first-child {
+        padding: 0px;
+
         h1 {
             font-size: 20px;
+
+            &::before {
+                content: '';
+                display: block;
+                height: 400px;
+                margin-top: -230px;
+                visibility: hidden;
+            }
         }
     
         p {
@@ -189,7 +284,7 @@ $black: #2E2E2E;
     }
 
     .hidden {
-        display: none;
+        display: none!important;
     }
 
     .menuContainer {
@@ -198,6 +293,7 @@ $black: #2E2E2E;
 
     .cardList {
         padding: 20px 0;
+        width: unset;
     }
 
     .card {

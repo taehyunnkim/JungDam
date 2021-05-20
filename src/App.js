@@ -9,8 +9,24 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import React, {useState, useEffect} from 'react';
 
 function App() {
+  const [showNav, setNav] = useState("hideNav");
+  const [page, setPage] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if(window.pageYOffset > 60) {
+        if(showNav !== "") setNav("revealNav");
+      } else if(window.pageYOffset <= 60) {
+        setNav("");
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+  }, [setNav, showNav]);
+  
   return (
     <BrowserRouter>
       <div className="masterContainer">
@@ -19,16 +35,16 @@ function App() {
           <div className="bgLine middleLine"></div>
           <div className="bgLine rightLine"></div>
         </div>
-        <Nav />
+        <Nav showNav={showNav} page={page} />
         <Switch>
           <Route path="/menu">
-            <Menu />
+            <Menu setPage={setPage} />
           </Route>
           <Route path="/gallery">
-            <Gallery />
+            <Gallery setPage={setPage} />
           </Route>
           <Route exact path="/">
-            <Landing />
+            <Landing setPage={setPage} />
           </Route>
         </Switch>
         <Footer />

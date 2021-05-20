@@ -1,6 +1,6 @@
 import Card from './Card';
 
-function CardList({items, title, description}) {
+function CardList({id, items, title, description}) {
     let cards = [];
     items.forEach(item => {
         cards.push(<Card item={item} key={Math.random(100000)} />)
@@ -9,7 +9,7 @@ function CardList({items, title, description}) {
     let numHidden = items.length % 4 !== 0 ? 4 - (items.length % 4) : items.length % 4;
     let ele = [];
     for(let i = 0; i < numHidden; i++) {
-        ele.push(<div className="card hidden" key={Math.random(100000)}></div>);
+        ele.push(<div className="card hidden invisiCard" key={Math.random(100000)}></div>);
     }
 
     let descriptions = [];
@@ -21,7 +21,7 @@ function CardList({items, title, description}) {
 
 
     return(
-        <div className="menuContainer">
+        <div id={id} className="menuContainer">
             <div>
                 <h1>{title}</h1>
                 {descriptions}
