@@ -15,8 +15,7 @@ function Nav({showNav, page}) {
                 </ul>
             </div>
 
-            { page === "menu" ? 
-                <div className="shortcut">
+            <div className={"shortcut " + (page === "menu" ? "revealShortcut" : "")}>
                 <a href="#premium">명품</a>
                 <a href="#special">스페셜</a>
                 <a href="#alchan">알찬</a>
@@ -29,8 +28,7 @@ function Nav({showNav, page}) {
                 <a href="#kids">어린이</a>
                 <a href="#hike">등산</a>
                 <a href="#snacks">간식</a>
-            </div> : null
-            }
+            </div>
         </nav>
     );
 }

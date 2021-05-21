@@ -12,6 +12,7 @@ $textshadow: rgba(0, 0, 0, 0.35) 0px 1px 2px;
 $borderRadius: 8px;
 
 html{scroll-behavior:smooth}
+.brown{color:$primaryColor}
 
 body {
   margin: 0;
@@ -253,6 +254,17 @@ p {
   transform:translate(50%,-50%)
 }
 
+#bottom-circle-two {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: -70px;
+  bottom: -350px;
+  z-index: 50;
+  background-color: #F1ECE7;
+  transform:translate(50%,-50%)
+}
+
 #bottom-circle {
   position: absolute;
   width: 400px;
@@ -347,7 +359,7 @@ p {
   cursor: pointer;
   margin: 25px 0 0 0;
   font-family: $paragraphFontKR;
-  transition: box-shadow 200ms cubic-bezier(.17,.67,.83,.67), transform 1000ms 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 100ms cubic-bezier(.17,.67,.83,.67), transform 500ms 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     box-shadow: $boxshadowHover;
@@ -365,8 +377,8 @@ p {
 
 //************************** NAVIGATION **************************
 .revealNav {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;;
   background-color: rgba( 255, 255, 255, 1);
+  border-bottom: 1px solid #d1d1d1;
 
   & > div:first-child {
     height: 100px;
@@ -680,6 +692,13 @@ $paddedWidth: 450px;
     width: 250px;
     height: 250px;
   }
+
+  #bottom-circle-two {
+    width: 150px;
+    height: 150px;
+    left: 0px;
+    bottom: -170px;
+  }
   
   #bottom-circle {
     width: 200px;
@@ -987,6 +1006,13 @@ $paddedWidth: 450px;
     width: 250px;
     height: 250px;
   }
+
+  #bottom-circle-two {
+    width: 150px;
+    height: 150px;
+    left: 0px;
+    bottom: -170px;
+  }
   
   #bottom-circle {
     width: 200px;
@@ -1062,7 +1088,7 @@ $paddedWidth: 450px;
 
   //************************** NAVIGATION **************************
   .revealNav > div:first-child {
-    height: 80px;
+    height: 60px;
   }
 
   nav > div {

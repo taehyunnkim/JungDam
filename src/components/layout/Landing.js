@@ -46,6 +46,7 @@ function Landing({ setPage }) {
             </div>
             <div id="menu-introduction">
                 <div id="top-circle" className="circle"></div>
+                <div id="bottom-circle-two" className="circle"></div>
                 <div id="bottom-circle" className="circle"></div>
                 <article>
                     <div>
@@ -67,11 +68,11 @@ function Landing({ setPage }) {
                             </div>
                             <div>
                                 <p>
-                                    바쁜 하루에 밥이라도 제대로 먹었으면 하는 <span>엄마의 마음</span> <br />
-                                    뜨끈한 국물로 마음속의 추위까지 녹였으면 하는 <span>정담도시락의 마음</span>                            
+                                    바쁜 하루에 밥이라도 제대로 먹었으면 하는 <span className="brown">엄마의 마음</span> <br />
+                                    뜨끈한 국물로 마음속의 추위까지 녹였으면 하는 <span className="brown">정담도시락의 마음</span>                            
                                 </p>
                                 <p>
-                                    그마음을 한 그릇에 담아 <span>따듯한 도시락</span>으로 <br />
+                                    그마음을 한 그릇에 담아 <span className="brown">따듯한 도시락</span>으로 <br />
                                     고객님을 찾아갑니다.
                                 </p>
                             </div>

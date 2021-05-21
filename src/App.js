@@ -17,9 +17,9 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if(window.pageYOffset > 60) {
+      if(window.pageYOffset > 40) {
         if(showNav !== "") setNav("revealNav");
-      } else if(window.pageYOffset <= 60) {
+      } else if(window.pageYOffset <= 40) {
         setNav("");
       }
     }
