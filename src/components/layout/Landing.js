@@ -5,12 +5,9 @@ import flower1 from '../../images/flowers/flower1.png';
 import flower2 from '../../images/flowers/flower2.png';
 import flower3 from '../../images/flowers/flower3.png';
 import flower4 from '../../images/flowers/flower4.png';
-import premium from '../../images/items/i1-1.png';
-import silsok from '../../images/items/i4-1.png';
-import special from '../../images/items/i2-1.png';
-// import premium from '../../images/premium.png';
-// import event from '../../images/event.png';
-// import special from '../../images/special.png';
+import premium from '../../images/premium_2.png';
+import event from '../../images/event_2.png';
+import special from '../../images/special_2.png';
 import Button from '../Button';
 import TeleButton from '../TeleButton';
 
@@ -58,8 +55,8 @@ function Landing({ setPage }) {
                                 <h1>명품 메뉴</h1>
                             </div>
                             <div>
-                                <img src={silsok} alt="event" />
-                                <h1>실속 메뉴</h1>
+                                <img src={event} alt="event" />
+                                <h1>행사 메뉴</h1>
                             </div>
                             <div>
                                 <img src={special} alt="special" />
@@ -76,8 +73,8 @@ function Landing({ setPage }) {
                     </div>
                     <div>
                         <div className="menuCard">
-                            <img src={silsok} alt="event" />
-                            <h1>실속 메뉴</h1>
+                            <img src={event} alt="event" />
+                            <h1>행사 메뉴</h1>
                         </div>
                     </div>
                     <div>
