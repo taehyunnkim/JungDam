@@ -6,8 +6,8 @@ $dashColor: #D8D7D7;
 $headerFont: "Fredericka the Great", "Serif";
 $paragraphFontKR: "Nanum Gothic Coding", "Arial";
 $paragraphFont: "Raleway", "Arial";
-$boxshadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
-$boxshadowHover: rgba(0, 0, 0, 0.35) 0px 0px 0px;
+$boxshadow: rgba(0, 0, 0, 0.18) -3px 3px 0px;
+$boxshadowHover: rgba(0, 0, 0, 0.2) 0px 0px 0px;
 $textshadow: rgba(0, 0, 0, 0.35) 0px 1px 2px;
 $borderRadius: 8px;
 
@@ -49,6 +49,7 @@ hr {
     color: $black;
     background: -webkit-linear-gradient(#8C4219, #BA9782);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -146,23 +147,82 @@ p {
   }
 }
 
+#menu-wrapper {
+  height: 550px;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+
+  .menuCards {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 200px;
+    width: 1000px;
+    z-index: 10000;
+    margin: 320px auto 0 auto;
+
+    & > div {
+      display: inline-block;
+      width: 250px;
+      height: 100%;
+    }
+
+    .menuCard {
+      height: 180px;
+      width: 165px;
+      padding: 2px;
+      border: 1px solid #d3d3d3;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: $borderRadius;
+      box-shadow: $boxshadow;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      font-family: $paragraphFontKR;
+
+      img {
+        width: 130px;
+        border-radius: $borderRadius;
+      }
+
+      h1 {
+        font-size: 13px;
+        color: $primaryColor;
+        margin: 0 0 5px 0;
+      }
+    }
+
+    & > div:nth-child(1) > div {
+      visibility: hidden;
+    }
+  }
+}
+
 #menu-introduction {
   position: relative;
-  height: 600px;
+  height: 450px;
   width: 100%;
   margin-top: -10px;
   background-color: #F1F1F1;
   overflow: hidden;
   border-radius: 0px;
+  border-top: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
 
   .circle {
-    border-radius: 100%
+    // border-radius: 100%;
+    border-radius: $borderRadius;
+    border: 1px solid #d1d1d1;
   }
 
   article {
     width: 940px;
-    height: 550px;
-    margin: 70px auto;
+    height: 400px;
+    margin: 40px auto;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -194,7 +254,7 @@ p {
         }
 
         div:first-child {
-          margin-right: 15px;
+          margin-right: 35px;
         }
 
         p {
@@ -246,8 +306,8 @@ p {
 
 #top-circle {
   position: absolute;
-  width: 550px;
-  height: 550px;
+  width: 400px;
+  height: 300px;
   right: 50px;
   top: 25px;
   background-color: #F1ECE7;
@@ -256,23 +316,33 @@ p {
 
 #bottom-circle-two {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  left: -70px;
-  bottom: -350px;
+  width: 200px;
+  height: 100px;
+  left: -20px;
+  bottom: -12px;
   z-index: 50;
   background-color: #F1ECE7;
-  transform:translate(50%,-50%)
+  transform: translate(50%, -50%);
+  //border-top-left-radius: 400px;
+  //border-top-right-radius: 400px;
+  border-radius: $borderRadius;
+  border: 1px solid #d1d1d1;
+  // box-shadow: rgba(0, 0, 0, 0.18) -3px 0px 0px;
 }
 
 #bottom-circle {
+  z-index: 30;
   position: absolute;
-  width: 400px;
-  height: 400px;
-  left: 50px;
-  bottom: 0;
+  width: 230px;
+  height: 150px;
+  left: 70px;
+  bottom: 115px;
   background-color: #BA9782;
-  transform:translate(-50%,50%)
+  transform: translate(-50%, 50%);
+  // border-top-left-radius: 400px;
+  // border-top-right-radius: 400px;
+  border-radius: $borderRadius;
+  border: 1px solid #d1d1d1;
 }
 
 #gallery-introduction {
@@ -390,7 +460,7 @@ nav {
   width: 100%;
   top: 0;
   background-color: rgba( 255, 255, 255, 0);
-  z-index: 1000;
+  z-index: 100000;
   transition: all 200ms cubic-bezier(0.56, 0.01, 0.5, 0.99);
 
   & > div {
@@ -434,7 +504,7 @@ nav {
       
       &:hover {
         opacity: 1;
-        background:rgb(245, 245, 245);
+        background:#eeeeee;
       }
     }
   
@@ -445,7 +515,7 @@ nav {
 }
 
 .active {
-  background:rgb(245, 245, 245);
+  background: #eeeeee;
   opacity: 1;
 }
 
@@ -460,6 +530,7 @@ footer {
   width: 100%;
   background-color: $secondaryColor;
   z-index: 300;
+  border-top: 1px solid #d1d1d1;
 }
 
 .footer {
@@ -616,8 +687,57 @@ $paddedWidth: 450px;
     }
   }
 
+  #menu-wrapper {
+    height: 550px;
+  
+    .menuCards {
+      height: 200px;
+      width: 450px;
+      margin: 400px auto 0 auto;
+  
+      & > div {
+        width: 150px;
+      }
+  
+      .menuCard {
+        height: 150px;
+        width: 130px;
+        padding: 2px;
+        position: relative;
+  
+        img {
+          width: 100px;
+          border-radius: $borderRadius;
+        }
+  
+        h1 {
+          font-size: 15px;
+          color: $primaryColor;
+          margin: 0 0 5px 0;
+        }
+      }
+  
+      & > div:nth-child(1) {
+        visibility: hidden;
+        display: none;
+      }
+
+      & > div:nth-child(2) > div {
+        display: flex;
+      }
+
+      & > div:nth-child(3) > div {
+        display: flex;
+      }
+
+      & > div:nth-child(4) > div {
+        display: flex;
+      }
+    }
+  }
+
   #menu-introduction {
-    height: 600px;
+    height: 450px;
     width: 100%;
     margin-top: -10px;
     z-index: 100;
@@ -695,14 +815,17 @@ $paddedWidth: 450px;
 
   #bottom-circle-two {
     width: 150px;
-    height: 150px;
+    height: 100px;
     left: 0px;
-    bottom: -170px;
+    bottom: -47px;
+    z-index: 1000;
   }
   
   #bottom-circle {
     width: 200px;
-    height: 200px;
+    height: 150px;
+    z-index: 500;
+    bottom: 80px;
   }
 
   #gallery-introduction {
@@ -926,8 +1049,90 @@ $paddedWidth: 450px;
     }
   }
 
+  #menu-wrapper {
+    height: 550px;
+  
+    .menuCards {
+      height: 200px;
+      width: 320px;
+      margin: 370px auto 0 auto;
+  
+      & > div:first-child {
+        display: block;
+        width: 155px;
+        padding: 3px;
+        margin-left: auto;
+
+        & > div > div {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          animation-name: fade;
+          animation-iteration-count: infinite;
+          animation-duration: 12s;
+        }
+
+        & > div > div:nth-child(2) {
+          animation-delay: -4s;
+        }
+
+        & > div > div:nth-child(3) {
+          animation-delay: -8s;
+        }
+
+        @keyframes fade {
+          0% {opacity: 0;}
+          20% {opacity: 1;}
+          33% {opacity: 1;}
+          53% {opacity: 0;}
+          100% {opacity: 0;}
+        }
+      }
+  
+      .menuCard {
+        height: 150px;
+        width: 130px;
+        padding: 2px;
+        position: relative;
+  
+        img {
+          width: 100px;
+          border-radius: $borderRadius;
+        }
+  
+        h1 {
+          font-size: 15px;
+          color: $primaryColor;
+          margin: 0 0 5px 0;
+        }
+      }
+  
+      & > div:nth-child(1) > div {
+        visibility: visible;
+      }
+
+      & > div:nth-child(2) > div {
+        display: none;
+      }
+
+      & > div:nth-child(3) > div {
+        display: none;
+      }
+
+      & > div:nth-child(4) > div {
+        display: none;
+      }
+    }
+  }
+
   #menu-introduction {
-    height: 760px;
+    height: 490px;
     width: 100%;
     margin-top: -10px;
     z-index: 100;
@@ -935,8 +1140,7 @@ $paddedWidth: 450px;
     article {
       width: 320px;
       height: 100%;
-      margin: 1px auto;
-      justify-content: center;
+      margin: 50px auto;
   
       & > div {
         width: 100%;
@@ -946,7 +1150,7 @@ $paddedWidth: 450px;
         height: unset;
 
         h2 {
-          font-size: 20px;
+          font-size: 18px;
         }
   
         & > div {
@@ -954,6 +1158,10 @@ $paddedWidth: 450px;
           
           div {
             flex-direction: column;
+          }
+
+          div:last-child {
+            margin-top: 10px;
           }
 
           p {
@@ -1003,20 +1211,26 @@ $paddedWidth: 450px;
   }
   
   #top-circle {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 50px;
+    right: 30px;
+    top: 20px;
   }
 
   #bottom-circle-two {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 60px;
     left: 0px;
-    bottom: -170px;
+    z-index: 2000;
+    bottom: -12px;
   }
   
   #bottom-circle {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 100px;
+    z-index: 1000;
+    left: 30px;
+    bottom: 70px;
   }
 
   #gallery-introduction {
@@ -1035,7 +1249,7 @@ $paddedWidth: 450px;
       position: relative;
   
       & > div {
-        border-radius: 15px;
+        border-radius: 8px;
       }
     }
   
@@ -1044,7 +1258,7 @@ $paddedWidth: 450px;
       width: 100%;
 
       h2 {
-        font-size: 20px;
+        font-size: 18px;
       }
 
       p {

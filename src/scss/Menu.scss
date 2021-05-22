@@ -47,7 +47,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         }
 
         &:hover {
-            background:rgb(245, 245, 245);
+            background:#eeeeee;
         }
     }
 }
@@ -81,9 +81,6 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         border-bottom: 3px solid #c1a89a;
         border-radius: 15px;
     }
-}
-
-.menuContainer {
 }
 
 .invisiCard {
@@ -135,6 +132,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
         img {
             width: 130px;
+            border-radius: $borderRadius;
         }
     }
 
