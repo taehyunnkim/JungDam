@@ -28,7 +28,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     background-color: white;
     opacity: 0;
     left: 0;
-    border-top: 1px dotted #f1f1f1;
+    border-top: 1px dotted #d1d1d1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,6 +163,11 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
 @media (min-width: 481px) and (max-width: 1000px) {
     $factor: 0.85;
+    .revealShortcut {
+        height: 70px!important;
+        opacity: 1!important;
+        padding: 5px 0px;
+    }
 
     .invisiCard {
         height: unset!important;

@@ -1189,7 +1189,7 @@ $paddedWidth: 450px;
           }
 
           p {
-            font-size: 8px;
+            font-size: 10px;
             width: 100%;
             margin: 3px 0px;
             line-height: 18px;
@@ -1383,6 +1383,8 @@ $paddedWidth: 450px;
   //************************** FOOTER **************************
   footer {
     .footer {
+      box-sizing: border-box;
+      padding: 5px 5px;
       & > div {
         margin: 10px 0 10px 0;
 
@@ -1407,7 +1409,7 @@ $paddedWidth: 450px;
       }
       
       li { 
-        font-size: 8px;
+        font-size: 10px;
         margin: 0;
       }
     }

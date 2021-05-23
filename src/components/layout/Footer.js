@@ -7,7 +7,7 @@ function Footer() {
             <div className="container">
                 <div className="footer">
                     <ul>
-                        <li>사업자등록번호 617-81-93155</li>
+                        <li>사업자등록번호 617-81-93155</li><br />
                         <li>부산광역시 해운대구 해운대로 161번길 31, 1층</li> <br />
                         <li>대표이사: 김성일</li><br />
                         <li>Fax. 051-782-0779</li> 
