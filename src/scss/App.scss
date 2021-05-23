@@ -1,11 +1,12 @@
 $primaryColor: #8C4219;
-$secondaryColor: #F1ECE7;
-$tertiaryColor: #7C9D68;
+$secondaryColor: #f1f1f1;
+$tertiaryColor: #bbac61;
+$quaternaryColor: #e08e35;
 $black: #2E2E2E;
 $dashColor: #D8D7D7;
 $headerFont: "Fredericka the Great", "Serif";
 $paragraphFontKR: "Nanum Gothic Coding", "Arial";
-$paragraphFont: "Raleway", "Arial";
+$paragraphFont: "Koho", "Arial";
 $boxshadow: rgba(0, 0, 0, 0.18) -3px 3px 0px;
 $boxshadowHover: rgba(0, 0, 0, 0.2) 0px 0px 0px;
 $textshadow: rgba(0, 0, 0, 0.35) 0px 1px 2px;
@@ -13,6 +14,7 @@ $borderRadius: 8px;
 
 html{scroll-behavior:smooth}
 .brown{color:$primaryColor}
+.green{color:$tertiaryColor!important}
 
 body {
   margin: 0;
@@ -21,6 +23,7 @@ body {
 }
 
 span {
+  font-weight: bold;
   color: $tertiaryColor;
 }
 
@@ -81,6 +84,7 @@ p {
 .smHeader {
     font-family: $paragraphFont;
     font-size: 12px;
+    font-weight: 600;
     margin-left: 4px;
     color: $primaryColor;
     margin: 0;
@@ -113,6 +117,11 @@ p {
     color: #8e8e8e;
     font-weight: bold;
     font-size: 12px;
+  }
+
+  p {
+    font-size: 17px;
+    color: $black;
   }
 }
 
@@ -207,7 +216,7 @@ p {
   height: 450px;
   width: 100%;
   margin-top: -10px;
-  background-color: #F1F1F1;
+  background-color: $secondaryColor;
   overflow: hidden;
   border-radius: 0px;
   border-top: 1px solid #d1d1d1;
@@ -307,7 +316,7 @@ p {
 #top-circle {
   position: absolute;
   width: 400px;
-  height: 300px;
+  height: 200px;
   right: 50px;
   top: 25px;
   background-color: #F1ECE7;
@@ -434,10 +443,14 @@ p {
   &:hover {
     box-shadow: $boxshadowHover;
   }
+
+  &:active {
+    box-shadow: $boxshadowHover;
+  }
 }
 
 .primary {
-  background: #8C4219;
+  background: $tertiaryColor;
 
 }
 
@@ -445,6 +458,13 @@ p {
   background: $black;
 }
 
+.tertiary {
+  background: $primaryColor;
+}
+
+.quaternary {
+  background: $quaternaryColor;
+}
 //************************** NAVIGATION **************************
 .revealNav {
   background-color: rgba( 255, 255, 255, 1);
@@ -487,7 +507,7 @@ nav {
   li { 
     display: inline-block; 
     margin: 0 10px;
-    font-weight: normal;
+    font-weight: 500;
     font-family: $paragraphFont;
     font-size: 14px;
     cursor: pointer;
@@ -495,15 +515,14 @@ nav {
 
     a {
       text-decoration: none;    
-      color: black;
+      color: $quaternaryColor;
       padding: 10px 27px; 
       border-radius: $borderRadius;
       transition-timing-function: cubic-bezier(.17,.67,.83,.67);
       transition-duration: 150ms;
-      opacity: 0.6;
+      opacity: 1;
       
       &:hover {
-        opacity: 1;
         background:#eeeeee;
       }
     }
@@ -528,7 +547,7 @@ nav {
 footer {
   position: relative;
   width: 100%;
-  background-color: $secondaryColor;
+  background-color: #F1ECE7;
   z-index: 300;
   border-top: 1px solid #d1d1d1;
 }
@@ -1026,6 +1045,11 @@ $paddedWidth: 450px;
     h2{
       font-size: 10px;
     }
+
+    p {
+      font-size: 12px;
+      color: #383838;
+    }
   }
 
   #landing-image {
@@ -1055,7 +1079,7 @@ $paddedWidth: 450px;
     .menuCards {
       height: 200px;
       width: 320px;
-      margin: 370px auto 0 auto;
+      margin: 380px auto 0 auto;
   
       & > div:first-child {
         display: block;
@@ -1096,18 +1120,18 @@ $paddedWidth: 450px;
       }
   
       .menuCard {
-        height: 150px;
+        height: 145px;
         width: 130px;
         padding: 2px;
         position: relative;
   
         img {
-          width: 100px;
+          width: 110px;
           border-radius: $borderRadius;
         }
   
         h1 {
-          font-size: 15px;
+          font-size: 11px;
           color: $primaryColor;
           margin: 0 0 5px 0;
         }
@@ -1322,9 +1346,8 @@ $paddedWidth: 450px;
 
       a {
         text-decoration: none;    
-        font-size: 10px;
-        color: black;
-        padding: 5px 8px; 
+        font-size: 11px;
+        padding: 6px 10px; 
         border-radius: 5px;
             
         &:hover {
