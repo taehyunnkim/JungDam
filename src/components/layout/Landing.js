@@ -52,7 +52,7 @@ function Landing({ setPage }) {
                         params={{
                             "particles": {
                                 "number": {
-                                    "value": 11,
+                                    "value": 7,
                                     "density": {
                                         "enable": false
                                     }

@@ -164,7 +164,7 @@ p {
     position: absolute;
     top: 0px;
     right: 0px;
-    bottom: -2px;
+    bottom: -4px;
     left: 0px;
     background: url("../images/middle_house.png");
     background-position: center;
@@ -1027,7 +1027,7 @@ $paddedWidth: 450px;
   $maxWidth: 320px;
 
   .first {
-    margin-top: 100px!important;
+    margin-top: 140px!important;
   }
 
   .leftLine {
@@ -1088,7 +1088,7 @@ $paddedWidth: 450px;
   //************************** LANDING **************************
   #landing {
     width: 100%;
-    height: 500px;
+    height: 450px;
     margin: 0 auto;
   }
   
