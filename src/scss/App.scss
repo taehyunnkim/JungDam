@@ -271,6 +271,7 @@ p {
   border-top: 1px solid #d1d1d1;
   border-bottom: 1px solid #d1d1d1;
   background-color: $tertiaryColor;
+  box-shadow: inset 0px 5px 10px #e2e2e2;
 
   & > div:first-child {
     display: flex;
@@ -1044,6 +1045,10 @@ $paddedWidth: 450px;
     width: 320px;
   }
 
+  .secondaryButton { 
+    font-size: 12px!important;
+  }
+
   #patterns {
     width: $maxWidth;
     position: absolute;
@@ -1062,8 +1067,8 @@ $paddedWidth: 450px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    border-left: 1px dashed $dashColor;
-    border-right: 1px dashed $dashColor;
+    border-left: 1px solid $dashColor;
+    border-right: 1px solid $dashColor;
     min-width: 320px;
     max-width: 90vw;
     height: 100%;
