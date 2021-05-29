@@ -20,7 +20,14 @@ html{scroll-behavior:smooth}
 
 .primary {
   background: $primaryColor
+}
 
+.order {
+  font-family: $paragraphFont;
+  font-size: 12px!important;
+  font-weight: bold;
+  color: #4e4e4e!important;
+  margin: 0;
 }
 
 .secondary {

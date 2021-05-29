@@ -41,11 +41,12 @@ function Landing({ setPage }) {
             </div>
             <div id="landing" className="first">
                 <div id="introduction" className={fade + " container"}>
-                    <h1 className="introHeader">NATURAL <br /> AND SINCERE</h1>
+                    <h1 className="introHeader">NATURAL & SINCERE</h1>
                     <p>행복을 담은 도시락, 정성을 담은 도시락으로</p>
                     <p>건강과 행복을 드리겠습니다</p>
                     <Button text="메뉴보기" type="primary" slide={slide} path='menu' />
                     <TeleButton text="전화주문" type="secondary" slide={slide} />
+                    <p className="order">ORDER 051-782-3630</p>
                 </div>
                 <div id="houses" className={fade}>
                     {/* <img id="house-image" src={houses} alt="houses" /> */}

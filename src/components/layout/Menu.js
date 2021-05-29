@@ -32,7 +32,7 @@ function Menu({setPage}) {
                 <CardList id="silsok" items={silsok} title="실속메뉴" />
                 <CardList id="japanese" items={japanese} title="일품메뉴" />
                 <CardList id="event" items={event} title="행사메뉴" />
-                <CardList id="lunch" items={lunch} title="정기식단메뉴" description={["주, 월별 계약 5개 이상", "주, 월단위 식단표에 의해반찬구성이 매일 변경되어 제공됨"]} />
+                <CardList id="lunch" items={lunch} title="정기식단메뉴" description={["주, 월별 계약 5개 이상", "주, 월단위 식단표에 의해 반찬구성이 매일 변경되어 제공됨"]} />
                 <CardList id="western" items={western} title="맞춤양식메뉴" />
                 <CardList id="korean" items={korean} title="맞춤한식메뉴" />
                 <CardList id="kids" items={kid} title="어린이메뉴" />
