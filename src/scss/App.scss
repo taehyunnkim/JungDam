@@ -1041,6 +1041,10 @@ $paddedWidth: 450px;
     visibility: hidden;
   }
 
+  .landingMidLine {
+    height: 100%;
+  }
+
   .container {
     width: 320px;
   }
@@ -1066,12 +1070,13 @@ $paddedWidth: 450px;
     position: absolute;
     left: 0;
     right: 0;
+    bottom: 0;
     margin: 0 auto;
     border-left: 1px solid $dashColor;
     border-right: 1px solid $dashColor;
     min-width: 320px;
     max-width: 90vw;
-    height: 100%;
+    height: 78%;
     z-index: 100;
   }
 
