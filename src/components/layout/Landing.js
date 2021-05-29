@@ -28,6 +28,7 @@ function Landing({ setPage }) {
         setFade('visible');
         setSlide('ogPos');
         setPage("home");
+        window.scrollTo(0, 0);
     },[setFade, setPage]);
 
     return(

@@ -19,6 +19,7 @@ import { useEffect } from 'react';
 function Gallery({setPage}) {
     useEffect(() => {
         setPage("gallery");
+        window.scrollTo(0, 0);
     }, [setPage]);
 
     return(

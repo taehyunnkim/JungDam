@@ -17,6 +17,7 @@ import { useEffect } from 'react';
 function Menu({setPage}) {
     useEffect(() => {
         setPage("menu");
+        window.scrollTo(0, 0);
     }, [setPage]);
 
     return(
