@@ -22,6 +22,10 @@ html{scroll-behavior:smooth}
   background: $primaryColor
 }
 
+.full {
+  height: 100%!important;
+}
+
 .order {
   font-family: $paragraphFont;
   font-size: 12px!important;
@@ -1263,7 +1267,7 @@ $paddedWidth: 450px;
 
   #gallery-introduction {
     width: $maxWidth;
-    padding: 5px;
+    padding: 5px 2px;
     box-sizing: border-box;
     margin: 90px auto 100px auto;
     display: flex;

@@ -30,11 +30,20 @@ function App() {
   return (
     <BrowserRouter>
       <div className="masterContainer">
-        <div id="lines">
-          {page !== "home" ? <div><div className="bgLine leftLine"></div>
-            <div className="bgLine middleLine"></div>
-          <div className="bgLine rightLine"></div></div> : <div className="bgLine landingMidLine middleLine"></div>}
+      {page !== "home" ? 
+        <div id="lines" className="full">
+          <div className="bgLine leftLine"></div>
+          <div className="bgLine middleLine"></div>
+          <div className="bgLine rightLine"></div>
         </div>
+          : 
+        <div id="lines">
+          <div className="bgLine leftLine"></div>
+          <div className="bgLine middleLine"></div>
+          <div className="bgLine rightLine"></div>
+        </div>
+        }
+
         <Nav showNav={showNav} page={page} />
         <Switch>
           <Route path="/menu">
