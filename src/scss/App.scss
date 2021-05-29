@@ -1,30 +1,42 @@
-$primaryColor: #8c4219;
-$secondaryColor: #f1f1f1;
-$tertiaryColor: #5D7334;
+$primaryColor: #FF833E;
+$secondaryColor: #FFCA3E;
+$tertiaryColor: #F6F8FA;
 $quaternaryColor: #F48220;
-$black: #2E2E2E;
-$dashColor: #D8D7D7;
-$headerFont: "Fredericka the Great", "Serif";
+$black: #24292E;
+$dashColor: #CCCCCC;
+$headerFont: "Pompiere", "Arial";
 $paragraphFontKR: "Nanum Gothic Coding", "Arial";
-$paragraphFont: "Koho", "Arial";
+$paragraphFont: "Quicksand", "Arial";
 $boxshadow: rgba(0, 0, 0, 0.18) -3px 3px 0px;
 $boxshadowHover: rgba(0, 0, 0, 0.2) 0px 0px 0px;
 $textshadow: rgba(0, 0, 0, 0.35) 0px 1px 2px;
 $borderRadius: 8px;
 
+$maxWidth: 1000px;
+
 html{scroll-behavior:smooth}
 .brown{color:$primaryColor}
 .green{color:$tertiaryColor!important}
+
+.primary {
+  background: $primaryColor
+
+}
+
+.secondary {
+  background: $black;
+}
 
 body {
   margin: 0;
   padding: 0;
   position: relative;
+  overflow-x: hidden;
 }
 
 span {
   font-weight: bold;
-  color: $tertiaryColor;
+  color: $primaryColor;
 }
 
 .masterContainer {
@@ -33,32 +45,36 @@ span {
     right: 0;
 }
 
+#patterns {
+  width: $maxWidth;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 hr {
   border-top: 1px solid #888888;
   width: 100%;
 }
 
 .first {
-  margin-top: 170px!important;
+  margin-top: 150px!important;
 }
 
 .introHeader {
     font-family: $headerFont;
     margin: 0;
     line-height: 105%;
-    font-size: 64px;
+    font-size: 60px;
     margin-bottom: 20px;
     font-weight: normal;
-    color: $black;
-    background: -webkit-linear-gradient(#8C4219, #BA9782);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $secondaryColor;
 }
 
 .container {
   position: relative;
-  width: 1000px;
+  width: $maxWidth;
   height: 100%;
   margin: 0 auto;
 }
@@ -74,26 +90,17 @@ p {
   left: 0;
   right: 0;
   margin: 0 auto;
-  border-left: 1px dashed $dashColor;
-  border-right: 1px dashed $dashColor;
+  border-left: 1px solid $dashColor;
+  border-right: 1px solid $dashColor;
   width: 1000px;
   height: 100%;
   z-index: 100;
 }
 
-.smHeader {
-    font-family: $paragraphFont;
-    font-size: 12px;
-    font-weight: 600;
-    margin-left: 4px;
-    color: $primaryColor;
-    margin: 0;
-}
-
 //************************** LANDING **************************
 #landing {
-  width: 940px;
-  height: 570px;
+  width: 100%;
+  height: 600px;
   margin: 10px auto 0 auto;
   display: flex;
   justify-content: space-between;
@@ -106,9 +113,10 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 1000ms;
   transition-delay: 500ms;
+  text-align: center;
   
   .button {
-    margin-right: 20px;
+    margin: 20px 15px;
   }
 
   h2 {
@@ -135,296 +143,317 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.3, 1);
   transition-duration: 1000ms;
   transition-delay: 800ms;
-
-  img {
-    width: 500px;
-    margin-left: -60px;
-  }
 }
 
 #filler {
-  height: 200px;
+  height: 50px;
 }
 
-#flowers {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 100px;
+#houses {
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid $dashColor;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 300px;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: -2px;
+    left: 0px;
+    background: url("../images/middle_house.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+  }
+}
+
+// Houses
+#house-image {
+  width: 850px;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 100;
+  opacity: 0.3;
   
-  img {
-    z-index: -10;
+
+}
+
+// Bento Image
+#bento-image {
+  position: absolute;
+  width: 450px;
+  bottom: -200px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+#tsparticles {
+  z-index: 10000;
+  position: absolute;
+  bottom: -200px;
+  height: 400px;
+  width: 500px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+#menu-intro {
+  position: relative;
+  z-index: 10000;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  text-align: center;
+
+  & > div:nth-child(1) {
+    flex-grow: 1;
+  }
+
+  & > div:nth-child(2) {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > div:nth-child(3) {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 30px;
+      margin: 0 10px;
+      margin-top: -40px;
+    }
+  }
+}
+
+.introHeading {
+  h1 {
+    font-family: $paragraphFont;
+    font-size: 12px;
+    color: #7D7D7D;
+    margin: 0;
+  }
+
+  h2 {
+    font-family: $paragraphFontKR;
+    font-size: 30px;
+    color: $black;
+    line-height: 45px;
+    margin: 5px 0;
   }
 }
 
 #menu-wrapper {
-  height: 550px;
+  height: 400px;
   width: 100%;
   position: relative;
   z-index: 100;
+  overflow: hidden;
+  border-top: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+  background-color: $tertiaryColor;
 
-  .menuCards {
+  & > div:first-child {
+    display: flex;
+    height: 100%;
+  }
+
+  #flowers-container {
+    display: flex;
+    height: 70px;
     position: absolute;
     left: 0;
     right: 0;
-    height: 200px;
-    width: 1000px;
-    z-index: 10000;
-    margin: 320px auto 0 auto;
-
-    & > div {
-      display: inline-block;
-      width: 250px;
-      height: 100%;
-    }
-    
-    .menuCard {
-      height: 180px;
-      width: 165px;
-      padding: 2px;
-      border: 1px solid #d3d3d3;
-      margin: 0 auto;
-      background-color: white;
-      border-radius: $borderRadius;
-      box-shadow: $boxshadow;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      text-align: center;
-      font-family: $paragraphFontKR;
-
-      img {
-        width: 130px;
-        border-radius: $borderRadius;
-      }
-
-      h1 {
-        font-size: 13px;
-        color: $primaryColor;
-        margin: 0 0 5px 0;
-      }
-    }
-
-    & > div:nth-child(1) > div {
-      visibility: hidden;
-    }
+    bottom: 0;
+    margin: 0 auto;
   }
 }
 
 #menu-introduction {
   position: relative;
-  height: 450px;
-  width: 100%;
-  margin-top: -10px;
-  background-color: $secondaryColor;
-  overflow: hidden;
-  border-radius: 0px;
-  border-top: 1px solid #d1d1d1;
-  border-bottom: 1px solid #d1d1d1;
+  width: 50%;
+  padding: 50px 10px 0 70px;
+  box-sizing: border-box;
 
-  .circle {
-    // border-radius: 100%;
-    border-radius: $borderRadius;
-    border: 1px solid #d1d1d1;
+  p {
+    font-size: 14px;
+    line-height: 20px;
   }
+}
 
-  article {
-    width: 940px;
-    height: 400px;
-    margin: 40px auto;
-    z-index: 10;
+#menuCards {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  z-index: 10000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+  .menuCard {
+    padding: 2px;
+    margin: 0 30px;
+    border: 1px solid #d3d3d3;
+    background-color: white;
+    border-radius: $borderRadius;
+    box-shadow: $boxshadow;
     display: flex;
     flex-direction: column;
-    font-family: $paragraphFontKR;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
 
-    & > div {
-      width: 100%;
-      z-index: 500;
-    }
-
-    & > div:first-child {
-      height: 55%;
-
-      h2 {
-        margin: 10px 0px;
-        font-family: $paragraphFontKR;
-        color: $black;
-        line-height: 140%;
-      }
-
-      & > div {
-        display: flex;
-        width: 90%;
-        flex-wrap: wrap;
-          
-        div {
-          display: flex;
-          flex-direction: column;
-        }
-
-        div:first-child {
-          margin-right: 35px;
-        }
-
-        p {
-          font-size: 12px;
-          margin: 5px 0px;
-          line-height: 18px;
-        }
-      }
-    }
-
-    & > div:last-child {
-      width: 73%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      margin-left: auto;
-      text-align: center;
-
-      h3 {
-        font-weight: bold;
-        font-size: 14px;
-        color: $primaryColor;
-      }
-
-      div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-      }
-
-      div:nth-child(1) {
-        width: 190px;
-        height: 148px;
-      }
-
-      div:nth-child(2) {
-        width: 168px;
-        height: 145px;
-      }
-
-      div:nth-child(3) {
-        width: 173px;
-        height: 153px;
-      }
-    }
-  }
-}
-
-#top-circle {
-  position: absolute;
-  width: 400px;
-  height: 200px;
-  right: 50px;
-  top: 25px;
-  background-color: #F1ECE7;
-  transform:translate(50%,-50%)
-}
-
-#bottom-circle-two {
-  position: absolute;
-  width: 200px;
-  height: 100px;
-  left: -20px;
-  bottom: -12px;
-  z-index: 50;
-  background-color: #F1ECE7;
-  transform: translate(50%, -50%);
-  //border-top-left-radius: 400px;
-  //border-top-right-radius: 400px;
-  border-radius: $borderRadius;
-  border: 1px solid #d1d1d1;
-  // box-shadow: rgba(0, 0, 0, 0.18) -3px 0px 0px;
-}
-
-#bottom-circle {
-  z-index: 30;
-  position: absolute;
-  width: 230px;
-  height: 150px;
-  left: 70px;
-  bottom: 115px;
-  background-color: #BA9782;
-  transform: translate(-50%, 50%);
-  // border-top-left-radius: 400px;
-  // border-top-right-radius: 400px;
-  border-radius: $borderRadius;
-  border: 1px solid #d1d1d1;
-}
-
-#gallery-introduction {
-  height: 470px;
-  width: 940px;
-  margin: 110px auto 40px auto;
-  display: flex;
-  justify-content: space-between;
-
-  & > div {
-    height: 100%;
-    z-index: 100;
-  }
-
-  & > div:first-child {
-    width: 500px;
-    position: relative;
-
-    & > div {
-      position: absolute;
-      box-shadow: $boxshadow;
-      background-size: cover;
-      background-position: center;
+    img {
+      width: 130px;
       border-radius: $borderRadius;
     }
   }
 
-  & > div:last-child {
-    h2 {
-      margin: 10px 0px;
-      font-family: $paragraphFontKR;
-      color: $black;
-      line-height: 140%;
-    }
-    
-    p {
-      font-size: 12px;
-      margin: 7px 0;
-    }
+  .menuCard:nth-child(1) {
+    width: 150px;
+    height: 130px;
+  }
 
-    width: 38%;
+  .menuCard:nth-child(2) {
+    width: 130px;
+    height: 150px;
+    margin-top: -30px;
+    
+    img {
+      transform: rotate(90deg);
+    }
+  }
+
+  .menuCard:nth-child(3) {
+    width: 150px;
+    height: 130px;
+    margin-top: -90px;
+  }
+}
+
+#flowers {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 50px;
+  box-sizing: border-box;
+
+  img {
+    display: inline-block;
+    height: 70px;
+    z-index: -10;
+  }
+
+  img:nth-child(3) {
+    margin-top: 5px;
+  }
+}
+
+#gallery-introduction {
+  width: 850px;
+  margin: 90px auto 100px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  p {
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+  }
+}
+
+#gallery-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  margin: 30px 0;
+
+  & > div {
+    div {
+      border-radius: $borderRadius;
+      margin: 8px;
+      box-shadow: $boxshadow;
+      background-position: center;
+      background-size: cover;
+    }
   }
 }
 
 #gallery1 {
   top: 0;
   left: 0;
-  width: 190px;
-  height: 190px;
+  width: 130px;
+  height: 130px;
   background-image: url("../images/jungdam0.jpg");
 }
 
 #gallery2 {
   top: 0;
   left: 50%;
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   background-image: url("../images/jungdam1.jpg");
 }
 
 #gallery3 {
   top: 230px;
   width: 130px;
-  height: 130px;
-  background-image: url("../images/jungdam2.jpg");
+  height: 268px;
+  background-image: url("../images/gallery/10.jpg");
 }
 
 #gallery4 {
   top: 160px;
   left: 50%;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 130px;
+  background-image: url("../images/gallery/13.jpg");
+}
+
+#gallery5 {
+  top: 160px;
+  left: 50%;
+  width: 180px;
+  height: 130px;
+  background-image: url("../images/gallery/14.jpg");
+}
+
+#gallery6 {
+  top: 160px;
+  left: 50%;
+  width: 130px;
+  height: 130px;
   background-image: url("../images/jungdam3.jpg");
+}
+
+#gallery7 {
+  top: 160px;
+  left: 50%;
+  width: 130px;
+  height: 130px;
+  background-image: url("../images/jungdam5.jpg");
 }
 
 //************************** BUTTON **************************
@@ -449,22 +478,27 @@ p {
   }
 }
 
-.primary {
-  background: $tertiaryColor;
+.secondaryButton {
+  position: relative;
+  font-weight: bold;
+  width: max-content;
+  color: $primaryColor;
+  font-size: 14px!important;
+  margin: 15px 0;
+  text-align: left!important;
+  z-index: 500;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.7;
 
+  &:hover {
+    opacity: 1;
+  }
 }
 
-.secondary {
-  background: $black;
+.secondaryButtonAnchor {
+  text-decoration: none;
 }
 
-.tertiary {
-  background: $primaryColor;
-}
-
-.quaternary {
-  background: $quaternaryColor;
-}
 //************************** NAVIGATION **************************
 .revealNav {
   background-color: rgba( 255, 255, 255, 1);
@@ -515,7 +549,7 @@ nav {
 
     a {
       text-decoration: none;    
-      color: $quaternaryColor;
+      color: $black;
       padding: 10px 27px; 
       border-radius: $borderRadius;
       transition-timing-function: cubic-bezier(.17,.67,.83,.67);
@@ -547,7 +581,7 @@ nav {
 footer {
   position: relative;
   width: 100%;
-  background-color: #F1ECE7;
+  background-color: $tertiaryColor;
   z-index: 300;
   border-top: 1px solid #d1d1d1;
 }
@@ -613,6 +647,11 @@ footer {
   z-index: 50;
 }
 
+.landingMidLine {
+  height: 75%;
+  bottom: 0;
+}
+
 .leftLine {
   left: 25%;
 }
@@ -639,6 +678,7 @@ footer {
 
 //************************** MEDIA QUERIES **************************
 $width: 480px;
+$maxWidth: 480px;
 $paddedWidth: 450px;
 
 @media (min-width: 481px) and (max-width: 1000px) {
@@ -648,19 +688,47 @@ $paddedWidth: 450px;
     width: $width;
   }
   
+  #patterns {
+    width: $maxWidth;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  
   .introHeader {
     line-height: 105%;
-    font-size: 45px;
+    font-size: 40px;
   }
 
   #lines {
-    width: $width;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-left: 1px dashed $dashColor;
+    border-right: 1px dashed $dashColor;
+    min-width: 320px;
+    max-width: 90vw;
     height: 100%;
-    z-index: 0;
+    z-index: 100;
   }
 
-  .smHeader {
+  .introHeading {
+    h1 {
+      font-family: $paragraphFont;
       font-size: 10px;
+      color: #7D7D7D;
+      margin: 0;
+    }
+  
+    h2 {
+      font-family: $paragraphFontKR;
+      font-size: 22px;
+      color: $black;
+      line-height: 30px;
+      margin: 5px 0;
+    }
   }
 
   //************************** LANDING **************************
@@ -668,250 +736,220 @@ $paddedWidth: 450px;
     width: 100%;
     height: 500px;
     margin: 0 auto;
-    justify-content: flex-start;
   }
   
   p {
     font-size: 10px;
   }
+  
 
   #introduction {
     padding: 10px;
+
     .button {
       margin-right: 10px;
     }
+
     h2{
       font-size: 10px;
     }
-  }
 
-  #landing-image {
-    height: 200px;
-  
-    img {
-      width: 300px;
-      margin-left: -50px;
+    p {
+      font-size: 12px;
+      color: #383838;
     }
   }
 
-  #filler {
-    height: 0;
+  #houses {
+    height: 250px;
+  
+    &::before{
+      bottom: -2px;
+      background-size: cover;
+      opacity: 0.3;
+    }
+  }
+  
+  // Bento Image
+  #bento-image {
+    width: 350px;
+    bottom: -140px;
+  }
+  
+  #tsparticles {
+    bottom: -100px;
+    height: 350px;
+    width: 100%;
   }
 
-  #flowers {
-    margin-top: 15px;
-
-    img {
-      height: 80px;
+  #menu-intro {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 200px;
+  
+    & > div:nth-child(2) {
+      height: 150px;
+      display: flex;
+    }
+  
+    & > div:nth-child(3) {
+      img {
+        width: 20px;
+        margin: 0 10px;
+        margin-top: -40px;
+      }
     }
   }
 
   #menu-wrapper {
-    height: 550px;
-  
-    .menuCards {
-      height: 200px;
-      width: 450px;
-      margin: 400px auto 0 auto;
-  
-      & > div {
-        width: 150px;
-      }
-  
-      .menuCard {
-        height: 150px;
-        width: 130px;
-        padding: 2px;
-        position: relative;
-  
-        img {
-          width: 100px;
-          border-radius: $borderRadius;
-        }
-  
-        h1 {
-          font-size: 15px;
-          color: $primaryColor;
-          margin: 0 0 5px 0;
-        }
-      }
-  
-      & > div:nth-child(1) {
-        visibility: hidden;
-        display: none;
-      }
-
-      & > div:nth-child(2) > div {
-        display: flex;
-      }
-
-      & > div:nth-child(3) > div {
-        display: flex;
-      }
-
-      & > div:nth-child(4) > div {
-        display: flex;
-      }
-    }
-  }
-
-  #menu-introduction {
     height: 450px;
     width: 100%;
-    margin-top: -10px;
-    z-index: 100;
   
-    article {
-      width: $paddedWidth;
+    & > div:first-child {
+      display: flex;
+      flex-direction: column;
       height: 100%;
-      margin: 45px auto;
+    }
   
-      & > div {
-        width: 100%;
-      }
-  
-      & > div:first-child {
-        h2 {
-          font-size: 22px;
-        }
-  
-        & > div {
-          width: 100%;
-          
-          div {
-            flex-direction: column;
-          }
-
-          p {
-            font-size: 8px;
-            width: 100%;
-            margin: 5px 0px;
-            line-height: 18px;
-          }
-        }
-      }
-  
-      & > div:last-child {
-        width: 100%;
-        justify-content: space-around;
-        margin-top: 40px;
-
-        h3 {
-          font-size: 12px;
-        }
-  
-        div:nth-child(1) {
-          img {
-            height: (148px / $divisor);
-          }
-
-          width: (190px / $divisor);
-        }
-  
-        div:nth-child(2) {
-          img {
-            height: (145px / $divisor);
-          }
-
-          width: (168px / $divisor);
-        }
-  
-        div:nth-child(3) {
-          img {
-            height: (153px / $divisor);
-          }
-          
-          width: (173px / $divisor);
-        }
-      }
+    #flowers-container {
+      display: flex;
+      height: 70px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
     }
   }
   
-  #top-circle {
-    width: 250px;
-    height: 250px;
-  }
-
-  #bottom-circle-two {
-    width: 150px;
-    height: 100px;
-    left: 0px;
-    bottom: -47px;
-    z-index: 1000;
+  #menu-introduction {
+    position: relative;
+    width: 100%;
+    padding: 30px 0px;
+    box-sizing: border-box;
+  
+    p {
+      font-size: 11px;
+      line-height: 20px;
+    }
   }
   
-  #bottom-circle {
-    width: 200px;
-    height: 150px;
-    z-index: 500;
-    bottom: 80px;
+  #menuCards {
+    width: 100%;
+    margin-bottom: 80px;
+    
+    .menuCard {
+      padding: 2px;
+      margin: 0 10px;
+  
+      img {
+        width: 110px;
+        border-radius: $borderRadius;
+      }
+    }
+  
+    .menuCard:nth-child(1) {
+      width: 130px;
+      height: 100px;
+      margin-top: -50px;
+    }
+  
+    .menuCard:nth-child(2) {
+      width: 100px;
+      height: 130px;
+      margin-top: -60px;
+      
+      img {
+        transform: rotate(90deg);
+      }
+    }
+  
+    .menuCard:nth-child(3) {
+      width: 130px;
+      height: 100px;
+      margin-top: -90px;
+    }
+  }
+  
+  #flowers {
+    width: 100%;
+    padding: 0 10px;
+  
+    img {
+      height: 70px;
+      z-index: -10;
+    }
+  
+    img:nth-child(3) {
+      margin-top: 5px;
+    }
   }
 
   #gallery-introduction {
-    height: 400px;
-    width: $paddedWidth;
-    margin: 60px auto;
+    width: $maxWidth;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 90px auto 100px auto;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
+    justify-content: space-between;
+  
+    p {
+      font-size: 11px;
+      text-align: center;
+      line-height: 20px;
+    }
+  }
+  
+  #gallery-preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    margin: 20px 0;
   
     & > div {
-      height: 100%;
-      z-index: 100;
-    }
-  
-    & > div:first-child {
-      position: relative;
-      width: 100%;
-      margin-top: 50px; 
-      display: flex;
-      justify-content: space-between;
-
-      & > div {
-        position: unset;
-        box-shadow: $boxshadow;
-        background-size: cover;
-        background-position: center;
-        border-radius: 15px;
-        height: 100px;
-      }
-    }
-  
-    & > div:last-child {
-      width: 100%;
-      h2 {
-        font-size: 22px;
-        line-height: 150%;
-      }
-
-      p {
-        font-size: 12px;
+      div {
+        margin: 10px;
       }
     }
   }
   
   #gallery1 {
-    width: 100px;
-    height: 100px;
-    background-image: url("../images/jungdam0.jpg");
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 130px;
   }
   
   #gallery2 {
-    width: 100px;
-    height: 100px;
-    background-image: url("../images/jungdam1.jpg");
+    top: 0;
+    left: 50%;
+    width: 130px;
+    height: 130px;
   }
   
   #gallery3 {
-    width: 100px;
-    height: 100px;
-    background-image: url("../images/jungdam2.jpg");
+    top: 230px;
+    width: 130px;
+    height: 268px;
   }
   
   #gallery4 {
-    width: 100px;
-    height: 100px;
-    background-image: url("../images/jungdam3.jpg");
+    display: none;
+  }
+  
+  #gallery5 {
+    display: none;
+  }
+  
+  #gallery6 {
+    display: none;
+  }
+  
+  #gallery7 {
+    display: none;
   }
 
   //************************** NAVIGATION **************************
@@ -986,6 +1024,7 @@ $paddedWidth: 450px;
 
 @media (min-width: 320px) and (max-width: 480px) {
   $divisor: 1.4;
+  $maxWidth: 320px;
 
   .first {
     margin-top: 100px!important;
@@ -1002,6 +1041,14 @@ $paddedWidth: 450px;
   .container {
     width: 320px;
   }
+
+  #patterns {
+    width: $maxWidth;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
   
   .introHeader {
     line-height: 105%;
@@ -1015,25 +1062,60 @@ $paddedWidth: 450px;
     margin: 0 auto;
     border-left: 1px dashed $dashColor;
     border-right: 1px dashed $dashColor;
-    width: 320px;
+    min-width: 320px;
+    max-width: 90vw;
     height: 100%;
     z-index: 100;
   }
 
-  .smHeader {
-    font-size: 8px;
+  .introHeading {
+    h1 {
+      font-family: $paragraphFont;
+      font-size: 10px;
+      color: #7D7D7D;
+      margin: 0;
+    }
+  
+    h2 {
+      font-family: $paragraphFontKR;
+      font-size: 22px;
+      color: $black;
+      line-height: 30px;
+      margin: 5px 0;
+    }
   }
 
   //************************** LANDING **************************
   #landing {
     width: 100%;
-    height: 550px;
+    height: 500px;
     margin: 0 auto;
   }
   
   p {
     font-size: 10px;
   }
+
+  #menu-intro {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 200px;
+  
+    & > div:nth-child(2) {
+      height: 150px;
+      display: flex;
+    }
+  
+    & > div:nth-child(3) {
+      img {
+        width: 20px;
+        margin: 0 10px;
+        margin-top: -40px;
+      }
+    }
+  }
+  
 
   #introduction {
     padding: 10px;
@@ -1052,285 +1134,187 @@ $paddedWidth: 450px;
     }
   }
 
-  #landing-image {
-    height: 200px;
+  #houses {
+    height: 250px;
   
-    img {
-      width: 300px;
-      margin-left: -30px;
+    &::before{
+      bottom: -2px;
+      background-size: cover;
+      opacity: 0.3;
     }
   }
-
-  #filler {
-    height: 0;
+  
+  // Bento Image
+  #bento-image {
+    width: 330px;
+    bottom: -140px;
+    left: -30px;
   }
-
-  #flowers {
-    margin-top: 15px;
-
-    img {
-      height: 80px;
-    }
+  
+  #tsparticles {
+    bottom: -100px;
+    height: 350px;
+    width: 100%;
   }
 
   #menu-wrapper {
-    height: 550px;
-  
-    .menuCards {
-      height: 200px;
-      width: 320px;
-      margin: 380px auto 0 auto;
-  
-      & > div:first-child {
-        display: block;
-        width: 155px;
-        padding: 3px;
-        margin-left: auto;
-
-        & > div > div {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          left: 0;
-          top: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          align-items: center;
-          animation-name: fade;
-          animation-iteration-count: infinite;
-          animation-duration: 12s;
-        }
-
-        & > div > div:nth-child(2) {
-          animation-delay: -4s;
-        }
-
-        & > div > div:nth-child(3) {
-          animation-delay: -8s;
-        }
-
-        @keyframes fade {
-          0% {opacity: 0;}
-          20% {opacity: 1;}
-          33% {opacity: 1;}
-          53% {opacity: 0;}
-          100% {opacity: 0;}
-        }
-      }
-  
-      .menuCard {
-        height: 145px;
-        width: 130px;
-        padding: 2px;
-        position: relative;
-  
-        img {
-          width: 110px;
-          border-radius: $borderRadius;
-        }
-  
-        h1 {
-          font-size: 11px;
-          color: $primaryColor;
-          margin: 0 0 5px 0;
-        }
-      }
-  
-      & > div:nth-child(1) > div {
-        visibility: visible;
-      }
-
-      & > div:nth-child(2) > div {
-        display: none;
-      }
-
-      & > div:nth-child(3) > div {
-        display: none;
-      }
-
-      & > div:nth-child(4) > div {
-        display: none;
-      }
-    }
-  }
-
-  #menu-introduction {
-    height: 490px;
+    height: 600px;
     width: 100%;
-    margin-top: -10px;
-    z-index: 100;
   
-    article {
-      width: 320px;
+    & > div:first-child {
+      display: flex;
+      flex-direction: column;
       height: 100%;
-      margin: 50px auto;
+    }
   
-      & > div {
-        width: 100%;
-      }
-  
-      & > div:first-child {
-        height: unset;
-
-        h2 {
-          font-size: 18px;
-        }
-  
-        & > div {
-          width: 100%;
-          
-          div {
-            flex-direction: column;
-          }
-
-          div:last-child {
-            margin-top: 10px;
-          }
-
-          p {
-            font-size: 10px;
-            width: 100%;
-            margin: 3px 0px;
-            line-height: 18px;
-          }
-        }
-      }
-  
-      & > div:last-child {
-        height: unset;
-        width: 100%;
-        justify-content: space-around;
-        margin-top: 30px;
-
-        h3 {
-          font-size: 12px;
-        }
-  
-        div:nth-child(1) {
-          img {
-            height: (148px / $divisor);
-          }
-
-          width: (190px / $divisor);
-        }
-  
-        div:nth-child(2) {
-          img {
-            height: (145px / $divisor);
-          }
-
-          width: (168px / $divisor);
-        }
-  
-        div:nth-child(3) {
-          img {
-            height: (153px / $divisor);
-          }
-          
-          width: (173px / $divisor);
-        }
-      }
+    #flowers-container {
+      display: flex;
+      height: 70px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
     }
   }
   
-  #top-circle {
-    width: 200px;
-    height: 50px;
-    right: 30px;
-    top: 20px;
-  }
-
-  #bottom-circle-two {
-    width: 100px;
-    height: 60px;
-    left: 0px;
-    z-index: 2000;
-    bottom: -12px;
+  #menu-introduction {
+    position: relative;
+    width: 100%;
+    padding: 30px 0px;
+    box-sizing: border-box;
+  
+    p {
+      font-size: 11px;
+      line-height: 20px;
+    }
   }
   
-  #bottom-circle {
-    width: 150px;
-    height: 100px;
-    z-index: 1000;
-    left: 30px;
-    bottom: 70px;
+  #menuCards {
+    width: 100%;
+    margin-bottom: 80px;
+    
+    .menuCard {
+      padding: 2px;
+      margin: 0 10px;
+  
+      img {
+        width: 110px;
+        border-radius: $borderRadius;
+      }
+    }
+  
+    .menuCard:nth-child(1) {
+      width: 130px;
+      height: 100px;
+      margin-top: -50px;
+    }
+  
+    .menuCard:nth-child(2) {
+      width: 100px;
+      height: 130px;
+      margin-top: -60px;
+      
+      img {
+        transform: rotate(90deg);
+      }
+    }
+  
+    .menuCard:nth-child(3) {
+      width: 130px;
+      height: 100px;
+      margin-top: -90px;
+    }
+  }
+  
+  #flowers {
+    width: 100%;
+    padding: 0 10px;
+  
+    img {
+      height: 70px;
+      z-index: -10;
+    }
+  
+    img:nth-child(3) {
+      margin-top: 5px;
+    }
   }
 
   #gallery-introduction {
-    height: 580px;
-    width: 300px;
-    margin-top: 60px;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
+    width: $maxWidth;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 90px auto 100px auto;
+    display: flex;
+    justify-content: space-between;
+  
+    p {
+      font-size: 11px;
+      text-align: center;
+      line-height: 20px;
+    }
+  }
+  
+  #gallery-preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    margin: 20px 0;
   
     & > div {
-      height: 80%;
-    }
-  
-    & > div:first-child {
-      width: 100%;
-      position: relative;
-  
-      & > div {
-        border-radius: 8px;
-      }
-    }
-  
-    & > div:last-child {
-      height: 260px;
-      width: 100%;
-
-      h2 {
-        font-size: 18px;
-      }
-
-      p {
-        font-size: 10px;
+      div {
+        margin: 10px;
       }
     }
   }
   
   #gallery1 {
-    top: 20px;
+    top: 0;
     left: 0;
-    width: 140px;
-    height: 140px;
-    background-image: url("../images/jungdam0.jpg");
+    width: 130px;
+    height: 130px;
   }
   
   #gallery2 {
     top: 0;
-    right: 0;
-    left: unset;
-    width: 100px;
-    height: 100px;
-    background-image: url("../images/jungdam1.jpg");
+    left: 50%;
+    width: 130px;
+    height: 130px;
   }
   
   #gallery3 {
-    top: 200px;
-    width: 100px;
-    height: 100px;
-    background-image: url("../images/jungdam2.jpg");
+    top: 230px;
+    width: 130px;
+    height: 268px;
   }
   
   #gallery4 {
-    top: 140px;
-    right: 0;
-    left: unset;
-    width: 140px;
-    height: 140px;
-    background-image: url("../images/jungdam3.jpg");
-  }  
+    display: none;
+  }
+  
+  #gallery5 {
+    display: none;
+  }
+  
+  #gallery6 {
+    display: none;
+  }
+  
+  #gallery7 {
+    display: none;
+  }
 
+  
   //************************** NAVIGATION **************************
   .revealNav > div:first-child {
     height: 60px;
   }
 
   nav > div {
-    width: 300px;
+    width: 320px;
     margin: 0 auto;
     height: 110px;
 

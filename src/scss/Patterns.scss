@@ -1,0 +1,78 @@
+.dottedSquare {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+}
+
+.orange {
+    background: url('../images/patterns/small_dot_orange.svg');
+}
+
+.yellow {
+    background: url('../images/patterns/small_dot_yellow.svg');
+}
+
+.gray {
+    background: url('../images/patterns/small_dot_gray.svg');
+}
+
+#dot-1 {
+    left: 80px;
+    top: 50px;
+}
+
+#dot-2 {
+    right: 80px;
+    top: 170px;
+}
+
+#dot-3 {
+    left: 80px;
+    top: 800px;
+}
+
+#dot-4 {
+    right: 300px;
+    top: 1400px;
+}
+
+@media (min-width: 481px) and (max-width: 1000px) {
+    #dot-1 {
+        left: -50px;
+        top: -20px;
+    }
+    
+    #dot-2 {
+        display: none;
+    }
+    
+    #dot-3 {
+        display: none;
+    }
+    
+    #dot-4 {
+        display: none;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #dot-1 {
+        left: -50px;
+        top: -20px;
+    }
+    
+    #dot-2 {
+        display: none;
+    }
+    
+    #dot-3 {
+        display: none;
+    }
+    
+    #dot-4 {
+        right: 30px;
+        top: 1355px;
+    }
+
+}

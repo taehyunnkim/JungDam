@@ -33,7 +33,7 @@ function App() {
         <div id="lines">
           {page !== "home" ? <div><div className="bgLine leftLine"></div>
             <div className="bgLine middleLine"></div>
-          <div className="bgLine rightLine"></div></div> : <div className="bgLine middleLine"></div>}
+          <div className="bgLine rightLine"></div></div> : <div className="bgLine landingMidLine middleLine"></div>}
         </div>
         <Nav showNav={showNav} page={page} />
         <Switch>
