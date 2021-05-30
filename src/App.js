@@ -38,9 +38,7 @@ function App() {
         </div>
           : 
         <div id="lines">
-          <div className="bgLine leftLine"></div>
           <div className="bgLine middleLine"></div>
-          <div className="bgLine rightLine"></div>
         </div>
         }
 

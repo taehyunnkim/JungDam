@@ -98,13 +98,14 @@ p {
 
 #lines {
   position: absolute;
+  box-sizing: border-box;
   left: 0;
   right: 0;
   margin: 0 auto;
   border-left: 1px solid $dashColor;
   border-right: 1px solid $dashColor;
   width: 1000px;
-  height: 73.5%;
+  height: 1970px;
   bottom: 0;
   z-index: 100;
 }
@@ -121,6 +122,7 @@ p {
 
 #introduction {
   white-space: nowrap;
+  box-sizing: border-box;
   z-index: 200;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 1000ms;
@@ -169,7 +171,7 @@ p {
   position: relative;
   text-align: center;
   width: 100%;
-  height: 300px;
+  height: 200px;
 
   &::before{
     content: "";
@@ -204,8 +206,8 @@ p {
 #bento-image {
   position: absolute;
   width: 450px;
-  bottom: -200px;
-  left: 0;
+  bottom: -230px;
+  left: -30px;
   right: 0;
   margin: 0 auto;
   z-index: 1000;
@@ -283,7 +285,7 @@ p {
   border-top: 1px solid #d1d1d1;
   border-bottom: 1px solid #d1d1d1;
   background-color: $tertiaryColor;
-  box-shadow: inset 0px 5px 10px #e2e2e2;
+  box-shadow: inset 0px 5px 10px #d6d6d6;
 
   & > div:first-child {
     display: flex;
@@ -589,7 +591,8 @@ nav {
 
 #logo {
   margin-left: 30px;
-  width: 122px;
+  width: 143px;
+  height: 51px;
 }
 
 //************************** FOOTER **************************
@@ -989,8 +992,9 @@ $paddedWidth: 450px;
   }
 
   #logo {
-    margin-left: 0px;
-    width: 122px;
+    margin-left: 20px;
+    width: 102px;
+    height: 37px!important
   }
 
   #bgSvg {
@@ -1058,7 +1062,8 @@ $paddedWidth: 450px;
   }
 
   .container {
-    width: 320px;
+    min-width: 320px;
+    max-width: 81vw;
   }
 
   .secondaryButton { 
@@ -1159,7 +1164,7 @@ $paddedWidth: 450px;
   }
 
   #houses {
-    height: 250px;
+    height: 180px;
   
     &::before{
       bottom: -2px;
@@ -1170,9 +1175,9 @@ $paddedWidth: 450px;
   
   // Bento Image
   #bento-image {
-    width: 330px;
+    width: 290px;
     bottom: -140px;
-    left: -30px;
+    left: -20px;
   }
   
   #tsparticles {
@@ -1195,6 +1200,7 @@ $paddedWidth: 450px;
       display: flex;
       height: 70px;
       position: absolute;
+      z-index: 1000;
       left: 0;
       right: 0;
       bottom: 0;
@@ -1338,8 +1344,10 @@ $paddedWidth: 450px;
   }
 
   nav > div {
-    width: 320px;
+    min-width: 320px;
+    max-width: 81vw;
     margin: 0 auto;
+    box-sizing: border-box;
     height: 110px;
 
     ul {
@@ -1370,8 +1378,9 @@ $paddedWidth: 450px;
   }
 
   #logo {
-    margin-left: 0px;
-    width: 85px;
+    margin-left: 10px;
+    width: 102px;
+    height: 37px!important;
   }
 
   #bgSvg {
