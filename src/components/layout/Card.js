@@ -1,4 +1,7 @@
 function Card({ item }) {
+    let prices = item.price.map((price) => {
+        return <h2 key={price}>{price}</h2>
+    });
     return(
         <div className="invisiCard">
             <div className="card">
@@ -7,7 +10,7 @@ function Card({ item }) {
                 </div>
                 <div>
                     <h1>{item.name}</h1>
-                    <h2>{item.price[0]}</h2>
+                    {prices}
                 </div>
             </div>
         </div>

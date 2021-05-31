@@ -26,7 +26,7 @@ function Menu({setPage}) {
 
             </div>
             <div className="container">
-                <CardList id="premium" items={premium} title="명품메뉴" description={["국 샐러드 홍삼드링크 김 제공"]} />
+                <CardList id="premium" items={premium} title="명품메뉴" description={["국 람부탄 홍삼드링크 김 제공"]} />
                 <CardList id="special" items={special} title="스페셜메뉴" description={["국 델몬트쥬스 김 제공"]} />
                 <CardList id="alchan" items={full} title="알찬메뉴" description={["김 제공"]} />
                 <CardList id="silsok" items={silsok} title="실속메뉴" />

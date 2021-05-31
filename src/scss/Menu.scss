@@ -1,5 +1,5 @@
 $borderRadius: 5px;
-$cardHeight: 230px;
+$cardHeight: 250px;
 $cardWidth: 180px;
 $paragraphFontKR: "Nanum Gothic Coding", "Arial";
 $primaryColor: #FF833E;
@@ -89,7 +89,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 }
 
 .invisiCard {
-    height: 250px!important;
+    height: 270px!important;
     width: 245px!important;
     margin: 0!important;
     padding: 0!important;
@@ -151,12 +151,12 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     h1 {
         font-size: 11px;
         line-height: 16px;
-        margin: 15px 0 10px 0;
-        width: 98%;
+        margin: 10px 0 10px 0;
+        width: 100%;
     }
 
     h2 {
-        margin: 0;
+        margin: 5px 0;
         font-size: 12px;
         color: gray;
     }
@@ -246,7 +246,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
 @media (min-width: 320px) and (max-width: 480px) {
     $factor: 0.9;
-    $cardHeight: 230px;
+    $cardHeight: 240px;
     $cardWidth: 150px;
 
     .spacing {
@@ -337,7 +337,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         }
     
         h2 {
-            margin: 0;
+            margin: 5px 0;
             font-size: 10px;
             color: gray;
         }
