@@ -17,7 +17,7 @@ import pic15 from "../../images/gallery/15.jpg";
 import pic16 from "../../images/gallery/16.jpg";
 import pic17 from "../../images/gallery/17.jpg";
 import pic18 from "../../images/gallery/18.jpg";
-import pic19 from "../../images/gallery/19.jpg";
+import pic19 from "../../images/gallery/1.jpg";
 import '../../scss/Gallery.scss';
 import { useEffect } from 'react';
 

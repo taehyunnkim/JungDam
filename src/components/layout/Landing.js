@@ -33,6 +33,7 @@ function Landing({ setPage }) {
 
     return(
         <div>
+            <div id="gradient"></div>
             <div id="patterns">
                 <DottedSquare color="orange" id="dot-1" />
                 <DottedSquare color="yellow" id="dot-2" />
@@ -49,6 +50,7 @@ function Landing({ setPage }) {
                     <p className="order">ORDER 051-782-3630</p>
                 </div>
                 <div id="houses" className={fade}>
+                    {/* <div id="gradient-2"></div> */}
                     {/* <img id="house-image" src={houses} alt="houses" /> */}
                     <Particles 
                         params={{
