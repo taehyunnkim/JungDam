@@ -1,6 +1,6 @@
 $borderRadius: 5px;
-$cardHeight: 250px;
-$cardWidth: 180px;
+$cardHeight: 230px;
+$cardWidth: 400px;
 $paragraphFontKR: "Nanum Gothic Coding", "Arial";
 $primaryColor: #FF833E;
 $secondaryColor: #F6F8FA;
@@ -46,6 +46,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         padding: 10px 12px;
         border-radius: 5px;
         display: none;
+        font-weight: bold;
 
         &:active {
             color: gray;
@@ -55,6 +56,10 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
             background:#eeeeee;
         }
     }
+}
+
+#menu-start {
+    min-height: 100vh;
 }
 
 .menuContainer > div:first-child {
@@ -89,8 +94,8 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 }
 
 .invisiCard {
-    height: 270px!important;
-    width: 245px!important;
+    // height: 270px!important;
+    width: 450px!important;
     margin: 0!important;
     padding: 0!important;
     display: flex;
@@ -106,7 +111,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .menuContainer:last-child {
@@ -123,42 +128,43 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     border-radius: $borderRadius;
     // box-shadow: rgba(0, 0, 0, 0.10) 0px 2px 4px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     font-family: $paragraphFontKR;
 
     div:first-child {
-        height: 150px;
-        width: 100%;
+        height: 230px;
+        width: 230px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-bottom: 1px dotted #d3d3d3;
+        border-right: 1px dotted #d3d3d3;
 
         img {
-            width: 130px;
+            width: 190px;
             border-radius: $borderRadius;
         }
     }
 
     div:last-child {
-        margin-top: 2px;
+        margin-left: 2px;
         background-color: $secondaryColor;
         flex-grow: 1;
         border-radius: 0 0 $borderRadius $borderRadius;
     }
 
     h1 {
-        font-size: 11px;
+        font-size: 12px;
         line-height: 16px;
-        margin: 10px 0 10px 0;
+        margin: 40px 0 10px 0;
         width: 100%;
+        color: $primaryColor;
     }
 
     h2 {
-        margin: 5px 0;
+        margin: 15px 0;
         font-size: 12px;
-        color: gray;
+        color: $black;
     }
 }
 
@@ -211,34 +217,38 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
     .cardList {
         padding: 20px 0;
-        justify-content: space-around;
+        width: unset;
     }
 
     .card {
-        width: $cardWidth * $factor;
-        height: $cardHeight * $factor;
+        width: 300px;
+        height: 160px;
         margin: 10px 0;
 
         div:first-child {
-            height: $cardWidth * $factor;
+            height: 160px;
+            width: 160px;
 
             img {
-                width: $cardWidth * $factor - 20px;
+                width: 125px;
                 border-radius: $borderRadius;
             }
+        }
+
+        div:last-child {
+            width: 130px;
         }
 
         h1 {
             font-size: 9px;
             line-height: 14px;
-            margin: 15px 0 10px 0;
+            margin: 30px 0 10px 0;
             width: 98%;
         }
     
         h2 {
-            margin: 0;
+            margin: 10px 0;
             font-size: 10px;
-            color: gray;
         }
     }
 
@@ -307,7 +317,6 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
     .menuContainer {
         padding: 10px;
-        margin-bottom: -200px;
     }
 
     .cardList {
@@ -316,30 +325,34 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     }
 
     .card {
-        width: $cardWidth * $factor;
-        height: $cardHeight * $factor;
+        width: 300px;
+        height: 160px;
         margin: 10px 0;
 
         div:first-child {
-            height: $cardWidth * $factor;
+            height: 160px;
+            width: 160px;
 
             img {
-                width: $cardWidth * $factor - 20px;
+                width: 140px;
                 border-radius: $borderRadius;
             }
+        }
+
+        div:last-child {
+            width: 130px;
         }
 
         h1 {
             font-size: 9px;
             line-height: 14px;
-            margin: 15px 0 10px 0;
+            margin: 30px 0 10px 0;
             width: 98%;
         }
     
         h2 {
-            margin: 5px 0;
+            margin: 10px 0;
             font-size: 10px;
-            color: gray;
         }
     }
 }

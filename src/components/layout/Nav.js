@@ -3,7 +3,7 @@ import {
     NavLink
   } from "react-router-dom";
 
-function Nav({showNav, page}) {
+function Nav({showNav, page, setMenu}) {
     return(
         <nav className={showNav + " " + (page === "menu" ? "revealNav" : "")} >
             <div>
@@ -16,18 +16,18 @@ function Nav({showNav, page}) {
             </div>
 
             <div className={"shortcut " + (page === "menu" ? "revealShortcut" : "")}>
-                <a href="#premium">명품</a>
-                <a href="#special">스페셜</a>
-                <a href="#alchan">알찬</a>
-                <a href="#silsok">실속</a>
-                <a href="#japanese">일품</a>
-                <a href="#event">행사</a>
-                <a href="#lunch">정기식단</a>
-                <a href="#western">맞춤양식</a>
-                <a href="#korean">맞춤한식</a>
-                <a href="#kids">어린이</a>
-                <a href="#hike">등산</a>
-                <a href="#snacks">간식</a>
+                <a href="#premium" onClick={() => {setMenu("premium")}}>명품</a>
+                <a href="#special" onClick={() => {setMenu("special")}}>스페셜</a>
+                <a href="#alchan" onClick={() => {setMenu("alchan")}}>알찬</a>
+                <a href="#silsok" onClick={() => {setMenu("silsok")}}>실속</a>
+                <a href="#japanese" onClick={() => {setMenu("japanese")}}>일품</a>
+                <a href="#event" onClick={() => {setMenu("event")}}>행사</a>
+                <a href="#lunch" onClick={() => {setMenu("lunch")}}>정기식단</a>
+                <a href="#western" onClick={() => {setMenu("western")}}>맞춤양식</a>
+                <a href="#korean" onClick={() => {setMenu("korean")}}>맞춤한식</a>
+                <a href="#kids" onClick={() => {setMenu("kids")}}>어린이</a>
+                <a href="#hike" onClick={() => {setMenu("hike")}}>등산</a>
+                <a href="#snacks" onClick={() => {setMenu("snacks")}}>간식</a>
             </div>
         </nav>
     );

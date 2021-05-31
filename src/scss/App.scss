@@ -706,7 +706,8 @@ $paddedWidth: 450px;
   $divisor: 1.4;
 
   .container {
-    width: $width;
+    min-width: $width;
+    max-width: 90vw;
   }
   
   #patterns {
@@ -975,7 +976,8 @@ $paddedWidth: 450px;
 
   //************************** NAVIGATION **************************
   nav > div {
-    width: $paddedWidth;
+    min-width: $width;
+    max-width: 90vw;
     margin: 0 auto;
     height: 100px;
 

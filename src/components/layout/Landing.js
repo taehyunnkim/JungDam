@@ -12,7 +12,7 @@ import food1 from '../../images/food1.png';
 import food2 from '../../images/food2.png';
 import food3 from '../../images/food3.png';
 import food4 from '../../images/food4.png';
-import premium from '../../images/premium_2.png';
+import premium from '../../images/items/Edits/premium_galbi_opt.png';
 import event from '../../images/event_2.png';
 import special from '../../images/special_2.png';
 import Button from '../Button';

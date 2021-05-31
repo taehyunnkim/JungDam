@@ -14,6 +14,7 @@ import React, {useState, useEffect} from 'react';
 function App() {
   const [showNav, setNav] = useState("hideNav");
   const [page, setPage] = useState("home");
+  const [menu, setMenu] = useState("premium");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,10 +43,10 @@ function App() {
         </div>
         }
 
-        <Nav showNav={showNav} page={page} />
+        <Nav showNav={showNav} page={page} setMenu={setMenu} />
         <Switch>
           <Route path="/menu">
-            <Menu setPage={setPage} />
+            <Menu setPage={setPage} menu={menu} />
           </Route>
           <Route path="/gallery">
             <Gallery setPage={setPage} />
