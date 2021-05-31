@@ -13,6 +13,11 @@ import pic11 from "../../images/gallery/11.jpg";
 import pic12 from "../../images/gallery/12.jpg";
 import pic13 from "../../images/gallery/13.jpg";
 import pic14 from "../../images/gallery/14.jpg";
+import pic15 from "../../images/gallery/15.jpg";
+import pic16 from "../../images/gallery/16.jpg";
+import pic17 from "../../images/gallery/17.jpg";
+import pic18 from "../../images/gallery/18.jpg";
+import pic19 from "../../images/gallery/19.jpg";
 import '../../scss/Gallery.scss';
 import { useEffect } from 'react';
 
@@ -40,6 +45,11 @@ function Gallery({setPage}) {
                 <img src={pic12} alt="gallery"/>
                 <img src={pic13} alt="gallery" />
                 <img src={pic14} alt="gallery"/>
+                <img src={pic15} alt="gallery"/>
+                <img src={pic16} alt="gallery"/>
+                <img src={pic17} alt="gallery"/>
+                <img src={pic18} alt="gallery"/>
+                <img src={pic19} alt="gallery"/>
             </div>
         </div>
     );
