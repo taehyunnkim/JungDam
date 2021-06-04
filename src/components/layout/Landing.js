@@ -24,11 +24,30 @@ import DottedSquare from '../patterns/DottedSquare';
 function Landing({ setPage }) {
     const [fade, setFade] = useState('hidden');
     const [slide, setSlide] = useState('up');
+    function parallax() { 
+        let scroll = window.scrollY; 
+        let ele = document.querySelector("#dot-1"); 
+        let ele2 = document.querySelector("#dot-2"); 
+        let ele3 = document.querySelector("#introduction");
+
+        if(window.pageYOffset < 1000) {
+            ele.style.transform = "translateY(" + (scroll*0.3) + "px)" 
+            ele2.style.top = 170 + -scroll * 0.3 + "px"; 
+            ele3.style.transform = "translateY(" + (-scroll*0.1) + "px)"; 
+        }
+    };
+
     useEffect(() => {
+        window.addEventListener("scroll", parallax);
+
         setFade('visible');
         setSlide('ogPos');
         setPage("home");
         window.scrollTo(0, 0);
+
+        return () => {
+            window.removeEventListener('scroll', parallax);
+        };
     },[setFade, setPage]);
 
     return(
@@ -37,8 +56,8 @@ function Landing({ setPage }) {
             <div id="patterns">
                 <DottedSquare color="orange" id="dot-1" />
                 <DottedSquare color="yellow" id="dot-2" />
-                <DottedSquare color="yellow" id="dot-3" />
-                <DottedSquare color="orange" id="dot-4" />
+                <DottedSquare color="gray" id="dot-3" />
+                <DottedSquare color="gray" id="dot-4" />
             </div>
             <div id="landing" className="first">
                 <div id="introduction" className={fade + " container"}>

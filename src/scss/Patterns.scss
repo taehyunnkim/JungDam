@@ -20,11 +20,15 @@
 #dot-1 {
     left: 80px;
     top: 50px;
+    transition-timing-function: cubic-bezier(0, 0, 0.4, 0.96); 
+    transition-duration: 500ms;
 }
 
 #dot-2 {
     right: 80px;
     top: 170px;
+    transition-timing-function: cubic-bezier(0, 0, 0.4, 0.96); 
+    transition-duration: 500ms;
 }
 
 #dot-3 {
