@@ -366,6 +366,8 @@ $borderRadius: 8px;
                 height: 225px;
                 top: 670px;
                 right: 0;
+                left: 0;
+                margin: 0 auto;
             }
     
             img:nth-child(12) {
@@ -399,7 +401,8 @@ $borderRadius: 8px;
                 height: 225px;
                 top: 1150px;
                 right: 0;
-                left: unset;
+                left: 0;
+                margin: 0 auto;
             }
 
             img:nth-child(17) {
