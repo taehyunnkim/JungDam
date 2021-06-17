@@ -7,7 +7,8 @@ import Footer from './components/layout/Footer';
 import {
   BrowserRouter,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 import React, {useState, useEffect} from 'react';
 
@@ -54,6 +55,7 @@ function App() {
           <Route exact path="/">
             <Landing setPage={setPage} />
           </Route>
+          <Redirect from="*" to="/" />
         </Switch>
         <Footer />
       </div>

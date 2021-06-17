@@ -173,8 +173,8 @@ function Landing({ setPage }) {
                                 각종 행사엔 누구나 좋아하는 한식 도시락
                             </p>
                             <p>
-                                항상 정성을 담은 정담 도시락은 엄선된 식태료만을 사용하여 <br />
-                                맛과 건강면에서 차병화된 한식 도시락입니다.
+                                항상 정성을 담은 정담 도시락은 엄선된 식재료만을 사용하여 <br />
+                                맛과 건강면에서 차별화된 한식 도시락입니다.
                             </p>
                             <SecondaryButton text="자세히 보기" path='menu' />
                         </div>
@@ -242,11 +242,11 @@ function Landing({ setPage }) {
                         </div>
                     </div>
                     <p>
-                            바쁜 하루에 밥이라도 제대로 먹었으면 하는 <span>엄마의 마음</span> <br />
-                            뜨끈한 국물로 마음속의 추위까지 녹였으면 하는 <span>정담의 마음</span>                            
+                            바쁜 하루에 밥이라도 제대로 먹었으면 하는 <span class="green">엄마의 마음</span> <br />
+                            뜨끈한 국물로 마음속의 추위까지 녹였으면 하는 <span class="green">정담의 마음</span>                            
                         </p>
                     <p>
-                        그마음을 한 그릇에 담아 <span>따듯한 도시락</span>으로 <br />
+                        그마음을 한 그릇에 담아 <span class="green">따듯한 도시락</span>으로 <br />
                         고객님을 찾아갑니다.
                     </p>
                 </div>
