@@ -30,7 +30,7 @@ function Landing({ setPage }) {
         let ele2 = document.querySelector("#dot-2"); 
         let ele3 = document.querySelector("#introduction");
 
-        if(window.pageYOffset < 1000) {
+        if(window.pageYOffset < 500) {
             ele.style.transform = "translateY(" + (scroll*0.3) + "px)" 
             ele2.style.top = 170 + -scroll * 0.3 + "px"; 
             ele3.style.transform = "translateY(" + (-scroll*0.1) + "px)"; 
