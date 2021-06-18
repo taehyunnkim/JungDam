@@ -56,8 +56,8 @@ function Landing({ setPage }) {
             <div id="patterns">
                 <DottedSquare color="orange" id="dot-1" />
                 <DottedSquare color="yellow" id="dot-2" />
-                <DottedSquare color="gray" id="dot-3" />
-                <DottedSquare color="gray" id="dot-4" />
+                <DottedSquare color="yellow" id="dot-3" />
+                <DottedSquare color="yellow" id="dot-4" />
             </div>
             <div id="landing" className="first">
                 <div id="introduction" className={fade + " container"}>
@@ -242,11 +242,11 @@ function Landing({ setPage }) {
                         </div>
                     </div>
                     <p>
-                            바쁜 하루에 밥이라도 제대로 먹었으면 하는 <span class="green">엄마의 마음</span> <br />
-                            뜨끈한 국물로 마음속의 추위까지 녹였으면 하는 <span class="green">정담의 마음</span>                            
+                            바쁜 하루에 밥이라도 제대로 먹었으면 하는 <span className="green">엄마의 마음</span> <br />
+                            뜨끈한 국물로 마음속의 추위까지 녹였으면 하는 <span className="green">정담의 마음</span>                            
                         </p>
                     <p>
-                        그마음을 한 그릇에 담아 <span class="green">따듯한 도시락</span>으로 <br />
+                        그마음을 한 그릇에 담아 <span className="green">따듯한 도시락</span>으로 <br />
                         고객님을 찾아갑니다.
                     </p>
                 </div>
