@@ -38,7 +38,7 @@
 
 #dot-4 {
     right: 300px;
-    top: 1525px;
+    top: 1475px;
 }
 
 @media (min-width: 481px) and (max-width: 1000px) {
@@ -76,8 +76,7 @@
     }
     
     #dot-4 {
-        right: 30px;
-        top: 1355px;
+        display: none;
     }
 
 }

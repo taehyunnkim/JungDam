@@ -3,8 +3,9 @@
 $primaryColor: #FF833E;
 $secondaryColor: #FFCA3E;
 $tertiaryColor: #F6F8FA;
-$quaternaryColor: #F48220;
+$quaternaryColor: #e14444;
 $black: #24292E;
+$green:#7C9D68;
 $dashColor: #CCCCCC;
 $headerFont: "Pompiere", "Arial";
 $paragraphFontKR: "Nanum Gothic Coding", "Arial";
@@ -18,7 +19,11 @@ $maxWidth: 1000px;
 
 html{scroll-behavior:smooth}
 .brown{color:$primaryColor}
-.green{color:$tertiaryColor!important}
+.green{color:$green!important}
+
+body {
+  overflow-x: hidden;
+}
 
 .primary {
   background: $primaryColor
@@ -100,7 +105,7 @@ hr {
     font-size: 60px;
     margin-bottom: 20px;
     font-weight: normal;
-    color: $secondaryColor;
+    color: #e14444;
 }
 
 .container {
@@ -125,7 +130,7 @@ p {
   border-left: 1px solid $dashColor;
   border-right: 1px solid $dashColor;
   width: 1000px;
-  height: 1970px;
+  height: 1920px;
   bottom: 0;
   z-index: 100;
 }
@@ -229,7 +234,7 @@ p {
 #bento-image {
   position: absolute;
   width: 450px;
-  bottom: -250px;
+  bottom: -240px;
   left: -30px;
   right: 0;
   margin: 0 auto;
@@ -252,7 +257,7 @@ p {
 #menu-intro {
   position: relative;
   z-index: 10000;
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   height: 300px;
@@ -285,10 +290,12 @@ p {
 }
 
 .introHeading {
+  padding: 0 10px;
+
   h1 {
     font-family: $paragraphFont;
     font-size: 12px;
-    color: #7D7D7D;
+    color: #7c8084;
     margin: 0;
   }
 
@@ -448,7 +455,7 @@ p {
   left: 0;
   width: 130px;
   height: 130px;
-  background-image: url("../images/jungdam0.jpg");
+  background-image: url("../images/jungdam3.jpg");
 }
 
 #gallery2 {
@@ -456,14 +463,15 @@ p {
   left: 50%;
   width: 130px;
   height: 130px;
-  background-image: url("../images/jungdam1.jpg");
+  background-image: url("../images/gallery/4.jpg");
 }
 
 #gallery3 {
   top: 230px;
   width: 130px;
   height: 268px;
-  background-image: url("../images/gallery/10.jpg");
+  background-image: url("../images/gallery/16.jpg");
+  background-position-x: -80px!important;
 }
 
 #gallery4 {
@@ -487,7 +495,7 @@ p {
   left: 50%;
   width: 130px;
   height: 130px;
-  background-image: url("../images/jungdam3.jpg");
+  background-image: url("../images/gallery/1.jpg");
 }
 
 #gallery7 {
@@ -505,7 +513,7 @@ p {
   border-radius: $borderRadius;
   border: none;
   color: white;
-  box-shadow: $boxshadow;
+  // box-shadow: $boxshadow;
   cursor: pointer;
   margin: 25px 0 0 0;
   font-family: $paragraphFontKR;
@@ -768,7 +776,6 @@ $paddedWidth: 450px;
     h1 {
       font-family: $paragraphFont;
       font-size: 10px;
-      color: #7D7D7D;
       margin: 0;
     }
   
@@ -1138,7 +1145,6 @@ $paddedWidth: 450px;
     h1 {
       font-family: $paragraphFont;
       font-size: 10px;
-      color: #7D7D7D;
       margin: 0;
     }
   
@@ -1316,7 +1322,7 @@ $paddedWidth: 450px;
     width: $maxWidth;
     padding: 5px 2px;
     box-sizing: border-box;
-    margin: 90px auto 100px auto;
+    margin: 50px auto 50px auto;
     display: flex;
     justify-content: space-between;
   
@@ -1432,7 +1438,7 @@ $paddedWidth: 450px;
   .button {
     width: 90px;
     font-size: 12px;
-    height: 30px;
+    height: 32px;
     margin: 10px 0 0 0;
     font-size: 10px;
     border-radius: 5px;
