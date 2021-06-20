@@ -152,6 +152,7 @@ $borderRadius: 8px;
     .galleryContainer {
         padding: 10px;
         width: 490px;
+        margin: 0 auto;
         height: 1550px;
     
         & > div {
@@ -296,6 +297,8 @@ $borderRadius: 8px;
     .galleryContainer {
         padding: 10px;
         height: 1800px;
+        width: 300px;
+        margin: 0 auto;
     
         & > div {
             img:nth-child(1) {
