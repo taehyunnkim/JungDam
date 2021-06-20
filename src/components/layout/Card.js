@@ -9,8 +9,10 @@ function Card({ item }) {
                     <img src={require(`../../images/items/${item.img}`).default} alt="item" />
                 </div>
                 <div>
-                    <h1>{item.name}</h1>
-                    {prices}
+                    <div>
+                        <h1>{item.name}</h1>
+                        {prices}
+                    </div>
                 </div>
             </div>
         </div>

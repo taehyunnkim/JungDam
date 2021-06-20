@@ -745,7 +745,7 @@ $paddedWidth: 450px;
 
   .container {
     min-width: $width;
-    max-width: 90vw;
+    max-width: 95vw;
   }
   
   #patterns {
@@ -769,7 +769,7 @@ $paddedWidth: 450px;
     border-left: 1px dashed $dashColor;
     border-right: 1px dashed $dashColor;
     min-width: 320px;
-    max-width: 90vw;
+    max-width: 95vw;
     height: 100%;
     z-index: 100;
   }
@@ -1109,7 +1109,7 @@ $paddedWidth: 450px;
 
   .container {
     min-width: 320px;
-    max-width: 81vw;
+    max-width: 90vw;
   }
 
   .secondaryButton { 
@@ -1138,7 +1138,7 @@ $paddedWidth: 450px;
     border-left: 1px solid $dashColor;
     border-right: 1px solid $dashColor;
     min-width: 320px;
-    max-width: 90vw;
+    max-width: 95vw;
     height: 78%;
     z-index: 100;
   }
