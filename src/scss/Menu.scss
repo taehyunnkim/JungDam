@@ -168,7 +168,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
             margin: 0 auto;
             padding: 5px;
             background-color: $tertiaryColor;
-            background-image: linear-gradient(0deg, #c12f2f -200%, #ff5959 50%, #c12f2f 200%);
+            background-image: linear-gradient(0deg, #190404 -200%, #da3535 50%, #c12f2f 200%);
             width: 80%;
             height: 100%;
             box-sizing: border-box;
@@ -178,11 +178,12 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     }
 
     h1 {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 20px;
         margin: 15px auto 20px auto;
         width: 100%;
         color: white;
+        font-weight: 400;
     }
 
     h2 {
