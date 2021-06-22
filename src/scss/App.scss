@@ -13,6 +13,7 @@ $paragraphFontKR: "Nanum Gothic Coding", "Arial";
 $paragraphFont: "Quicksand", "Arial";
 $boxshadow: rgba(0, 0, 0, 0.18) -3px 3px 0px;
 $boxshadowHover: rgba(0, 0, 0, 0.2) 0px 0px 0px;
+$boxshadowTwo: rgba(0, 0, 0, 0.35) 0px 2px 4px;
 $textshadow: rgba(0, 0, 0, 0.35) 0px 1px 2px;
 $borderRadius: 8px;
 
@@ -106,7 +107,7 @@ hr {
     font-size: 60px;
     margin-bottom: 20px;
     font-weight: normal;
-    color: #e14444;
+    color: #8C4219;
 }
 
 .container {
@@ -445,7 +446,7 @@ p {
     div {
       border-radius: $borderRadius;
       margin: 8px;
-      box-shadow: $boxshadow;
+      box-shadow: $boxshadowTwo;
       background-position: center;
       background-size: cover;
     }
@@ -515,7 +516,7 @@ p {
   border-radius: $borderRadius;
   border: none;
   color: white;
-  box-shadow: $boxshadow;
+  box-shadow: $boxshadowTwo;
   cursor: pointer;
   margin: 25px 0 0 0;
   font-family: $paragraphFontKR;
