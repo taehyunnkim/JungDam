@@ -15,17 +15,17 @@
         "img": "i1-2.png"
     },
     {
-        "name": "프리미엄 송이갈비",
-        "price": ["일반밥 28,900원"],
+        "name": "송이갈비",
+        "price": ["28,900원"],
         "img": "Edits/premium_galbi_opt.png"
     },
     {
-        "name": "프리미엄 송이불고기",
-        "price": ["일반밥 26,900원"],
+        "name": "송이불고기",
+        "price": ["26,900원"],
         "img": "Edits/premium_shroom_bulbogi_opt.png"
     },
     {
-        "name": "프리미엄 갈비",
+        "name": "갈비",
         "price": ["21,900원"],
         "img": "i1-5.png"
     }
