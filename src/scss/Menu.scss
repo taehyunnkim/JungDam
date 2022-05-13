@@ -178,16 +178,16 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     }
 
     h1 {
-        font-size: 13px;
+        font-size: 12px;
         line-height: 20px;
-        margin: 15px auto 20px auto;
+        margin: 15px auto 0px auto;
         width: 100%;
         color: $black;
     }
 
     h2 {
-        margin: 15px 0;
-        font-size: 12px;
+        margin: 12px 0 0 0;
+        font-size: 11px;
         color: $tertiaryColor;
     }
 }
@@ -280,7 +280,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 300px) and (max-width: 480px) {
     $factor: 0.9;
     $cardHeight: 210px;
     $cardWidth: 150px;
@@ -334,7 +334,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         div {
             width: 30px;
             margin-left: 2px;
-            border-bottom: 2px solid $black;
+            border-bottom: 2px solid $primaryColor;
         }
     }
 
