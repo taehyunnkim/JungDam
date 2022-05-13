@@ -6,7 +6,7 @@ function Card({ item }) {
         <div className="invisiCard">
             <div className="card">
                 <div>
-                    <img src={require(`../../images/items/${item.img}`).default} alt="item" />
+                    <img src={require(`../../images/items/${item.img}`)} alt="item" />
                 </div>
                 <div>
                     <div>
