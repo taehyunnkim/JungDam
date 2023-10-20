@@ -20,7 +20,7 @@ function Footer() {
                         <p>식품위생 안전취급 <br/> 캐나다인증</p>
                     </div>
                     <hr/>
-                    <p>Copyright © 정담도시락.com &nbsp;&nbsp;&nbsp;&nbsp; 2021 All Rights Reserved.</p>
+                    <p>Copyright © 정담도시락.com &nbsp;&nbsp;&nbsp;&nbsp; 2023 All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

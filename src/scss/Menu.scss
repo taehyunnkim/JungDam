@@ -353,13 +353,13 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
     .card {
         width: $cardWidth;
-        height: $cardHeight;
+        height: 230px;
         margin: 10px 0;
 
         & > div:first-child {
             height: 65%;
             img {
-                width: 110px;
+                width: 120px;
                 border-radius: $borderRadius;
             }
         }
@@ -367,13 +367,14 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         & > div:last-child {
             height: 35%;
             div {
-                width: 80%;
+                width: 90%;
             }
         }
 
         h1 {
             font-size: 10px;
             line-height: 16px;
+            font-weight: bold;
             margin: 10px auto 5px auto;
             width: 90%;
         }
