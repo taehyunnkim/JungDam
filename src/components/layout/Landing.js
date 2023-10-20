@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
-import Particles from 'react-particles-js';
+import { useState, useEffect, useCallback } from 'react';
+import Particles from 'react-particles';
+import { loadSlim } from "tsparticles-slim";
+import particlesSettings from '../../assets/particles.json';
 import '../../scss/Bricks.scss';
 
 import mainImage from '../../images/main_nc.png';
@@ -37,6 +39,19 @@ function Landing({ setPage }) {
         }
     };
 
+    const particlesInit = useCallback(async engine => {
+        console.log(engine);
+        // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+        // starting from v2 you can add only the features you need reducing the bundle size
+        //await loadFull(engine);
+        await loadSlim(engine);
+    }, []);
+
+    const particlesLoaded = useCallback(async container => {
+        await console.log(container);
+    }, []);
+
     useEffect(() => {
         window.addEventListener("scroll", parallax);
 
@@ -72,63 +87,10 @@ function Landing({ setPage }) {
                     {/* <div id="gradient-2"></div> */}
                     {/* <img id="house-image" src={houses} alt="houses" /> */}
                     <Particles 
-                        params={{
-                            "particles": {
-                                "number": {
-                                    "value": 7,
-                                    "density": {
-                                        "enable": false
-                                    }
-                                },
-                                "color": {
-                                    "value": ["#FFCA3E","#FFCA3E","#7C9D68","#E27C7C"]
-                                },
-                                "size": {
-                                    "value": 5,
-                                    "random": true,
-                                    "anim": {
-                                        "speed": 2,
-                                        "size_min": 1
-                                    }
-                                },
-                                "line_linked": {
-                                    "enable": false
-                                },
-                                "move": {
-                                    "angle": {
-                                        "offset": 45,
-                                        "value": 90
-                                      },
-                                    "path": {
-                                        "delay": {
-                                            "value": 3,
-                                            "random": {
-                                                "enable": true,
-                                                "min_value": 1
-                                            }
-                                        },
-                                        // "clamp": true,
-                                        "enable": true
-                                    },
-                                    "random": true,
-                                    "speed": 1
-                                }
-                            },
-                            "interactivity": {
-                                "events": {
-                                    "onhover": {
-                                        "enable": true,
-                                        "mode": "attract"
-                                    }
-                                },
-                                "modes": {
-                                    "attract": {
-                                        "distance": 100,
-                                        "duration": 0.4
-                                    }
-                                }
-                            }
-                        }}
+                        id="tsparticles"
+                        options={particlesSettings}
+                        init={particlesInit} 
+                        loaded={particlesLoaded}
                     />
                     <img id="bento-image" src={mainImage} draggable={false} alt="JungDam" />
                     <div id="bricks">
