@@ -23,7 +23,7 @@ function Menu({setPage, menu}) {
 
     let menuItems = "";
     if(menu === "premium") {
-        menuItems = <CardList id="premium" items={premium} title="명품메뉴" description={["국 람부탄 홍삼드링크 김 제공"]} />
+        menuItems = <CardList id="premium" items={premium} title="명품메뉴" description={["국,김 제공"]} />
     } else if(menu === "special") {
         menuItems = <CardList id="special" items={special} title="스페셜메뉴" description={["국 델몬트쥬스 김 제공"]} />
     } else if(menu === "alchan") {
