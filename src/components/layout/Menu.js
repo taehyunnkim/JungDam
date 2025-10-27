@@ -39,11 +39,16 @@ function Menu({setPage, menu}) {
     } else if(menu === "western") {
         menuItems = <CardList id="western" items={western} title="맞춤양식메뉴" />
     } else if(menu === "korean") {
-        menuItems = <CardList id="korean" items={korean} title="맞춤한식메뉴" />
+        const type1Items = korean.filter(item => item.type === "1");
+        const type2Items = korean.filter(item => item.type === "2");
+        menuItems = (
+            <>
+                <CardList id="korean-regular" items={type1Items} title="맞춤한식메뉴 1" />
+                <CardList id="korean-premium" items={type2Items} title="맞춤한식메뉴 2" />
+            </>
+        );
     } else if(menu === "kids") {
         menuItems = <CardList id="kids" items={kid} title="어린이메뉴" />
-    } else if(menu === "hike") {
-        menuItems = <CardList id="hike" items={hike} title="등산메뉴" />
     } else if(menu === "snacks") {
         menuItems = <CardList id="snacks" items={snacks} title="간식메뉴"/>
     } 

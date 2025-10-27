@@ -1,19 +1,26 @@
 function Card({ item }) {
-    let prices = item.price.map((price) => {
-        return <h2 key={price}>{price}</h2>
-    });
+    // Format prices on separate lines or with bullet separator
+    let priceDisplay;
+    if (item.price.length === 1) {
+        priceDisplay = <h2>{item.price[0]}</h2>;
+    } else {
+        priceDisplay = (
+            <div className="price-container">
+                {item.price.map((price, index) => (
+                    <h2 key={price}>{price}</h2>
+                ))}
+            </div>
+        );
+    }
+    
     return(
-        <div className="invisiCard">
-            <div className="card">
-                <div>
-                    <img src={require(`../../images/items/${item.img}`)} alt="item" />
-                </div>
-                <div>
-                    <div>
-                        <h1>{item.name}</h1>
-                        {prices}
-                    </div>
-                </div>
+        <div className="card">
+            <div>
+                <img src={require(`../../images/items/${item.img}`)} alt="item" />
+            </div>
+            <div>
+                <h1>{item.name}</h1>
+                {priceDisplay}
             </div>
         </div>
     );

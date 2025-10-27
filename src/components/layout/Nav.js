@@ -37,7 +37,6 @@ function Nav({showNav, page, setMenu}) {
                 <a href="#western" onClick={(e) => {setMenu("western"); removeActive(); e.target.classList.add("active")}}>맞춤양식</a>
                 <a href="#korean" onClick={(e) => {setMenu("korean"); removeActive(); e.target.classList.add("active")}}>맞춤한식</a>
                 <a href="#kids" onClick={(e) => {setMenu("kids"); removeActive(); e.target.classList.add("active")}}>어린이</a>
-                <a href="#hike" onClick={(e) => {setMenu("hike"); removeActive(); e.target.classList.add("active")}}>등산</a>
                 <a href="#snacks" onClick={(e) => {setMenu("snacks"); removeActive(); e.target.classList.add("active")}}>간식</a>
             </div>
         </nav>

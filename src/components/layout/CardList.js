@@ -6,19 +6,12 @@ function CardList({id, items, title, description}) {
         cards.push(<Card item={item} key={Math.random(100000)} />)
     });
 
-    let numHidden = items.length % 4 !== 0 ? 4 - (items.length % 4) : items.length % 4;
-    let ele = [];
-    for(let i = 0; i < numHidden; i++) {
-        ele.push(<div className="card hidden invisiCard" key={Math.random(100000)}></div>);
-    }
-
     let descriptions = [];
     if(description) {
         for(let i = 0; i < description.length; i++) {
             descriptions.push(<p key={Math.random(100000)}>{description[i]}</p>);
         }
     }
-
 
     return(
         <div id={id} className="menuContainer">
@@ -29,7 +22,6 @@ function CardList({id, items, title, description}) {
             </div>
             <div className="cardList">
                 {cards}
-                {ele}
             </div>
         </div>
     );

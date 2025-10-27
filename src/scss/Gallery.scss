@@ -5,7 +5,7 @@ $borderRadius: 8px;
 .galleryContainer {
     padding: 30px;
     box-sizing: border-box;
-    height: 2900px;
+    height: 3500px;
 
     & > div {
         position: relative;
@@ -176,6 +176,42 @@ $borderRadius: 8px;
             top: 1915px;
             left: 0;
         }
+
+        img:nth-child(26) {
+            height: 190px;
+            top: 2508px;
+            right: 0;
+        }
+
+        img:nth-child(27) {
+            height: 338px;
+            top: 2812px;
+            right: 280px;
+        }
+
+        img:nth-child(28) {
+            height: 336px;
+            top: 2723px;
+            right: 0;
+        }
+
+        img:nth-child(29) {
+            height: 284px;
+            top: 2533px;
+            left: 0;
+        }
+
+        img:nth-child(30) {
+            height: 240px;
+            top: 2842px;
+            left: 200px;
+        }
+
+        img:nth-child(31) {
+            height: 240px;
+            top: 2842px;
+            left: 0;
+        }
     }
 }
 
@@ -184,7 +220,7 @@ $borderRadius: 8px;
         padding: 10px;
         width: 490px;
         margin: 0 auto;
-        height: 2350px;
+        height: 3150px;
     
         & > div {
             img:nth-child(1) {
@@ -365,6 +401,59 @@ $borderRadius: 8px;
                 left: 0;
                 right: unset;
             }
+
+            img:nth-child(26) {
+                width: 126px;
+                height: 200px;
+                top: 1943px;
+                object-fit: cover;
+                right: 0;
+                left: unset;
+            }
+
+            img:nth-child(27) {
+                width: 320px;
+                height: 260px;
+                top: 2170px;
+                left: 0;
+                object-fit: cover;
+                right: unset;
+            }
+
+            img:nth-child(28) {
+                width: 126px;
+                height: 200px;
+                top: 2162px;
+                object-fit: cover;
+                right: 0;
+                left: unset;
+            }
+
+            img:nth-child(29) {
+                width: 126px;
+                height: 200px;
+                top: 2381px;
+                object-fit: cover;
+                right: 0;
+                left: unset;
+            }
+
+            img:nth-child(30) {
+                width: 320px;
+                height: 260px;
+                top: 2450px;
+                left: 0;
+                object-fit: cover;
+                right: unset;
+            }
+
+            img:nth-child(31) {
+                width: 320px;
+                height: 260px;
+                top: 2730px;
+                left: 0;
+                right: unset;
+            }
         }
     }
 }
@@ -372,7 +461,7 @@ $borderRadius: 8px;
 @media (min-width: 300px) and (max-width: 480px) {
     .galleryContainer {
         padding: 10px;
-        height: 2500px;
+        height: 3200px;
         width: 300px;
         margin: 0 auto;
     
@@ -546,6 +635,47 @@ $borderRadius: 8px;
                 top: 1525px;
                 right: 0;
                 left: unset;
+            }
+
+            img:nth-child(26) {
+                height: 120px;
+                top: 2229px;
+                left: 0;
+                right: unset;
+            }
+
+            img:nth-child(27) {
+                height: 150px;
+                top: 2229px;
+                right: 0;
+                left: unset;
+            }
+
+            img:nth-child(28) {
+                height: 225px;
+                top: 2364px;
+                left: 0;
+            }
+
+            img:nth-child(29) {
+                height: 220px;
+                top: 2610px;
+                left: 0;
+                right: unset;
+            }
+
+            img:nth-child(30) {
+                height: 150px;
+                top: 2394px;
+                right: 0;
+                left: unset;
+            }
+
+            img:nth-child(31) {
+                height: 220px;
+                top: 2859px;
+                left: 0;
+                right: unset;
             }
         }
     }
