@@ -32,6 +32,7 @@ import pic31 from "../../images/gallery/31.jpg";
 // import pic19 from "../../images/gallery/19.jpg";
 // Import video
 import video1 from "../../images/gallery/video.mp4";
+import poster from "../../images/gallery/poster.jpeg";
 import '../../scss/Gallery.scss';
 import { useEffect } from 'react';
 
@@ -75,7 +76,7 @@ function Gallery({setPage}) {
                 <img src={pic29} alt="gallery"/>
                 <img src={pic30} alt="gallery"/>
                 <img src={pic31} alt="gallery"/>
-                <video controls>
+                <video controls poster={poster}>
                     <source src={video1} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>

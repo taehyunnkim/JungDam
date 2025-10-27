@@ -104,11 +104,11 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     z-index: 500;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 10px 30px;
     margin-bottom: 30px;
     display: grid;
     grid-template-columns: repeat(4, $cardWidth);
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
     max-width: 100%;
 }
@@ -251,9 +251,9 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     }
 
     .cardList {
-        padding: 20px 10px;
+        padding: 20px 15px;
         grid-template-columns: repeat(4, 160px);
-        gap: 15px;
+        gap: 18px;
     }
 
     .card {
@@ -367,9 +367,9 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     }
 
     .cardList {
-        padding: 20px 5px;
+        padding: 20px 10px;
         grid-template-columns: repeat(2, $cardWidth);
-        gap: 12px;
+        gap: 15px;
     }
 
     .card {
