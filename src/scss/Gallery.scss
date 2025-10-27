@@ -5,7 +5,7 @@ $borderRadius: 8px;
 .galleryContainer {
     padding: 30px;
     box-sizing: border-box;
-    height: 3500px;
+    height: 3700px;
 
     & > div {
         position: relative;
@@ -13,10 +13,14 @@ $borderRadius: 8px;
         height: 100%;
         z-index: 500;
 
-        img {
+        img, video {
             position: absolute;
             box-shadow: $boxshadowTwo;
             border-radius: $borderRadius;
+        }
+
+        video {
+            cursor: pointer;
         }
         
         $oneHeight: 440px;
@@ -212,6 +216,14 @@ $borderRadius: 8px;
             top: 2842px;
             left: 0;
         }
+
+        // Video positioning
+        video:nth-child(32) {
+            height: 400px;
+            width: auto;
+            top: 3110px;
+            left: 0;
+        }
     }
 }
 
@@ -220,7 +232,7 @@ $borderRadius: 8px;
         padding: 10px;
         width: 490px;
         margin: 0 auto;
-        height: 3150px;
+        height: 3850px;
     
         & > div {
             img:nth-child(1) {
@@ -454,6 +466,14 @@ $borderRadius: 8px;
                 left: 0;
                 right: unset;
             }
+
+            video:nth-child(32) {
+                width: 400px;
+                height: auto;
+                top: 3020px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
 }
@@ -461,7 +481,7 @@ $borderRadius: 8px;
 @media (min-width: 300px) and (max-width: 480px) {
     .galleryContainer {
         padding: 10px;
-        height: 3200px;
+        height: 3750px;
         width: 300px;
         margin: 0 auto;
     
@@ -676,6 +696,14 @@ $borderRadius: 8px;
                 top: 2859px;
                 left: 0;
                 right: unset;
+            }
+
+            video:nth-child(32) {
+                width: 300px;
+                height: auto;
+                top: 3100px;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     }
