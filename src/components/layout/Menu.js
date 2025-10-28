@@ -44,7 +44,7 @@ function Menu({setPage, menu}) {
         menuItems = (
             <>
                 <CardList id="korean-regular" items={type1Items} title="맞춤한식메뉴 1" />
-                <CardList id="korean-premium" items={type2Items} title="맞춤한식메뉴 2" />
+                <CardList id="korean-premium" items={type2Items} title="맞춤한식메뉴 2" description={["국 제공"]}/>
             </>
         );
     } else if(menu === "kids") {
