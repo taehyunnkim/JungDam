@@ -24,19 +24,19 @@
         "img": "i8-4.jpg"
     },
     {
-        "name": "프리미엄 (불고기, 낙지)",
+        "name": "불고기, 낙지",
         "type": "2",
         "price": ["가격협의"],
-        "img": "i8-2.jpg"
+        "img": "korean_bulgogi.png"
     },
     {
-        "name": "프리미엄 (제육, 닭갈비)",
+        "name": "제육, 닭갈비",
         "type": "2",
         "price": ["가격협의"],
-        "img": "i8-2.jpg"
+        "img": "korean_dakgalbi.png"
     },
     {
-        "name": "프리미엄 (갈비)",
+        "name": "갈비",
         "type": "2",
         "price": ["가격협의"],
         "img": "chicken-galbi-2.png"
