@@ -16,7 +16,7 @@ import food3 from '../../images/food3.png';
 import food4 from '../../images/food4.png';
 import premium from '../../images/items/Edits/premium_galbi_opt.png';
 import event from '../../images/event_2.png';
-import special from '../../images/special_2.png';
+import special from '../../images/main.png';
 import Button from '../Button';
 import SecondaryButton from '../SecondaryButton';
 import TeleButton from '../TeleButton';

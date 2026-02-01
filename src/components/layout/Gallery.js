@@ -27,6 +27,17 @@ import pic27 from "../../images/gallery/26-2.JPG";
 import pic26 from "../../images/gallery/27-2.JPG";
 import pic28 from "../../images/gallery/28-2.JPG";
 import pic29 from "../../images/gallery/29-2.JPG";
+import pic202601 from "../../images/gallery/2026-01.JPG";
+import pic202602 from "../../images/gallery/2026-02.JPG";
+import pic202603 from "../../images/gallery/2026-03.JPG";
+import pic202604 from "../../images/gallery/2026-04.JPG";
+import pic202605 from "../../images/gallery/2026-05.JPG";
+import pic202606 from "../../images/gallery/2026-06.JPG";
+import pic202607 from "../../images/gallery/2026-07.JPG";
+import pic202608 from "../../images/gallery/2026-08.JPG";
+import pic202609 from "../../images/gallery/2026-09.JPG";
+import pic202610 from "../../images/gallery/2026-10.JPG";
+import pic202611 from "../../images/gallery/2026-11.JPG";
 // import pic30 from "../../images/gallery/30.jpg";
 // import pic31 from "../../images/gallery/31.jpg";
 // import pic19 from "../../images/gallery/19.jpg";
@@ -36,6 +47,16 @@ import pic29 from "../../images/gallery/29-2.JPG";
 import '../../scss/Gallery.scss';
 import { useEffect } from 'react';
 
+// Array of all gallery images - easy to add/remove images
+const galleryImages = [
+    main, pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9,
+    pic10, pic11, pic12, pic13, pic14, pic15, pic16, pic17, pic18,
+    pic20, pic21, pic22, pic23, pic24, pic25, pic26, pic27, pic28, pic29,
+    pic202601, pic202602, pic202603, pic202604, pic202605, pic202606, pic202607, pic202608, pic202609, pic202610, pic202611
+    // Uncomment to add more images:
+    // pic30, pic31, pic19
+];
+
 function Gallery({setPage}) {
     useEffect(() => {
         setPage("gallery");
@@ -44,43 +65,20 @@ function Gallery({setPage}) {
 
     return(
         <div className="container galleryContainer first">
-            <div>
-                <img src={main} alt="gallery" />
-                <img src={pic1} alt="gallery" />
-                <img src={pic2} alt="gallery" />
-                <img src={pic3} alt="gallery" />
-                <img src={pic4} alt="gallery" />
-                <img src={pic5} alt="gallery" />
-                <img src={pic6} alt="gallery" />
-                <img src={pic7} alt="gallery" />
-                <img src={pic8} alt="gallery" />
-                <img src={pic9} alt="gallery" />
-                <img src={pic10} alt="gallery" />
-                <img src={pic11} alt="gallery"/>
-                <img src={pic12} alt="gallery"/>
-                <img src={pic13} alt="gallery" />
-                <img src={pic14} alt="gallery"/>
-                <img src={pic15} alt="gallery"/>
-                <img src={pic16} alt="gallery"/>
-                <img src={pic17} alt="gallery"/>
-                <img src={pic18} alt="gallery"/>
-                <img src={pic20} alt="gallery"/>
-                <img src={pic21} alt="gallery"/>
-                <img src={pic22} alt="gallery"/>
-                <img src={pic23} alt="gallery"/>
-                <img src={pic24} alt="gallery"/>
-                <img src={pic25} alt="gallery"/>
-                <img src={pic26} alt="gallery"/>
-                <img src={pic27} alt="gallery"/>
-                <img src={pic28} alt="gallery"/>
-                <img src={pic29} alt="gallery"/>
-                {/* <img src={pic30} alt="gallery"/>
-                <img src={pic31} alt="gallery"/> */}
-                {/* <video controls poster={poster}>
-                    <source src={video1} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video> */}
-                {/* <img src={pic19} alt="gallery"/> */}
+            <div className="masonry-grid">
+                {galleryImages.map((img, index) => (
+                    <div key={index} className="masonry-item">
+                        <img src={img} alt={`Gallery ${index + 1}`} />
+                    </div>
+                ))}
+                {/* Uncomment to add video:
+                <div className="masonry-item">
+                    <video controls poster={poster}>
+                        <source src={video1} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                */}
             </div>
         </div>
     );
