@@ -2,14 +2,14 @@ import Card from './Card';
 
 function CardList({id, items, title, description}) {
     let cards = [];
-    items.forEach(item => {
-        cards.push(<Card item={item} key={Math.random(100000)} />)
+    items.forEach((item, index) => {
+        cards.push(<Card item={item} key={index} />)
     });
 
     let descriptions = [];
     if(description) {
         for(let i = 0; i < description.length; i++) {
-            descriptions.push(<p key={Math.random(100000)}>{description[i]}</p>);
+            descriptions.push(<p key={i}>{description[i]}</p>);
         }
     }
 
