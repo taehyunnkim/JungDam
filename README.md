@@ -1,10 +1,10 @@
 ## Jungdam Homepage
 
-Node Version: `12.18.0`
+Node Version: `22` (LTS)
 
 ```
-nvm install 12.18.0
-nvm use 12.18.0
+nvm install 22
+nvm use 22
 ```
 
 https://jungdamdosirak.co.kr

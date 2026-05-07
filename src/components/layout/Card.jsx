@@ -1,3 +1,5 @@
+const itemImages = import.meta.glob('../../images/items/**/*', { eager: true });
+
 function Card({ item }) {
     // Format prices on separate lines or with bullet separator
     let priceDisplay;
@@ -16,7 +18,7 @@ function Card({ item }) {
     return(
         <div className="card">
             <div>
-                <img src={require(`../../images/items/${item.img}`)} alt="item" />
+                <img src={itemImages[`../../images/items/${item.img}`]?.default} alt="item" />
             </div>
             <div>
                 <h1>{item.name}</h1>

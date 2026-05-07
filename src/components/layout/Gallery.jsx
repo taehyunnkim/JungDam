@@ -1,10 +1,10 @@
 import '../../scss/Gallery.scss';
 import { useEffect } from 'react';
 
-const requireContext = require.context('../../images/gallery', false, /\.(jpg|jpeg|JPG|JPEG|png|PNG|gif|GIF)$/);
-const galleryImages = requireContext.keys()
-    .sort((a, b) => b.localeCompare(a, undefined, { numeric: true, sensitivity: 'base' }))
-    .map(key => requireContext(key));
+const imageModules = import.meta.glob('../../images/gallery/*', { eager: true });
+const galleryImages = Object.entries(imageModules)
+    .sort(([a], [b]) => b.localeCompare(a, undefined, { numeric: true, sensitivity: 'base' }))
+    .map(([, mod]) => mod.default);
 
 function Gallery({setPage}) {
     useEffect(() => {
