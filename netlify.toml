@@ -5,5 +5,5 @@
 [[plugins]]
   package = "netlify-plugin-minify-html"
 
-  [plugins.inputs.htmlMinifier]
+  [plugins.inputs.minifierOptions]
     minifyURLs = false
