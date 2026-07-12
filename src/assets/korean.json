@@ -12,25 +12,43 @@
         "img": "boxb.png"
     },
     {
-        "name": "단품 A (닭강정, 떡갈비, 새우까스)",
+        "name": "박스형도시락 C",
         "type": "1",
         "price": ["가격협의"],
-        "img": "i8-2.jpg"
+        "img": "boxc.png"
     },
     {
-        "name": "단품 B (제육김치.낙지볶음, 불고기, 닭갈비)",
+        "name": "박스형도시락 D",
+        "type": "1",
+        "price": ["가격협의"],
+        "img": "boxd.png"
+    },
+    {
+        "name": "단품 A (제육김치, 낙지볶음, 불고기, 닭갈비)",
         "type": "1",
         "price": ["가격협의"],
         "img": "i8-3.jpg"
     },
     {
-        "name": "불고기, 낙지",
-        "type": "2",
+        "name": "단품 B",
+        "type": "1",
         "price": ["가격협의"],
-        "img": "korean_bulgogi.png"
+        "img": "danpum-c.png"
     },
     {
-        "name": "제육, 닭갈비",
+        "name": "칠기(찬합)도시락A",
+        "type": "2",
+        "price": ["가격협의"],
+        "img": "chilgi-a.png"
+    },
+    {
+        "name": "칠기(찬합)도시락B",
+        "type": "2",
+        "price": ["가격협의"],
+        "img": "chilgi-b.png"
+    },
+    {
+        "name": "불고기, 낙지, 제육, 닭갈비",
         "type": "2",
         "price": ["가격협의"],
         "img": "korean_dakgalbi.png"
