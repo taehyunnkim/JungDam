@@ -92,7 +92,9 @@ function Landing({ setPage }) {
                         init={particlesInit} 
                         loaded={particlesLoaded}
                     />
-                    <img id="bento-image" src={mainImage} draggable={false} alt="JungDam" />
+                    {
+                     // <img id="bento-image" src={mainImage} draggable={false} alt="JungDam" />
+                    }
                     <div id="bricks">
                         <div className="brick"></div>
                         <div className="brick"></div>
@@ -110,7 +112,9 @@ function Landing({ setPage }) {
                         <div className="brick"></div>
                     </div>
                 </div>
-                <div id="filler"></div>
+                {
+                  // <div id="filler"></div> 
+                }
             </div>
             <div id="menu-intro">
                 <div></div>
