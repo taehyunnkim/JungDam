@@ -1,30 +1,30 @@
 [
     {
-        "name": "박스형도시락 A",
+        "name": "박스형 명품도시락 A",
         "type": "1",
         "price": ["23,000원~"],
         "img": "boxa.png"
     },
     {
-        "name": "박스형도시락 B",
+        "name": "박스형 명품도시락 B",
         "type": "1",
         "price": ["25,000원~"],
         "img": "boxb.png"
     },
     {
-        "name": "박스형도시락 C",
+        "name": "박스형 명품도시락 C",
         "type": "1",
         "price": ["27,000원~"],
         "img": "boxc.png"
     },
     {
-        "name": "박스형도시락 D",
+        "name": "박스형 명품도시락 D",
         "type": "1",
         "price": ["37,000원~"],
         "img": "boxd.png"
     },
     {
-        "name": "박스형도시락 E",
+        "name": "박스형도시락 E (메인2가지선택ㆍ불고기ㆍ제육등)",
         "type": "1",
         "price": ["27,000원~"],
         "img": "boxe.png"
@@ -62,7 +62,7 @@
     {
         "name": "갈비",
         "type": "2",
-        "price": ["22,000원~"],
+        "price": ["29,000원~"],
         "img": "korean-galbi.png"
     }
 ]
