@@ -120,7 +120,7 @@ function Landing({ setPage }) {
                 <div></div>
                 <div className="introHeading">
                     <h1>MENU INTRODUCTION</h1>
-                    <h2>늘 신선하고 깨끗한 맛으로 <br />
+                    <h2>항상 신선하고 정갈한 맛으로<br />
                         건강까지 채워드리겠습니다</h2>
                 </div>
                 <div>

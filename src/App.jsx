@@ -53,7 +53,7 @@ function App() {
                   <title>정담 메뉴</title>
                   <meta
                     name="description"
-                    content="늘 신선하고 깨끗한 맛으로 건강까지 채워드리겠습니다."
+                    content="항상 신선하고 정갈한 맛으로 건강까지 채워드리겠습니다."
                   />
               </Helmet>
               <Menu setPage={setPage} menu={menu} />

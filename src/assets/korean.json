@@ -2,61 +2,67 @@
     {
         "name": "박스형도시락 A",
         "type": "1",
-        "price": ["가격협의"],
+        "price": ["23,000원~"],
         "img": "boxa.png"
     },
     {
         "name": "박스형도시락 B",
         "type": "1",
-        "price": ["가격협의"],
+        "price": ["25,000원~"],
         "img": "boxb.png"
     },
     {
         "name": "박스형도시락 C",
         "type": "1",
-        "price": ["가격협의"],
+        "price": ["27,000원~"],
         "img": "boxc.png"
     },
     {
         "name": "박스형도시락 D",
         "type": "1",
-        "price": ["가격협의"],
+        "price": ["37,000원~"],
         "img": "boxd.png"
+    },
+    {
+        "name": "박스형도시락 E",
+        "type": "1",
+        "price": ["27,000원~"],
+        "img": "boxe.png"
     },
     {
         "name": "단품 A (제육김치, 낙지볶음, 불고기, 닭갈비)",
         "type": "1",
-        "price": ["가격협의"],
+        "price": ["11,500원~"],
         "img": "i8-3.jpg"
     },
     {
         "name": "단품 B",
         "type": "1",
-        "price": ["가격협의"],
+        "price": ["13,500원~"],
         "img": "danpum-c.png"
     },
     {
         "name": "칠기(찬합)도시락A",
         "type": "2",
-        "price": ["가격협의"],
+        "price": ["35,000원~"],
         "img": "chilgi-a.png"
     },
     {
         "name": "칠기(찬합)도시락B",
         "type": "2",
-        "price": ["가격협의"],
+        "price": ["30,000원~"],
         "img": "chilgi-b.png"
     },
     {
         "name": "불고기, 낙지, 제육, 닭갈비",
         "type": "2",
-        "price": ["가격협의"],
+        "price": ["20,000원~"],
         "img": "korean_dakgalbi.png"
     },
     {
         "name": "갈비",
         "type": "2",
-        "price": ["가격협의"],
+        "price": ["22,000원~"],
         "img": "korean-galbi.png"
     }
 ]
