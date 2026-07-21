@@ -23,7 +23,14 @@ function Menu({setPage, menu}) {
 
     let menuItems = "";
     if(menu === "premium") {
-        menuItems = <CardList id="premium" items={premium} title="명품메뉴" description={["국,김 제공"]} />
+        const premiumItems = premium.filter(item => item.type !== "box");
+        const boxItems = premium.filter(item => item.type === "box");
+        menuItems = (
+            <>
+                <CardList id="premium" items={premiumItems} title="명품메뉴" description={["국,김 제공"]} />
+                <CardList id="premium-box" items={boxItems} title="박스형 메뉴" description={["송이 ,장어,갈비 추가 가능"]} />
+            </>
+        );
     } else if(menu === "special") {
         menuItems = <CardList id="special" items={special} title="스페셜메뉴" description={["국 델몬트쥬스 김 제공"]} />
     } else if(menu === "alchan") {

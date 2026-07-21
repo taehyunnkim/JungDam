@@ -311,7 +311,8 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     }
 
     .revealShortcut {
-        height: 70px!important;
+        height: auto!important;
+        min-height: 70px;
         opacity: 1!important;
         padding: 5px 0px;
     }
