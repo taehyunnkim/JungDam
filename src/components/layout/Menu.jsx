@@ -27,38 +27,38 @@ function Menu({setPage, menu}) {
         const boxItems = premium.filter(item => item.type === "box");
         menuItems = (
             <>
-                <CardList id="premium" items={premiumItems} title="명품메뉴" description={["국, 김 제공"]} />
-                <CardList id="premium-box" items={boxItems} title="박스형 메뉴" description={["송이, 장어, 갈비 추가 가능"]} />
+                <CardList id="premium" items={premiumItems} title="명품메뉴" kicker="PREMIUM" description={["국, 김 제공"]} />
+                <CardList id="premium-box" items={boxItems} title="박스형 메뉴" kicker="PREMIUM BOX" description={["송이, 장어, 갈비 추가 가능"]} />
             </>
         );
     } else if(menu === "special") {
-        menuItems = <CardList id="special" items={special} title="스페셜메뉴" description={["국 델몬트쥬스 김 제공"]} />
+        menuItems = <CardList id="special" items={special} title="스페셜메뉴" kicker="SPECIAL" description={["국 델몬트쥬스 김 제공"]} />
     } else if(menu === "alchan") {
-        menuItems = <CardList id="alchan" items={full} title="알찬메뉴" description={["김 제공"]} />
+        menuItems = <CardList id="alchan" items={full} title="알찬메뉴" kicker="VALUE SET" description={["김 제공"]} />
     } else if(menu === "silsok") {
-        menuItems = <CardList id="silsok" items={silsok} title="실속메뉴" />
+        menuItems = <CardList id="silsok" items={silsok} title="실속메뉴" kicker="EVERYDAY" />
     } else if(menu === "japanese") {
         menuItems = <CardList id="japanese" items={japanese} title="일품메뉴" />
     } else if(menu === "event") {
-        menuItems = <CardList id="event" items={event} title="행사메뉴" />
+        menuItems = <CardList id="event" items={event} title="행사메뉴" kicker="CATERING" />
     } else if(menu === "lunch") {
-        menuItems = <CardList id="lunch" items={lunch} title="정기식단메뉴" description={["주, 월별 계약 5개 이상", "주, 월단위 식단표에 의해 반찬구성이 매일 변경되어 제공됨"]} />
+        menuItems = <CardList id="lunch" items={lunch} title="정기식단메뉴" kicker="SUBSCRIPTION" description={["주, 월별 계약 5개 이상", "주, 월단위 식단표에 의해 반찬구성이 매일 변경되어 제공됨"]} />
     } else if(menu === "western") {
-        menuItems = <CardList id="western" items={western} title="맞춤양식메뉴" />
+        menuItems = <CardList id="western" items={western} title="맞춤양식메뉴" kicker="WESTERN" />
     } else if(menu === "korean") {
         const type1Items = korean.filter(item => item.type === "1");
         const type2Items = korean.filter(item => item.type === "2");
         menuItems = (
             <>
-                <CardList id="korean-regular" items={type1Items} title="맞춤한식메뉴 1" />
-                <CardList id="korean-premium" items={type2Items} title="맞춤한식메뉴 2" description={["국 제공"]}/>
+                <CardList id="korean-regular" items={type1Items} title="맞춤한식메뉴 1" kicker="KOREAN" />
+                <CardList id="korean-premium" items={type2Items} title="맞춤한식메뉴 2" kicker="KOREAN PLUS" description={["국 제공"]}/>
             </>
         );
     } else if(menu === "kids") {
-        menuItems = <CardList id="kids" items={kid} title="어린이메뉴" />
+        menuItems = <CardList id="kids" items={kid} title="어린이메뉴" kicker="FOR KIDS" />
     } else if(menu === "snacks") {
-        menuItems = <CardList id="snacks" items={snacks} title="간식메뉴"/>
-    } 
+        menuItems = <CardList id="snacks" items={snacks} title="간식메뉴" kicker="SNACKS"/>
+    }
 
     return(
         <div>  

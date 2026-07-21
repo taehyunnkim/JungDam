@@ -1,6 +1,6 @@
 import Card from './Card';
 
-function CardList({id, items, title, description}) {
+function CardList({id, items, title, description, kicker}) {
     let cards = [];
     items.forEach((item, index) => {
         cards.push(<Card item={item} key={index} />)
@@ -15,10 +15,11 @@ function CardList({id, items, title, description}) {
 
     return(
         <div id={id} className="menuContainer">
-            <div>
+            <div className="sectionHeader">
+                {kicker && <span className="kicker">{kicker}</span>}
                 <h1>{title}</h1>
                 {descriptions}
-                <div></div>
+                <div className="accent"></div>
             </div>
             <div className="cardList">
                 {cards}

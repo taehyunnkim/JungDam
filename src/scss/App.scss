@@ -610,8 +610,10 @@ nav {
     a {
       text-decoration: none;
       box-sizing: border-box;
+      display: inline-block;
       color: $black;
-      padding: 10px 27px; 
+      line-height: 14px;
+      padding: 10px 27px;
       border-radius: $borderRadius;
       transition-timing-function: cubic-bezier(.17,.67,.83,.67);
       transition-duration: 150ms;

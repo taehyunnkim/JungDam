@@ -1,7 +1,7 @@
 @use 'variables' as v;
 
 $borderRadius: v.$radius;
-$cardHeight: 310px;
+$cardHeight: 280px;
 $cardWidth: 215px;
 $paragraphFontKR: v.$fontKR;
 $primaryColor: v.$primary;
@@ -48,7 +48,8 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         text-decoration: none;
         color: $primaryColor;
         font-size: 16px;
-        padding: 10px 12px;
+        line-height: 16px;
+        padding: 12px;
         margin: 0 3px;
         border-radius: 5px;
         display: none;
@@ -68,19 +69,34 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     min-height: 100vh;
 }
 
+// Offset in-page anchor jumps so the section title clears the fixed nav
+.menuContainer {
+    scroll-margin-top: 170px;
+}
+
 .menuContainer > div:first-child {
     position: relative;
     z-index: 500;
-    width: 300px;
-    padding: 0 30px 30px 30px;
+    box-sizing: border-box;
+    padding: 0 18px; // aligns with the card's inset inside its grid track
+    margin-bottom: 14px;
+
+    .kicker {
+        display: block;
+        font-family: "Quicksand", "Arial";
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $primaryColor;
+        margin-bottom: 4px;
+    }
 
     h1 {
         font-family: $paragraphFontKR;
         font-size: 24px;
-        color: $primaryColor;
-        margin-bottom: 0;
-        padding-top: 180px;
-        margin-top: -180px;
+        color: $black; // ink title, kicker carries the brand orange
+        margin: 0;
     }
 
     p {
@@ -88,14 +104,13 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         font-size: 12px;
         line-height: 18px;
         color: $black;
-        margin-left: 2px;
+        margin: 6px 0 0 2px;
         font-weight: bold;
     }
 
-    div {
+    .accent {
         width: 40px;
-        margin-top: 10px;
-        margin-left: 2px;
+        margin-top: 12px;
         border-bottom: 3px solid $primaryColor;
         border-radius: 20px;
     }
@@ -122,45 +137,44 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
 .card {
     width: $cardWidth;
-    height: $cardHeight;
     padding: 0px;
-    border: 1px solid #e8e8e8;
+    border: 1px solid #EAE7E1; // soft neutral hairline, faint warmth
     margin: 0px;
-    background-color: white;
-    border-radius: $borderRadius;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px;
+    background-color: #FFFFFF;
+    border-radius: 16px; // softer, more organic corners
+    box-shadow: rgba(50, 42, 32, 0.07) 0px 4px 16px; // soft, near-neutral
     display: flex;
     flex-direction: column;
     text-align: center;
     font-family: $paragraphFontKR;
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 
     &:hover {
-        transform: translateY(-2px);
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 12px;
+        transform: translateY(-3px);
+        box-shadow: rgba(50, 42, 32, 0.13) 0px 8px 22px;
     }
 
     & > div:first-child {
-        height: 170px;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: white;
-        padding: 15px;
+        background-color: transparent;
+        padding: 16px 0 6px; // tighter gap above the divider
         box-sizing: border-box;
 
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 3px;
+            width: 82%; // larger square frame; contain letterboxes to white
+            aspect-ratio: 1 / 1;
+            object-fit: contain; // show the whole photo, no cropping
+            border-radius: 0;
         }
     }
 
     & > div:last-child {
-        background-color: $secondaryColor;
+        background-color: #F7F8F9; // faint cool gray
+        border-top: 1px solid #EDEFF1; // gentle gray divider
         flex: 1;
         width: 100%;
         padding: 15px 12px;
@@ -174,16 +188,17 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     }
 
     h1 {
-        font-size: 13px;
-        line-height: 18px;
+        font-size: 15px; // stronger name, clear hierarchy over price
+        line-height: 21px;
         margin: 0;
         width: 100%;
-        min-height: 36px; // ~2 lines, keeps price rows aligned across a grid row
+        min-height: 42px; // ~2 lines, keeps price rows aligned across a grid row
         display: flex;
         align-items: center;
         justify-content: center;
         color: $black;
-        font-weight: 600;
+        font-weight: 700;
+        letter-spacing: -0.2px;
         word-wrap: break-word;
         overflow-wrap: break-word;
         hyphens: auto;
@@ -191,8 +206,8 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
     h2 {
         margin: 0;
-        font-size: 14px;
-        font-weight: bold;
+        font-size: 13px; // calmer than the name
+        font-weight: 600;
         color: $primaryColor;
     }
 
@@ -221,32 +236,21 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         padding: 5px 0px;
     }
 
+    .menuContainer {
+        scroll-margin-top: 150px;
+    }
+
     .menuContainer > div:first-child {
-        position: relative;
-        padding: 10px;
-        z-index: 500;
+        padding: 0 12px;
+        margin-bottom: 12px;
 
         h1 {
             font-size: 20px;
         }
-    
+
         p {
             font-size: 10px;
             line-height: 18px;
-        }
-    
-        div {
-            width: 30px;
-            margin-left: 2px;
-            border-bottom: 2px solid lightgray;
-        }
-    }
-
-    #korean-premium > div:first-child,
-    #premium-box > div:first-child {
-        h1 {
-            padding-top: 80px;
-            margin-top: -80px;
         }
     }
 
@@ -267,17 +271,14 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     }
 
     .card {
-        width: 100%;
-        max-width: 160px;
-        height: 250px;
+        width: 92%; // inset inside the track so cards clear the dashed lines
         margin: 0 auto;
 
         & > div:first-child {
-            height: 140px;
-            padding: 12px;
+            padding: 14px 0 6px;
 
             img {
-                border-radius: 3px;
+                border-radius: 0;
             }
         }
 
@@ -287,13 +288,14 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         }
 
         h1 {
-            font-size: 12px;
-            line-height: 17px;
-            font-weight: 600;
+            font-size: 14px; // name leads over price
+            line-height: 19px;
+            font-weight: 700;
         }
-    
+
         h2 {
-            font-size: 14px;
+            font-size: 12px;
+            font-weight: 600;
         }
     }
 
@@ -317,7 +319,6 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
     .card {
         width: 100%;
-        max-width: 160px;
         margin: 0 auto;
     }
 }
@@ -328,7 +329,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     $cardWidth: 150px;
 
     .spacing {
-        height: unset;
+        height: 190px; // clears the fixed nav (110) + shortcut bar (70)
     }
 
     .revealShortcut {
@@ -341,43 +342,23 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     .shortcut {
         a {
             font-size: 11px;
+            line-height: 11px;
             margin: 0 1px;
-            padding: 5px 8px;
+            padding: 6px 8px;
         }
     }
 
     .menuContainer > div:first-child {
-        padding: 0px 10px;
+        padding: 0 14px;
+        margin-bottom: 10px;
 
         h1 {
             font-size: 20px;
-
-            &::before {
-                content: '';
-                display: block;
-                height: 400px;
-                margin-top: -230px;
-                visibility: hidden;
-            }
         }
-    
+
         p {
             font-size: 10px;
             line-height: 18px;
-        }
-    
-        div {
-            width: 30px;
-            margin-left: 2px;
-            border-bottom: 2px solid $primaryColor;
-        }
-    }
-
-    #korean-premium > div:first-child,
-    #premium-box > div:first-child {
-        h1::before {
-            height: 80px;
-            margin-top: -50px;
         }
     }
 
@@ -387,6 +368,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
     .menuContainer {
         padding: 0px;
+        scroll-margin-top: 110px;
     }
 
     .cardList {
@@ -397,16 +379,13 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
     .card {
         width: 100%;
-        max-width: $cardWidth;
         margin: 0 auto;
-        height: 240px;
 
         & > div:first-child {
-            height: 130px;
-            padding: 10px;
+            padding: 12px 0 6px;
 
             img {
-                border-radius: 3px;
+                border-radius: 0;
             }
         }
 
@@ -416,13 +395,14 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         }
 
         h1 {
-            font-size: 11px;
-            line-height: 16px;
-            font-weight: 600;
+            font-size: 13px; // name leads over price
+            line-height: 18px;
+            font-weight: 700;
         }
-    
+
         h2 {
-            font-size: 13px;
+            font-size: 11px;
+            font-weight: 600;
         }
     }
 }
