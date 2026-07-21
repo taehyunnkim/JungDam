@@ -9,6 +9,9 @@ $danger:  #e14444; // red
 $green:   #7C9D68;
 $ink:     #24292E; // near-black text
 
+// Display face — headers, nav, buttons, card titles.
 $fontKR: "Gowun Dodum", "Nanum Gothic Coding", "Arial";
+// Body face — paragraphs and small running text. Weights 400/500/600/700 loaded.
+$bodyKR: "IBM Plex Sans KR", "Gowun Dodum", sans-serif;
 
 $radius: 8px;

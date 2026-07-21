@@ -4,6 +4,7 @@ $borderRadius: v.$radius;
 $cardHeight: 280px;
 $cardWidth: 215px;
 $paragraphFontKR: v.$fontKR;
+$bodyFontKR: v.$bodyKR;
 $primaryColor: v.$primary;
 $secondaryColor: v.$surface; // card footer bg
 $tertiaryColor: v.$danger;
@@ -105,12 +106,12 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     }
 
     p {
-        font-family: $paragraphFontKR;
+        font-family: $bodyFontKR;
         font-size: 12px;
-        line-height: 18px;
+        line-height: 19px;
         color: $black;
         margin: 6px 0 0 2px;
-        font-weight: bold;
+        font-weight: 400; // sub description reads as support text, not a second title
     }
 
     .accent {
@@ -151,7 +152,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-family: $paragraphFontKR;
+    font-family: $bodyFontKR; // item name + price both read as body, not display
     overflow: hidden;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 
@@ -182,27 +183,23 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         border-top: 1px solid #EDEFF1; // gentle gray divider
         flex: 1;
         width: 100%;
-        padding: 15px 12px;
+        padding: 20px 12px;
         margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 6px;
+        gap: 9px;
         box-sizing: border-box;
     }
 
     h1 {
-        font-size: 15px; // stronger name, clear hierarchy over price
+        font-size: 15px; // size alone carries the name over the price
         line-height: 21px;
         margin: 0;
         width: 100%;
-        min-height: 42px; // ~2 lines, keeps price rows aligned across a grid row
-        display: flex;
-        align-items: center;
-        justify-content: center;
         color: $black;
-        font-weight: 700;
+        font-weight: 400;
         letter-spacing: -0.2px;
         word-wrap: break-word;
         overflow-wrap: break-word;
@@ -288,14 +285,14 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         }
 
         & > div:last-child {
-            padding: 12px 10px;
-            gap: 6px;
+            padding: 17px 10px;
+            gap: 8px;
         }
 
         h1 {
             font-size: 14px; // name leads over price
             line-height: 19px;
-            font-weight: 700;
+            font-weight: 400;
         }
 
         h2 {
@@ -395,14 +392,14 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         }
 
         & > div:last-child {
-            padding: 10px 8px;
-            gap: 5px;
+            padding: 14px 8px;
+            gap: 7px;
         }
 
         h1 {
             font-size: 13px; // name leads over price
             line-height: 18px;
-            font-weight: 700;
+            font-weight: 400;
         }
 
         h2 {

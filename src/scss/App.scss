@@ -11,6 +11,7 @@ $green: v.$green;
 $dashColor: #CCCCCC;
 $headerFont: "Pompiere", "Arial";
 $paragraphFontKR: v.$fontKR;
+$bodyFontKR: v.$bodyKR;
 $paragraphFont: "Quicksand", "Arial";
 $boxshadow: rgba(0, 0, 0, 0.18) -3px 3px 0px;
 $boxshadowHover: rgba(0, 0, 0, 0.2) 0px 0px 0px;
@@ -121,7 +122,8 @@ hr {
 p {
   margin: 10px 0;
   color: $black;
-  font-family: $paragraphFontKR;
+  font-family: $bodyFontKR;
+  line-height: 1.65;
 }
 
 #lines {
