@@ -27,8 +27,8 @@ function Menu({setPage, menu}) {
         const boxItems = premium.filter(item => item.type === "box");
         menuItems = (
             <>
-                <CardList id="premium" items={premiumItems} title="명품메뉴" description={["국,김 제공"]} />
-                <CardList id="premium-box" items={boxItems} title="박스형 메뉴" description={["송이 ,장어,갈비 추가 가능"]} />
+                <CardList id="premium" items={premiumItems} title="명품메뉴" description={["국, 김 제공"]} />
+                <CardList id="premium-box" items={boxItems} title="박스형 메뉴" description={["송이, 장어, 갈비 추가 가능"]} />
             </>
         );
     } else if(menu === "special") {
