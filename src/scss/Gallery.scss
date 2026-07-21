@@ -12,22 +12,24 @@ $borderRadius: v.$radius;
     margin: 0 auto;
 
     .masonry-grid {
-        column-count: 3;
-        column-gap: 20px;
+        display: flex;
+        gap: 20px;
         width: 100%;
         margin: 0;
         padding: 0;
     }
 
+    .masonry-col {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
     .masonry-item {
-        break-inside: avoid;
-        page-break-inside: avoid;
-        -webkit-column-break-inside: avoid;
-        margin-bottom: 20px;
-        margin-top: 0;
-        display: inline-block;
+        margin: 0;
         width: 100%;
-        vertical-align: top;
         position: relative;
         z-index: 500;
 
@@ -45,10 +47,28 @@ $borderRadius: v.$radius;
         video {
             cursor: pointer;
         }
+
+        .masonry-date {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 501;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            font-family: v.$fontKR;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 1;
+            letter-spacing: 0.3px;
+            backdrop-filter: blur(2px);
+            pointer-events: none;
+        }
     }
 }
 
-// Tablet layout - 2 columns
+// Tablet layout - 2 columns (column count handled in JS)
 @media (min-width: 481px) and (max-width: 1000px) {
     .galleryContainer {
         padding: 20px;
@@ -56,17 +76,16 @@ $borderRadius: v.$radius;
         width: 95%;
 
         .masonry-grid {
-            column-count: 2;
-            column-gap: 15px;
+            gap: 15px;
         }
 
-        .masonry-item {
-            margin-bottom: 15px;
+        .masonry-col {
+            gap: 15px;
         }
     }
 }
 
-// Mobile layout - 1 column
+// Mobile layout - 2 columns
 @media (min-width: 300px) and (max-width: 480px) {
     .galleryContainer {
         padding: 15px;
@@ -74,12 +93,11 @@ $borderRadius: v.$radius;
         width: 100%;
 
         .masonry-grid {
-            column-count: 2;
-            column-gap: 15px;
+            gap: 15px;
         }
 
-        .masonry-item {
-            margin-bottom: 15px;
+        .masonry-col {
+            gap: 15px;
         }
     }
 }
