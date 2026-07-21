@@ -28,7 +28,7 @@ function Menu({setPage, menu}) {
         menuItems = (
             <>
                 <CardList id="premium" items={premiumItems} title="명품메뉴" kicker="PREMIUM" description={["국, 김 제공"]} />
-                <CardList id="premium-box" items={boxItems} title="박스형 메뉴" kicker="PREMIUM BOX" description={["송이, 장어, 갈비 추가 가능"]} />
+                <CardList id="premium-box" items={boxItems} title="박스형 명품메뉴" kicker="PREMIUM BOX" description={["송이, 장어, 갈비 추가 가능"]} />
             </>
         );
     } else if(menu === "special") {

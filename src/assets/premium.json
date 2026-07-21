@@ -30,7 +30,7 @@
         "img": "i1-5.png"
     },
     {
-        "name": "박스형 명품도시락 A",
+        "name": "맞춤형 명품도시락 A",
         "type": "box",
         "price": ["23,000원~"],
         "img": "boxa.png"
@@ -42,19 +42,19 @@
         "img": "boxb.png"
     },
     {
-        "name": "박스형 명품도시락 C",
+        "name": "맞춤형 명품도시락 C",
         "type": "box",
         "price": ["27,000원~"],
         "img": "boxc.png"
     },
     {
-        "name": "박스형 명품도시락 D",
+        "name": "맞춤형 명품도시락 D",
         "type": "box",
         "price": ["37,000원~"],
         "img": "boxd.png"
     },
     {
-        "name": "박스형 명품도시락 E (메인2가지선택ㆍ불고기ㆍ제육등)",
+        "name": "맞춤형 명품도시락 E (메인2가지선택ㆍ불고기ㆍ제육등)",
         "type": "box",
         "price": ["27,000원~"],
         "img": "boxe.png"
