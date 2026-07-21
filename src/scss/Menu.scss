@@ -1,12 +1,14 @@
-$borderRadius: 5px;
+@use 'variables' as v;
+
+$borderRadius: v.$radius;
 $cardHeight: 310px;
 $cardWidth: 215px;
-$paragraphFontKR: "Nanum Gothic Coding", "Arial";
-$primaryColor: #FF833E;
-$secondaryColor: #F6F8FA;
-$tertiaryColor: #e14444;
-$fourth: #7C9D68;
-$black: #24292E;
+$paragraphFontKR: v.$fontKR;
+$primaryColor: v.$primary;
+$secondaryColor: v.$surface; // card footer bg
+$tertiaryColor: v.$danger;
+$fourth: v.$green;
+$black: v.$ink;
 $boxshadowSolid:#d644442c -3px 3px 0px;
 $boxshadowSolidTwo:#d8d8d8 0px 5px 0px;
 $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
@@ -23,7 +25,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     height: 40px!important;
     opacity: 1!important;
     padding: 5px 5px;
-    
+
     a {
         display: inline-block!important;
     }
@@ -151,7 +153,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 3px;
         }
     }
@@ -175,6 +177,10 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         line-height: 18px;
         margin: 0;
         width: 100%;
+        min-height: 36px; // ~2 lines, keeps price rows aligned across a grid row
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: $black;
         font-weight: 600;
         word-wrap: break-word;
@@ -297,7 +303,13 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
 @media (min-width: 481px) and (max-width: 699px) {
     .cardList {
-        grid-template-columns: repeat(3, 160px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        padding: 20px 12px;
+    }
+
+    .card {
+        width: 100%;
     }
 }
 
@@ -369,14 +381,15 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
     .cardList {
         padding: 20px 10px;
-        grid-template-columns: repeat(2, $cardWidth);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 15px;
     }
 
     .card {
-        width: $cardWidth;
+        width: 100%;
+        max-width: $cardWidth;
+        margin: 0 auto;
         height: 240px;
-        margin: 0px;
 
         & > div:first-child {
             height: 130px;

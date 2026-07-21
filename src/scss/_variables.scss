@@ -1,0 +1,14 @@
+// Canonical design tokens — single source of truth.
+// Per-file SCSS aliases (e.g. $primaryColor, $secondaryColor) map onto these
+// so existing selectors keep working while values live in one place.
+
+$primary: #FF833E; // brand orange
+$accent:  #FFCA3E; // yellow
+$surface: #F6F8FA; // light gray card/surface bg
+$danger:  #e14444; // red
+$green:   #7C9D68;
+$ink:     #24292E; // near-black text
+
+$fontKR: "Nanum Gothic Coding", "Arial";
+
+$radius: 8px;

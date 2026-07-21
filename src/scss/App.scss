@@ -1,21 +1,22 @@
+@use 'variables' as v;
 @import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
 
-$primaryColor: #FF833E;
-$secondaryColor: #FFCA3E;
-$tertiaryColor: #F6F8FA;
-$quaternaryColor: #e14444;
-$black: #24292E;
-$green:#7C9D68;
+$primaryColor: v.$primary;
+$secondaryColor: v.$accent;
+$tertiaryColor: v.$surface;
+$quaternaryColor: v.$danger;
+$black: v.$ink;
+$green: v.$green;
 $dashColor: #CCCCCC;
 $headerFont: "Pompiere", "Arial";
-$paragraphFontKR: "Nanum Gothic Coding", "Arial";
+$paragraphFontKR: v.$fontKR;
 $paragraphFont: "Quicksand", "Arial";
 $boxshadow: rgba(0, 0, 0, 0.18) -3px 3px 0px;
 $boxshadowHover: rgba(0, 0, 0, 0.2) 0px 0px 0px;
 $boxshadowTwo: rgba(0, 0, 0, 0.35) 0px 2px 4px;
 $textshadow: rgba(0, 0, 0, 0.35) 0px 1px 2px;
-$borderRadius: 8px;
+$borderRadius: v.$radius;
 
 $maxWidth: 1000px;
 
