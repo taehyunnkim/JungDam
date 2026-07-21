@@ -1069,9 +1069,27 @@ $paddedWidth: 450px;
   .leftLine {
     left: 25%;
   }
-  
+
   .rightLine {
     right: 25%;
+  }
+
+  // Menu goes 3-col at 481-699px — move dividers to thirds, drop the mid line
+  // Scoped to .full (menu/gallery) so landing keeps its single mid line
+  @media (max-width: 699px) {
+    #lines.full {
+      .middleLine {
+        visibility: hidden;
+      }
+
+      .leftLine {
+        left: 33.333%;
+      }
+
+      .rightLine {
+        right: 33.333%;
+      }
+    }
   }
 
   //************************** FOOTER **************************

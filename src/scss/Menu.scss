@@ -106,12 +106,13 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     z-index: 500;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 10px 30px;
+    padding: 10px 0;
     margin-bottom: 30px;
     display: grid;
-    grid-template-columns: repeat(4, $cardWidth);
-    gap: 25px;
-    justify-content: center;
+    grid-template-columns: repeat(4, 1fr); // 4 equal quarters, matches #lines dividers
+    justify-items: center; // center each card in its quarter
+    row-gap: 25px;
+    width: 100%;
     max-width: 100%;
 }
 
@@ -241,7 +242,8 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         }
     }
 
-    #korean-premium > div:first-child {
+    #korean-premium > div:first-child,
+    #premium-box > div:first-child {
         h1 {
             padding-top: 80px;
             margin-top: -80px;
@@ -257,15 +259,18 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     }
 
     .cardList {
-        padding: 20px 15px;
-        grid-template-columns: repeat(4, 160px);
-        gap: 18px;
+        padding: 20px 0;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        row-gap: 18px;
+        column-gap: 18px;
     }
 
     .card {
-        width: 160px;
+        width: 100%;
+        max-width: 160px;
         height: 250px;
-        margin: 0px;
+        margin: 0 auto;
 
         & > div:first-child {
             height: 140px;
@@ -297,19 +302,23 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 // Small tablets
 @media (min-width: 700px) and (max-width: 1000px) {
     .cardList {
-        grid-template-columns: repeat(4, 160px);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (min-width: 481px) and (max-width: 699px) {
     .cardList {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
-        padding: 20px 12px;
+        grid-template-columns: repeat(3, minmax(0, 1fr)); // 3 thirds, matches thirds lines
+        justify-items: center;
+        row-gap: 12px;
+        column-gap: 15px;
+        padding: 20px 0;
     }
 
     .card {
         width: 100%;
+        max-width: 160px;
+        margin: 0 auto;
     }
 }
 
@@ -364,7 +373,8 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         }
     }
 
-    #korean-premium > div:first-child {
+    #korean-premium > div:first-child,
+    #premium-box > div:first-child {
         h1::before {
             height: 80px;
             margin-top: -50px;
