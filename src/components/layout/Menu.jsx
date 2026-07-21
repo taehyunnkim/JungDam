@@ -50,8 +50,8 @@ function Menu({setPage, menu}) {
         const type2Items = korean.filter(item => item.type === "2");
         menuItems = (
             <>
-                <CardList id="korean-regular" items={type1Items} title="맞춤한식메뉴 1" kicker="KOREAN" />
-                <CardList id="korean-premium" items={type2Items} title="맞춤한식메뉴 2" kicker="KOREAN PLUS" description={["국 제공"]}/>
+                <CardList id="korean-regular" items={type1Items} title="맞춤한식메뉴 1" kicker="KOREAN 1" />
+                <CardList id="korean-premium" items={type2Items} title="맞춤한식메뉴 2" kicker="KOREAN 2" description={["국 제공"]}/>
             </>
         );
     } else if(menu === "kids") {
