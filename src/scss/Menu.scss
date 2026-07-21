@@ -46,21 +46,26 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     a {
         font-family: $paragraphFontKR;
         text-decoration: none;
-        color: $primaryColor;
+        color: #7C8084; // muted by default so the active one reads
         font-size: 16px;
         line-height: 16px;
         padding: 12px;
         margin: 0 3px;
-        border-radius: 5px;
+        border-radius: 8px;
         display: none;
-        font-weight: bold;
-
-        &:active {
-            color: gray;
-        }
+        font-weight: 600;
+        transition: color 150ms ease, background-color 150ms ease;
 
         &:hover {
-            background:#eeeeee;
+            color: $black;
+            background: #F4F5F6;
+        }
+
+        // active category: brand orange on a soft orange tint
+        &.active {
+            color: $primaryColor;
+            background: rgba($primaryColor, 0.12);
+            font-weight: 700;
         }
     }
 }
