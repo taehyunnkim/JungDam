@@ -158,7 +158,8 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
 
     &:hover {
         transform: translateY(-3px);
-        box-shadow: rgba(50, 42, 32, 0.13) 0px 8px 22px;
+        box-shadow: rgba(50, 42, 32, 0.13) 0px 8px 22px,
+                    rgba(245, 166, 90, 0.22) 0px 0px 24px 2px; // orange glow
     }
 
     & > div:first-child {
