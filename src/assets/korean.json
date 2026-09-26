@@ -60,9 +60,10 @@
         "img": "korean_dakgalbi.png"
     },
     {
-        "name": "갈비",
+        "name": "할랄도시락",
         "type": "2",
-        "price": ["29,000원~"],
-        "img": "korean-galbi.png"
+        "price": ["59,000원"],
+        "img": "halal.png",
+        "note": "*식재료및용기 변경시 가격변경"
     }
 ]

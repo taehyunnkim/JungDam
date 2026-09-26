@@ -1,33 +1,28 @@
 [
     {
         "name": "프리미엄 송이장어",
-        "price": ["곤드레나물밥 41,500원", "일반밥 39,800원"],
-        "img": "i1-0.jpg"
+        "price": ["곤드레나물밥 52,700원", "일반밥 51,500원"],
+        "img": "premiumshroom.png"
     },
     {
         "name": "프리미엄 송이갈비",
-        "price": ["곤드레나물밥 39,800원", "일반밥 38,100원"],
-        "img": "i1-1.png"
+        "price": ["곤드레나물밥 51,200원", "일반밥 49,500원"],
+        "img": "premiumshroomgalbi.png"
     },
     {
         "name": "프리미엄 송이불고기",
-        "price": ["곤드레나물밥 37,500원", "일반밥 36,000원"],
-        "img": "i1-2.png"
+        "price": ["곤드레나물밥 48,700원", "일반밥 47,000원"],
+        "img": "premiumshroombulgogi.png"
     },
     {
         "name": "송이갈비",
-        "price": ["34,900원"],
-        "img": "Edits/premium_galbi_opt.png"
+        "price": ["39,500원"],
+        "img": "shroomgalbi.png"
     },
     {
         "name": "송이불고기",
-        "price": ["32,900원"],
-        "img": "Edits/premium_shroom_bulbogi_opt.png"
-    },
-    {
-        "name": "갈비",
-        "price": ["25,900원"],
-        "img": "i1-5.png"
+        "price": ["37,000원"],
+        "img": "shroombulgogi.png"
     },
     {
         "name": "맞춤형 명품도시락 A",
@@ -58,5 +53,11 @@
         "type": "box",
         "price": ["27,000원~"],
         "img": "boxe.png"
+    },
+    {
+        "name": "맞춤형 명품도시락 F (갈비도시락)",
+        "type": "box",
+        "price": ["29,500원~"],
+        "img": "galbi-2.png"
     }
 ]

@@ -14,6 +14,8 @@ import food1 from '../../images/food1.png';
 import food2 from '../../images/food2.png';
 import food3 from '../../images/food3.png';
 import food4 from '../../images/food4.png';
+import food5 from '../../images/landing_pic.png';
+import food6 from '../../images/landing_pic_2.png';
 import premium from '../../images/items/Edits/premium_galbi_opt.png';
 import event from '../../images/event_2.png';
 import special from '../../images/main.png';
@@ -147,10 +149,10 @@ function Landing({ setPage }) {
                     </div>
                     <div id="menuCards">
                         <div className="menuCard">
-                            <img src={premium} alt="premium" />
+                            <img src={food6} alt="premium" />
                         </div>
                         <div className="menuCard">
-                            <img src={event} alt="event" />
+                            <img src={food5} alt="event" />
                         </div>
                         <div className="menuCard">
                             <img src={special} alt="special" />

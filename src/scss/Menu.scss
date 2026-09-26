@@ -154,6 +154,7 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     text-align: center;
     font-family: $bodyFontKR; // item name + price both read as body, not display
     overflow: hidden;
+    position: relative; // anchor for .note banner
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 
     &:hover {
@@ -212,6 +213,26 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         font-size: 13px; // calmer than the name
         font-weight: 600;
         color: $primaryColor;
+    }
+
+    // optional banner across the top (item.note in JSON);
+    // absolute so it overlays the photo instead of adding height
+    .note {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        margin: 0;
+        padding: 5px 10px;
+        font-size: 11px;
+        line-height: 1.35;
+        font-weight: 600;
+        color: $primaryColor;
+        background: rgba(255, 244, 236, 0.94); // soft orange tint, mostly opaque over the photo
+        border-bottom: 1px solid rgba($primaryColor, 0.18);
+        word-break: keep-all; // wrap Korean at word boundaries
+        overflow-wrap: break-word;
     }
 
     .price-container {
@@ -406,6 +427,11 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         h2 {
             font-size: 11px;
             font-weight: 600;
+        }
+
+        .note {
+            font-size: 10px;
+            padding: 4px 6px;
         }
     }
 }

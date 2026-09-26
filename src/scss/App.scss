@@ -396,9 +396,9 @@ p {
     width: 130px;
     height: 150px;
     margin-top: -30px;
-    
+
     img {
-      transform: rotate(90deg);
+      width: 90px;
     }
   }
 
@@ -936,9 +936,9 @@ $paddedWidth: 450px;
       width: 100px;
       height: 130px;
       margin-top: -60px;
-      
+
       img {
-        transform: rotate(90deg);
+        width: 80px;
       }
     }
   
@@ -1336,9 +1336,9 @@ $paddedWidth: 450px;
       width: 100px;
       height: 130px;
       margin-top: -60px;
-      
+
       img {
-        transform: rotate(90deg);
+        width: 80px;
       }
     }
   

@@ -18,6 +18,7 @@ function Card({ item }) {
     return(
         <div className="card">
             <div>
+                {item.note && <p className="note">{item.note}</p>}
                 <img src={itemImages[`../../images/items/${item.img}`]?.default} alt="item" />
             </div>
             <div>
