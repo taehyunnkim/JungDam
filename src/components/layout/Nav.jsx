@@ -15,6 +15,16 @@ function Nav({showNav, page, setMenu}) {
         }
     }
 
+    // Each category replaces the whole page, so the href is only a label — let it
+    // jump and the browser lands mid-page instead of at the top. Menu handles the
+    // scroll reset once the new category renders.
+    function selectMenu(e, category) {
+        e.preventDefault();
+        setMenu(category);
+        removeActive();
+        e.target.classList.add("active");
+    }
+
     return(
         <nav className={showNav + " " + (page === "menu" ? "revealNav" : "")} >
             <div>
@@ -27,17 +37,17 @@ function Nav({showNav, page, setMenu}) {
             </div>
 
             <div className={"shortcut " + (page === "menu" ? "revealShortcut" : "")} ref={shortcuts}>
-                <a href="#premium" className="active" onClick={(e) => {setMenu("premium"); removeActive(); e.target.classList.add("active")}}>명품</a>
-                <a href="#special" onClick={(e) => {setMenu("special"); removeActive(); e.target.classList.add("active")}}>스페셜</a>
-                <a href="#alchan" onClick={(e) => {setMenu("alchan"); removeActive(); e.target.classList.add("active")}}>알찬</a>
-                <a href="#silsok" onClick={(e) => {setMenu("silsok"); removeActive(); e.target.classList.add("active")}}>실속</a>
-                <a href="#japanese" onClick={(e) => {setMenu("japanese"); removeActive(); e.target.classList.add("active")}}>일품</a>
-                <a href="#event" onClick={(e) => {setMenu("event"); removeActive(); e.target.classList.add("active")}}>행사</a>
-                <a href="#lunch" onClick={(e) => {setMenu("lunch"); removeActive(); e.target.classList.add("active")}}>정기식단</a>
-                <a href="#western" onClick={(e) => {setMenu("western"); removeActive(); e.target.classList.add("active")}}>맞춤양식</a>
-                <a href="#korean" onClick={(e) => {setMenu("korean"); removeActive(); e.target.classList.add("active")}}>맞춤한식</a>
-                <a href="#kids" onClick={(e) => {setMenu("kids"); removeActive(); e.target.classList.add("active")}}>어린이</a>
-                <a href="#snacks" onClick={(e) => {setMenu("snacks"); removeActive(); e.target.classList.add("active")}}>간식</a>
+                <a href="#premium" className="active" onClick={(e) => selectMenu(e, "premium")}>명품</a>
+                <a href="#special" onClick={(e) => selectMenu(e, "special")}>스페셜</a>
+                <a href="#alchan" onClick={(e) => selectMenu(e, "alchan")}>알찬</a>
+                <a href="#silsok" onClick={(e) => selectMenu(e, "silsok")}>실속</a>
+                <a href="#japanese" onClick={(e) => selectMenu(e, "japanese")}>일품</a>
+                <a href="#event" onClick={(e) => selectMenu(e, "event")}>행사</a>
+                <a href="#lunch" onClick={(e) => selectMenu(e, "lunch")}>정기식단</a>
+                <a href="#western" onClick={(e) => selectMenu(e, "western")}>맞춤양식</a>
+                <a href="#korean" onClick={(e) => selectMenu(e, "korean")}>맞춤한식</a>
+                <a href="#kids" onClick={(e) => selectMenu(e, "kids")}>어린이</a>
+                <a href="#snacks" onClick={(e) => selectMenu(e, "snacks")}>간식</a>
             </div>
         </nav>
     );

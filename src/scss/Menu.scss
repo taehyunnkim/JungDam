@@ -353,7 +353,8 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     $cardWidth: 150px;
 
     .spacing {
-        height: 206px; // clears the fixed nav (110) + shortcut bar (86)
+        // on /menu the nav is always revealed, so its row is 60px, not 110px
+        height: 180px; // clears the fixed nav (60) + shortcut bar (86), plus breathing room
     }
 
     .revealShortcut {

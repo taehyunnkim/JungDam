@@ -20,10 +20,15 @@ function Menu({setPage, menu}) {
         setPage("menu");
     }, [setPage]);
 
-    // Jump to the top whenever the category changes — a smooth scroll here gets
-    // cancelled before it lands, so this has to be an instant one.
+    // Jump to the top whenever the category changes. It has to be an instant
+    // scroll: swapping the category reflows the page, which kills an in-flight
+    // smooth scroll. Older iOS Safari throws on behavior:"instant", so fall back.
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "instant" });
+        try {
+            window.scrollTo({ top: 0, behavior: "instant" });
+        } catch (e) {
+            window.scrollTo(0, 0);
+        }
     }, [menu]);
 
     let menuItems = "";
