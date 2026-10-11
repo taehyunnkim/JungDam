@@ -48,13 +48,13 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
         font-family: $paragraphFontKR;
         text-decoration: none;
         color: #7C8084; // muted by default so the active one reads
-        font-size: 16px;
-        line-height: 16px;
-        padding: 12px;
+        font-size: 18px;
+        line-height: 18px;
+        padding: 10px 12px; // trimmed vertical padding so the taller text still fits the 40px bar
         margin: 0 3px;
         border-radius: 8px;
         display: none;
-        font-weight: 600;
+        font-weight: 700;
         transition: color 150ms ease, background-color 150ms ease;
 
         &:hover {
@@ -353,22 +353,24 @@ $boxshadow: rgba(0, 0, 0, 0.10) 0px -2px 8px;
     $cardWidth: 150px;
 
     .spacing {
-        height: 190px; // clears the fixed nav (110) + shortcut bar (70)
+        height: 206px; // clears the fixed nav (110) + shortcut bar (86)
     }
 
     .revealShortcut {
         height: auto!important;
-        min-height: 70px;
+        min-height: 86px; // two rows of 14px labels (37px each) + row-gap + bar padding
         opacity: 1!important;
         padding: 5px 0px;
     }
 
     .shortcut {
+        row-gap: 2px; // the labels wrap to two rows here — keep them off each other
+
         a {
-            font-size: 11px;
-            line-height: 11px;
+            font-size: 14px;
+            line-height: 19px; // looser than the font size so the taller text can breathe
             margin: 0 1px;
-            padding: 6px 8px;
+            padding: 9px 7px; // horizontal kept tight so 14px labels still hold two rows at 300px
         }
     }
 

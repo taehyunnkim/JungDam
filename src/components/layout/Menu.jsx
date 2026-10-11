@@ -18,8 +18,13 @@ import { useEffect } from 'react';
 function Menu({setPage, menu}) {
     useEffect(() => {
         setPage("menu");
-        window.scrollTo(0, 0);
     }, [setPage]);
+
+    // Jump to the top whenever the category changes — a smooth scroll here gets
+    // cancelled before it lands, so this has to be an instant one.
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "instant" });
+    }, [menu]);
 
     let menuItems = "";
     if(menu === "premium") {
