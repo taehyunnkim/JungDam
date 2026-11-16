@@ -1,5 +1,10 @@
 [
     {
+        "name": "맞춤양식",
+        "price": ["10,000~"],
+        "img": "western4.png"
+    },
+    {
         "name": "크라상, 샌드위치",
         "price": ["가격협의"],
         "img": "crossaint_sandwich.png"
